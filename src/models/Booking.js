@@ -7,7 +7,7 @@ configure({
 
 class Booking {
 
-  constructor({id = v4(), couple, type, country, marriageYear, marriageCount, pants, coupleId, typeId, countryId}) {
+  constructor({id = v4(), couple, type, country, marriageYear, marriageCount, pants, img, coupleId, typeId, countryId}) {
     this.id = id;
     this.couple = couple;
     this.type = type;
@@ -15,6 +15,7 @@ class Booking {
     this.marriageYear = marriageYear;
     this.marriageCount = marriageCount;
     this.pants = pants;
+    this.img = img;
     this.coupleId = coupleId;
     this.typeId = typeId;
     this.countryId = countryId;
