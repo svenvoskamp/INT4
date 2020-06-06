@@ -17,4 +17,21 @@ class Country {
 decorate(Country, {
 });
 
+const countryConverter = {
+  toFirestore: function(country){
+    return{
+      country: country.country,
+    };
+  },
+  fromFirestore: function(snapshot, options){
+    const data = snapshot.data(options);
+    return new Country({
+      id: snapshot.id,
+      country: data.country
+    });
+  }
+};
+
+export {countryConverter};
+
 export default Country;

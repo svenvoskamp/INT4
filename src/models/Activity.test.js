@@ -1,10 +1,8 @@
-import Couple from "./Couple";
-import Booking from "./Booking";
 import Type from "./Type";
 import Day from "./Day";
 import Country from "./Country";
 import Activity from "./Activitiy";
-import RootStore from "../stores/index";
+
 
 test("Create an Activity", () => {
   const activity = new Activity({day: {}, type: {}, country: {}, img: "selfie.png", title: "Massage"});

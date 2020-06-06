@@ -1,4 +1,4 @@
-import Couple from "./Couple";
+import Couple from "./User";
 import Booking from "./Booking";
 import RootStore from "../stores/index";
 
