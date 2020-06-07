@@ -31,17 +31,14 @@ const Form = () => {
     try {
       const newBooking = await bookingStore.createBooking(booking);
       console.log(newBooking);
-      history.pushState(ROUTES.home);
+      await bookingStore.createBookingForUser(booking);
+      await bookingStore.getBookings();
+      history.push(ROUTES.home);
     } catch(error) {
       console.log(error);
     }
   }
 }
-
-
-
-
-
 
   return (
     <>

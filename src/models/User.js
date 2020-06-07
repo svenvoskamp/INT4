@@ -7,16 +7,16 @@ configure({
 
 class User {
 
-  constructor({id = v4(), booking, name, email, bookingId}) {
+  constructor({id = v4(), bookings = [], name, email, bookingId}) {
     this.id = id;
-    this.booking = booking;
+    this.bookings = bookings;
     this.name = name;
     this.email = email;
     this.bookingId = bookingId;
   }
 
   linkBooking(booking) {
-    !this.booking.includes(booking) && this.booking.push(booking);
+   !this.bookings.includes(booking) && this.bookings.push(booking);
   }
 }
 

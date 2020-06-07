@@ -13,19 +13,23 @@ class UiStore {
     this.authService = new AuthService(this.rootStore.firebase, this.onAuthStateChanged);
   }
 
-  onAuthStateChanged = user => {
+  onAuthStateChanged = async user => {
     if (user){
+      const newUser = await new User({
+        id: user.uid,
+        name: user.displayName,
+        store: this.rootStore.userStore,
+        email: user.email
+      })
+      await this.rootStore.userStore.createUser(newUser);
+      await this.rootStore.bookingStore.getBookings();
       console.log("De user is ingelogd");
-      this.setCurrentUser(
-        new User({
-          id: user.uid,
-          name: user.displayName,
-          email: user.email,
-          store: this.rootStore.userStore
-        })
-      );
-
-
+      const currentUser = this.rootStore.userStore.getUserById(newUser.id);
+      if(currentUser == undefined){
+      this.setCurrentUser(newUser);
+      }else {
+      this.setCurrentUser(currentUser);
+      }
 
     }else {
       console.log("De user is nu uitgelogd");
@@ -56,20 +60,15 @@ class UiStore {
 
   logoutUser = async () => {
     const result = await this.authService.logout();
+    this.rootStore.bookingStore.empty();
+    this.rootStore.userStore.empty();
     return result;
   }
 
   signInWithPopUp = async () => {
     const result = await this.authService.signInWithPopup();
-    const newRegisteredUser = new User({
-      id: result.user.uid,
-      name: result.user.displayName,
-      store: this.rootStore.userStore,
-      email: result.user.email
-    })
-    if(result){
-      this.rootStore.userStore.createUser(newRegisteredUser);
-    }
+
+
     return result;
   }
 }

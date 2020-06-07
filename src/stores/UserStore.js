@@ -19,13 +19,22 @@ class UserStore {
 
   getUserById = id => this.users.find(user => user.id === id);
 
-
+  getBookingForUserById = (user, bookingId) => {
+    const newUser = this.getUserById(user.id);
+    const result = newUser.bookings.find(booking => booking.id === bookingId);
+    return result;
+  }
   empty() {
     this.users = [];
   }
 
   createUser = async user => {
-    return await this.userService.create(user);
+     await this.userService.create(user);
+     const result = this.getUserById(user.id);
+     if(result == undefined){
+       this.addUser(user);
+     }
+     this.rootStore.uiStore.setCurrentUser(user);
   }
 }
 

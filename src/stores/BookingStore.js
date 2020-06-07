@@ -14,7 +14,7 @@ class BookingStore {
   }
 
   addBooking(booking) {
-    this.booking.push(booking);
+    this.bookings.push(booking);
   }
 
   getBookingById = id => this.bookings.find(booking => booking.id === id);
@@ -23,8 +23,31 @@ class BookingStore {
     this.bookings = [];
   }
 
+  getBookings = async () => {
+    this.bookingService.getBookings(this.onBookingChange);
+  }
+
+  onBookingChange = booking => {
+    const result = this.getBookingById(booking.id);
+    if(result == undefined){
+    this.addBooking(booking);
+    }
+    const user = this.rootStore.userStore.getUserById(booking.userId);
+    if(user){
+    const bookingResult = this.rootStore.userStore.getBookingForUserById(user, booking.id)
+    if(bookingResult == undefined){
+    user.linkBooking(booking);
+    }
+  }
+}
+
   createBooking = async booking => {
     await this.bookingService.createBooking(booking);
+    return booking;
+  }
+
+  createBookingForUser = async booking => {
+    await this.bookingService.createBookingForUser(booking, this.rootStore.uiStore.currentUser.email);
     return booking;
   }
 }
