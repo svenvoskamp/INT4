@@ -1,7 +1,8 @@
 const ROUTES = {
   home: "/",
   form: "/form",
-  login: "/login"
+  login: "/login",
+  booking: "/booking"
 };
 
 export { ROUTES };

@@ -62,6 +62,7 @@ class UiStore {
     const result = await this.authService.logout();
     this.rootStore.bookingStore.empty();
     this.rootStore.userStore.empty();
+    this.setCurrentBooking(undefined);
     return result;
   }
 

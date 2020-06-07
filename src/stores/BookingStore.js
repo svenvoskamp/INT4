@@ -35,6 +35,7 @@ class BookingStore {
     const user = this.rootStore.userStore.getUserById(booking.userId);
     if(user){
     const bookingResult = this.rootStore.userStore.getBookingForUserById(user, booking.id)
+    this.rootStore.uiStore.setCurrentBooking(booking);
     if(bookingResult == undefined){
     user.linkBooking(booking);
     }

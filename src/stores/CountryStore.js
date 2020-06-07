@@ -19,6 +19,8 @@ class CountryStore {
     }
   };
 
+  getCountryById = id => this.countries.find(country => country.id === id);
+
   getCountries = async () => {
    this.countryService.getCountries(this.onCountryChange);
   }

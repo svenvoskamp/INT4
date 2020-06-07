@@ -5,6 +5,7 @@ import { ROUTES } from "../../consts";
 import RegisterForm from "./RegisterForm";
 import Form from "../../containers/Form/Form";
 import Home from "../../containers/Home/Home";
+import Booking from "../../containers/Booking/Booking";
 import { useStores } from "../../hooks/index";
 import { useObserver } from "mobx-react-lite";
 
@@ -25,9 +26,31 @@ const Authentication = () => {
         </Route>
         <Route exact path={ROUTES.form}>
           {
-            uiStore.currentUser ? (
+            uiStore.currentUser && !uiStore.currentBooking ? (
               <>
               <Form/>
+              </>
+            ):
+            uiStore.currentUser && uiStore.currentBooking ? (
+              <>
+              <Redirect to= {ROUTES.booking}/>
+              </>
+            ):
+            (
+              <Redirect to={ROUTES.login}/>
+            )
+          }
+        </Route>
+        <Route exact path= {ROUTES.booking}>
+          {
+             uiStore.currentUser && uiStore.currentBooking ? (
+              <>
+              <Booking/>
+              </>
+            ):
+            uiStore.currentUser && !uiStore.currentBooking ? (
+              <>
+              <Redirect to={ROUTES.form}/>
               </>
             ):
             (

@@ -37,10 +37,10 @@ class Booking {
 }
 
 decorate(Booking, {
-  couple: observable,
+  user: observable,
   type: observable,
   country: observable,
-  linkCouple: action,
+  linkUser: action,
   linkType: action,
   linkCountry: action
 });

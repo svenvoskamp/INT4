@@ -33,7 +33,7 @@ const Form = () => {
       console.log(newBooking);
       await bookingStore.createBookingForUser(booking);
       await bookingStore.getBookings();
-      history.push(ROUTES.home);
+      history.push(ROUTES.booking);
     } catch(error) {
       console.log(error);
     }

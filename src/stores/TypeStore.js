@@ -19,10 +19,12 @@ class TypeStore {
     }
   };
 
+  getTypeById = id => this.types.find(type => type.id === id);
+
   getTypes = async () => {
    this.typeService.getTypes(this.onTypeChange);
   }
-  
+
   onTypeChange = type => {
     this.addType(type);
   }
