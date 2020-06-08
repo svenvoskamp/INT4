@@ -7,7 +7,7 @@ configure({
 
 class Booking {
 
-  constructor({id = v4(), user, sex1, sex2, name1, name2, type, country, year, count, pants, img, userId, typeId, countryId}) {
+  constructor({id = v4(), user = [], sex1, sex2, name1, name2, type = [], country = [], year, count, pants, img, userId, typeId, countryId}) {
     this.id = id;
     this.user = user;
     this.sex1 = sex1;
