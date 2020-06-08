@@ -57,7 +57,8 @@ const bookingConverter = {
       pants: booking.pants,
       userId: booking.userId,
       typeId: booking.typeId,
-      countryId: booking.countryId
+      countryId: booking.countryId,
+      img: booking.img
     };
   },
   fromFirestore: function(snapshot, options) {
@@ -73,7 +74,8 @@ const bookingConverter = {
       pants: data.pants,
       userId: data.userId,
       typeId: data.typeId,
-      countryId: data.countryId
+      countryId: data.countryId,
+      img: data.img
     });
   }
 };

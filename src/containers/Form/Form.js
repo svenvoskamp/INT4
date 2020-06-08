@@ -5,6 +5,8 @@ import Country from "../../components/Country/Country";
 import Booking from "../../models/Booking";
 import { useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts/index";
+import * as firebase from "firebase/app";
+import 'firebase/storage';
 
 const Form = () => {
   const { uiStore, typeStore, countryStore, bookingStore} = useStores();
@@ -17,6 +19,7 @@ const Form = () => {
   const [ pants, setPants] = useState("");
   const [ type, setType] = useState("");
   const [ country, setCountry] = useState("");
+  const [ img, setImg] = useState("");
   const history = useHistory();
 
   const handleLogOut = async e => {
@@ -26,14 +29,20 @@ const Form = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    const imgRef = await firebase.storage().ref('images/' + img.name);
+    console.log(imgRef);
+    const imgUrl = imgRef.name;
+    await imgRef.put(img);
     if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && year !== "" && pants !== "") {
-      const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, year, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country});
+      const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, year, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
     try {
+      console.log(booking);
       const newBooking = await bookingStore.createBooking(booking);
       console.log(newBooking);
       await bookingStore.createBookingForUser(booking);
+
       await bookingStore.getBookings();
-      history.push(ROUTES.booking);
+      await history.push(ROUTES.booking);
     } catch(error) {
       console.log(error);
     }
@@ -160,11 +169,15 @@ const Form = () => {
       {countryStore.countries.map(country => (
         <Country country = {country} key = {country.id} setCountry = {setCountry}/>
       ))}
-      {/* <label htmlFor = "img">
-       <span>Stuur de leukste foto van jullie samen van jullie huwelijksreis!</span>
-        <input type="file" id="img" name="filename"/>
+       <label htmlFor = "img">
+        <span>Stuur de leukste foto van jullie samen van jullie huwelijksreis!</span>
+       <input
+       type="file"
+       id="img"
+       name="filename"
+       onChange = {e => setImg(e.target.files[0])}/>
       </label>
-      */}
+
       <input type="submit" value="Verzend"/>
     </form>
 
