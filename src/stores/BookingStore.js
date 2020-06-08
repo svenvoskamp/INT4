@@ -33,11 +33,16 @@ class BookingStore {
     this.addBooking(booking);
     }
     const user = this.rootStore.userStore.getUserById(booking.userId);
+    const type = this.rootStore.typeStore.getTypeById(booking.typeId);
+    const country = this.rootStore.countryStore.getCountryById(booking.countryId);
     if(user){
     const bookingResult = this.rootStore.userStore.getBookingForUserById(user, booking.id)
     this.rootStore.uiStore.setCurrentBooking(booking);
     if(bookingResult == undefined){
     user.linkBooking(booking);
+    booking.linkUser(user);
+    booking.linkType(type);
+    booking.linkCountry(country);
     }
   }
 }
