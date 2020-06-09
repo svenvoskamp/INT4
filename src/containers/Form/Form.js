@@ -1,25 +1,34 @@
 import React, { useState } from "react";
 import { useStores } from "../../hooks/index";
-import Type from "../../components/Type/Type";
-import Country from "../../components/Country/Country";
 import Booking from "../../models/Booking";
 import { useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts/index";
 import * as firebase from "firebase/app";
 import 'firebase/storage';
+import Step1 from "../../components/Step1/Step1";
+import Step2 from "../../components/Step2/Step2";
+import Step3 from "../../components/Step3/Step3";
+import Step4 from "../../components/Step4/Step4";
+import Step5 from "../../components/Step5/Step5";
+import Step6 from "../../components/Step6/Step6";
+import Step7 from "../../components/Step7/Step7";
+import Step8 from "../../components/Step8/Step8";
+import Progress from "../../components/Progress/Progress";
+
 
 const Form = () => {
   const { uiStore, typeStore, countryStore, bookingStore} = useStores();
+  const [ currentIndex, setCurrentIndex] = useState(0);
   const [ name1, setName1] = useState("");
   const [ name2, setName2] = useState("");
   const [ sex1, setSex1] = useState("");
   const [ sex2, setSex2] = useState("");
   const [ count, setCount] = useState("");
-  const [ year, setYear] = useState("");
   const [ pants, setPants] = useState("");
   const [ type, setType] = useState("");
   const [ country, setCountry] = useState("");
   const [ img, setImg] = useState("");
+  const [ firstName, setFirstName] = useState("");
   const history = useHistory();
 
   const handleLogOut = async e => {
@@ -33,14 +42,13 @@ const Form = () => {
     console.log(imgRef);
     const imgUrl = imgRef.name;
     await imgRef.put(img);
-    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && year !== "" && pants !== "") {
-      const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, year, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
+    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "") {
+      const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
     try {
       console.log(booking);
       const newBooking = await bookingStore.createBooking(booking);
       console.log(newBooking);
       await bookingStore.createBookingForUser(booking);
-
       await bookingStore.getBookings();
       await history.push(ROUTES.booking);
     } catch(error) {
@@ -55,133 +63,52 @@ const Form = () => {
     <form onSubmit={handleLogOut}>
         <input type="submit" value="Logout"/>
     </form>
+    <Progress currentIndex = {currentIndex}/>
     <form onSubmit = {handleSubmit}>
-      <label htmlFor="name1" >
-      <span>Name 1</span>
-        <input
-          required
-          id="name1"
-          min="0"
-          max="255"
-          value={name1}
-          type="text"
-          placeholder="Alex"
-          onChange={e => setName1(e.currentTarget.value)}
-        />
-      </label>
-      <label htmlFor="name2" >
-        <input
-          required
-          id="name2"
-          min="0"
-          max="255"
-          value={name2}
-          type="text"
-          placeholder="Celine"
-          onChange={e => setName2(e.currentTarget.value)}
-        />
-      </label>
-      <label htmlFor = "male">
-        <span>Male</span>
-        <input
-        id = "male"
-        type = "radio"
-        value = "male"
-        name = "sex1"
-        onClick={e => setSex1(e.currentTarget.value)}
-        required
-        />
-      </label>
-      <label htmlFor = "female">
-        <span>Female</span>
-        <input
-        id = "female"
-        type = "radio"
-        value = "female"
-        name = "sex1"
-        onClick={e => setSex1(e.currentTarget.value)}
-        required
-        />
-      </label>
-      <label htmlFor = "male">
-        <span>Male</span>
-        <input
-        id = "male"
-        type = "radio"
-        value = "male"
-        name = "sex2"
-        onClick={e => setSex2(e.currentTarget.value)}
-        required
-        />
-      </label>
-      <label htmlFor = "female">
-        <span>Female</span>
-        <input
-        id = "female"
-        type = "radio"
-        value = "female"
-        name = "sex2"
-        onClick={e => setSex2(e.currentTarget.value)}
-        required
-        />
-      </label>
-      <label htmlFor = "count">
-        <span>Marriage count: {count}</span>
-        <input
-        id = "count"
-        type = "range"
-        min = "1"
-        max = "100"
-        value = {count}
-        name = "count"
-        onChange={e => setCount(e.currentTarget.value)}
-        required
-        />
-      </label>
-      <label htmlFor="year" >
-        <input
-          required
-          id="year"
-          min="0"
-          maxLength="4"
-          value={year}
-          type="text"
-          placeholder="2000"
-          onChange={e => setYear(e.currentTarget.value)}
-        />
-      </label>
-      <label htmlFor = "count">
-        <span>Wie heeft de broek aan? {name1} of {name2} </span>
-        <input
-        id = "pants"
-        type = "range"
-        min = "0"
-        max = "2"
-        value = {pants}
-        name = "pants"
-        onChange={e => setPants(e.currentTarget.value)}
-        required
-        />
-      </label>
-      {typeStore.types.map(type => (
-        <Type type = {type} key = {type.id} setType = {setType}/>
-      ))}
-      {countryStore.countries.map(country => (
-        <Country country = {country} key = {country.id} setCountry = {setCountry}/>
-      ))}
-       <label htmlFor = "img">
-        <span>Stuur de leukste foto van jullie samen van jullie huwelijksreis!</span>
-       <input
-       type="file"
-       id="img"
-       name="filename"
-       onChange = {e => setImg(e.target.files[0])}/>
-      </label>
+    {currentIndex === 0 &&
+    <div>
+      <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
 
-      <input type="submit" value="Verzend"/>
+    {currentIndex === 1 &&
+    <div>
+      <Step2 count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+
+    {currentIndex === 2 &&
+     <div>
+      <Step3 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+    {currentIndex === 3 &&
+    <div>
+      <Step4 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+    {currentIndex === 4 &&
+    <div>
+      <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+    {currentIndex === 5 &&
+    <div>
+      <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+    {currentIndex === 6 &&
+    <div>
+      <Step7 firstName = {firstName} setFirstName = {setFirstName} setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+    {currentIndex === 7 &&
+    <div>
+      <Step8 setCurrentIndex = {setCurrentIndex}/>
+    </div>
+    }
+
     </form>
-
-
     </>
   );
 };

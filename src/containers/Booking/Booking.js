@@ -50,7 +50,7 @@ storageRef.child('images/' + currentBooking.img).getDownloadURL().then(function(
     <p>Aantal jaar getrouwd: {currentBooking.count}</p>
     <p>Jullie zijn deze type reizigers: {type.type}</p>
     <p>Jullie zullen dit land bezoeken: {country.country}</p>
-    <img id = "img" alt= {currentBooking.name1}/>
+    <img id = "img" width = "300" height = "400" alt= {currentBooking.name1}/>
     </>
   );
 };

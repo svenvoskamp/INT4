@@ -7,7 +7,7 @@ configure({
 
 class Booking {
 
-  constructor({id = v4(), user = [], sex1, sex2, name1, name2, type = [], country = [], year, count, pants, img, userId, typeId, countryId}) {
+  constructor({id = v4(), user = [], sex1, sex2, name1, name2, type = [], country = [], count, pants, img, userId, typeId, countryId}) {
     this.id = id;
     this.user = user;
     this.sex1 = sex1;
@@ -16,7 +16,6 @@ class Booking {
     this.name2 = name2;
     this.type = type;
     this.country = country
-    this.year = year;
     this.count = count;
     this.pants = pants;
     this.img = img;
@@ -52,7 +51,6 @@ const bookingConverter = {
       sex2: booking.sex2,
       name1: booking.name1,
       name2: booking.name2,
-      year: booking.year,
       count: booking.count,
       pants: booking.pants,
       userId: booking.userId,
@@ -69,7 +67,6 @@ const bookingConverter = {
       sex2: data.sex2,
       name1: data.name1,
       name2: data.name2,
-      year: data.year,
       count: data.count,
       pants: data.pants,
       userId: data.userId,
