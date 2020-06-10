@@ -9,6 +9,7 @@ import Booking from "../../containers/Booking/Booking";
 import { useStores } from "../../hooks/index";
 import { useObserver } from "mobx-react-lite";
 
+
 const Authentication = () => {
   const { uiStore } = useStores();
   return useObserver (() => (

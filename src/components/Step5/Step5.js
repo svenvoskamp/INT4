@@ -14,6 +14,8 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Wie draagt de <span>broek...?</span></h1>
+    <h2>Wie van jullie neemt het meest het voortouw in de relatie?</h2>
     <label htmlFor = "pants">
         <span>Wie heeft de broek aan? {name1} of {name2} </span>
         <input

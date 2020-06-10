@@ -9,6 +9,8 @@ const Step8 = ({setCurrentIndex}) => {
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Snel eens <span>controleren!</span></h1>
+    <h2>Deze informatie gaven jullie ons, klopt dit?</h2>
     <input type="submit" value="Verzend"/>
     </>
   );

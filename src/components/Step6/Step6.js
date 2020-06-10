@@ -15,6 +15,8 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Jullie mooiste <span>herinnering!</span></h1>
+    <h2>Upload jullie meeste memorable foto van jullie huwelijkreis.</h2>
     <label htmlFor = "img">
        <span>Stuur de leukste foto van jullie samen van jullie huwelijksreis!</span>
        <input

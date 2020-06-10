@@ -1,6 +1,6 @@
 import React from "react";
 
-const Step2 = ({count, setCount, setCurrentIndex}) => {
+const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
 
   const handleClick = () => {
     if(count !== "" ){
@@ -14,6 +14,8 @@ const Step2 = ({count, setCount, setCurrentIndex}) => {
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Let's go <span>{name1} & {name2}!</span></h1>
+    <h2>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
     <label htmlFor = "count">
         <span>Marriage count: {count}</span>
         <input

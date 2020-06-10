@@ -16,6 +16,8 @@ const Step4 = ({country, setCountry, setCurrentIndex}) => {
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Waar zijn jullie op <span>huwelijksreis</span> geweest?</h1>
+    <h2>De bestemming zal voor ons als leidraad dienen om de herbeleving van jullie huwelijksreis te creeëren.</h2>
     {countryStore.countries.map(country => (
         <Country country = {country} key = {country.id} setCountry = {setCountry}/>
       ))}

@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts/index";
 
 const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, setCurrentIndex}) => {
+
+
+
   const history = useHistory();
+
   const handleClick = () => {
     if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" ){
       setCurrentIndex(1);
@@ -16,8 +20,10 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Om te beginnen, wat zijn jullie <span>voornamen?</span></h1>
+    <h2>Deze data zal niet worden gepubliceerd.</h2>
     <label htmlFor="name1" >
-    <span>Name 1</span>
+    <span>Voornaam: </span>
       <input
         required
         id="name1"
@@ -30,6 +36,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
       />
     </label>
     <label htmlFor="name2" >
+    <span>Voornaam: </span>
       <input
         required
         id="name2"
@@ -85,6 +92,8 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
       required
       />
     </label>
+    <div className = "geslacht1"></div>
+    <div className = "geslacht2"></div>
     <button onClick = {handleClick}>Ja dit zijn wij!</button>
     </>
   );

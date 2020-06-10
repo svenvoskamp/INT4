@@ -35,6 +35,8 @@ const Step7= ({firstName,
   return (
     <>
     <button onClick = {handleBack}>Terug</button>
+    <h1>Nog even wat <span>administratie!</span></h1>
+    <h2>Velden met * zijn verplicht.</h2>
     <label htmlFor="firstName" >
     <span>Voornaam:</span>
       <input

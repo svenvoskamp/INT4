@@ -92,7 +92,7 @@ const Form = () => {
 
     {currentIndex === 1 &&
     <div>
-      <Step2 count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
+      <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
     </div>
     }
 
