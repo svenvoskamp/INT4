@@ -7,9 +7,10 @@ configure({
 
 class User {
 
-  constructor({id = v4(), bookings = [], name, email, bookingId}) {
+  constructor({id = v4(), bookings = [], userData = [], name, email, bookingId}) {
     this.id = id;
     this.bookings = bookings;
+    this.userData = userData;
     this.name = name;
     this.email = email;
     this.bookingId = bookingId;
@@ -18,10 +19,15 @@ class User {
   linkBooking(booking) {
    !this.bookings.includes(booking) && this.bookings.push(booking);
   }
+
+  linkUserData(userData) {
+    !this.userData.includes(userData) && this.userData.push(userData);
+   }
 }
 
 decorate(User, {
-  booking: observable,
+  bookings: observable,
+  userData: observable,
   linkBooking: action
 });
 

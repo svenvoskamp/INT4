@@ -36,6 +36,16 @@ class UserStore {
      }
      this.rootStore.uiStore.setCurrentUser(user);
   }
+
+  createUserData = async (user, userData, email) => {
+    await this.userService.createUserData(userData, email);
+    const updatedUser = this.rootStore.userStore.getUserById(user.id);
+    updatedUser.linkUserData(userData);
+    return userData;
+  }
+
+
+
 }
 
 decorate (UserStore, {

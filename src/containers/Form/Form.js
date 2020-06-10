@@ -14,11 +14,14 @@ import Step6 from "../../components/Step6/Step6";
 import Step7 from "../../components/Step7/Step7";
 import Step8 from "../../components/Step8/Step8";
 import Progress from "../../components/Progress/Progress";
+import UserData from "../../models/UserData";
 
 
 const Form = () => {
-  const { uiStore, typeStore, countryStore, bookingStore} = useStores();
+  const { uiStore, bookingStore, userStore} = useStores();
   const [ currentIndex, setCurrentIndex] = useState(0);
+
+  // Formulier : boeking
   const [ name1, setName1] = useState("");
   const [ name2, setName2] = useState("");
   const [ sex1, setSex1] = useState("");
@@ -28,7 +31,19 @@ const Form = () => {
   const [ type, setType] = useState("");
   const [ country, setCountry] = useState("");
   const [ img, setImg] = useState("");
+
+  // Formulier : user gegevens
   const [ firstName, setFirstName] = useState("");
+  const [ lastName, setLastName] = useState("");
+  const [ city, setCity] = useState("");
+  const [ zip, setZip] = useState("");
+  const [ adress, setAdress] = useState("");
+  const [ houseNumber, setHouseNumber] = useState("");
+  const [ busNumber, setBusNumber] = useState("");
+  const [ email, setEmail] = useState("");
+  const [ telephone, setTelephone] = useState("");
+  const [ terms, setTerms] = useState("");
+
   const history = useHistory();
 
   const handleLogOut = async e => {
@@ -42,12 +57,16 @@ const Form = () => {
     console.log(imgRef);
     const imgUrl = imgRef.name;
     await imgRef.put(img);
-    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "") {
+    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms == 1) {
       const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
+      const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, email, telephone, terms, userId: uiStore.currentUser.id });
     try {
       console.log(booking);
+      console.log(userData);
       const newBooking = await bookingStore.createBooking(booking);
+      const newUserData = await userStore.createUserData(uiStore.currentUser, userData, uiStore.currentUser.email);
       console.log(newBooking);
+      console.log(newUserData);
       await bookingStore.createBookingForUser(booking);
       await bookingStore.getBookings();
       await history.push(ROUTES.booking);
@@ -99,7 +118,7 @@ const Form = () => {
     }
     {currentIndex === 6 &&
     <div>
-      <Step7 firstName = {firstName} setFirstName = {setFirstName} setCurrentIndex = {setCurrentIndex}/>
+      <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
     </div>
     }
     {currentIndex === 7 &&
