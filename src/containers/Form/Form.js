@@ -31,6 +31,10 @@ const Form = () => {
   const [ type, setType] = useState("");
   const [ country, setCountry] = useState("");
   const [ img, setImg] = useState("");
+  const [ video1, setVideo1] = useState("../../assets/video/male.webm");
+  const [ video1_mp4, setVideo1MP4] = useState("../../assets/video/male.mp4");
+  const [ video2, setVideo2] = useState("../../assets/video/female.webm");
+  const [ video2_mp4, setVideo2MP4] = useState("../../assets/video/female.mp4");
 
   // Formulier : user gegevens
   const [ firstName, setFirstName] = useState("");
@@ -86,7 +90,7 @@ const Form = () => {
     <form onSubmit = {handleSubmit}>
     {currentIndex === 0 &&
     <div>
-      <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} setCurrentIndex = {setCurrentIndex}/>
+      <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} video1 = {video1} video2 = {video2} setVideo1 = {setVideo1} setVideo2 = {setVideo2} video1_mp4 = {video1_mp4} video2_mp4 = {video2_mp4} setVideo1MP4 = {setVideo1MP4} setVideo2MP4 = {setVideo2MP4} setCurrentIndex = {setCurrentIndex}/>
     </div>
     }
 
