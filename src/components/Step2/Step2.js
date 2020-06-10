@@ -22,7 +22,7 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
         id = "count"
         type = "range"
         min = "1"
-        max = "100"
+        max = "80"
         value = {count}
         name = "count"
         onChange={e => setCount(e.currentTarget.value)}
