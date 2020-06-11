@@ -1,6 +1,13 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor from tokens;
 
+.background {
+    background-image: url(/assets/backgrounds/step1_right.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: auto 100%;
+}
+
 .content {
     composes: view from "../../style/layout.module.css";
 }
