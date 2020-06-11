@@ -1,17 +1,15 @@
 import React from "react";
+import style from "./step8.module.css"
 
 const Step8 = ({setCurrentIndex}) => {
 
-  const handleBack = () => {
-    setCurrentIndex(6);
-  }
-
   return (
     <>
-    <button onClick = {handleBack}>Terug</button>
-    <h1>Snel eens <span>controleren!</span></h1>
-    <h2>Deze informatie gaven jullie ons, klopt dit?</h2>
-    <input type="submit" value="Verzend"/>
+      <div className={style.content}>
+        <h1 className={style.title}>Snel eens <span>controleren!</span></h1>
+        <h2 className={style.subtitle}>Deze informatie gaven jullie ons, klopt dit?</h2>
+        <input className={style.confirm} type="submit" value="Verzend"/>
+      </div>
     </>
   );
 }

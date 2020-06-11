@@ -63,7 +63,6 @@ const Authentication = () => {
         <>
           <Home/>
         </>
-        )
         </Route>
       </Switch>
     </>

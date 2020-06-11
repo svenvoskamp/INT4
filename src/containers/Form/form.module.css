@@ -1,0 +1,20 @@
+.content_form {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 80% 1fr;
+    grid-template-areas: 
+    "progressbar"
+    "form"
+    ".";
+}
+
+.form_header {
+    grid-area: progressbar;
+    display: grid;
+    grid-template-columns: auto 96rem auto;
+    align-items: center;
+}
+
+.form_input {
+    grid-area: form;
+}

@@ -13,8 +13,10 @@ import Step5 from "../../components/Step5/Step5";
 import Step6 from "../../components/Step6/Step6";
 import Step7 from "../../components/Step7/Step7";
 import Step8 from "../../components/Step8/Step8";
+import Back from "../../components/Back/Back";
 import Progress from "../../components/Progress/Progress";
 import UserData from "../../models/UserData";
+import style from "./form.module.css";
 
 
 const Form = () => {
@@ -50,11 +52,6 @@ const Form = () => {
 
   const history = useHistory();
 
-  const handleLogOut = async e => {
-    e.preventDefault();
-      await uiStore.logoutUser();
-  };
-
   const handleSubmit = async e => {
     e.preventDefault();
     const imgRef = await firebase.storage().ref('images/' + img.name);
@@ -82,56 +79,55 @@ const Form = () => {
 
   return (
     <>
-    <h1>Dit is het formulier </h1>
-    <form onSubmit={handleLogOut}>
-        <input type="submit" value="Logout"/>
-    </form>
-    <Progress currentIndex = {currentIndex}/>
-    <form onSubmit = {handleSubmit}>
-    {currentIndex === 0 &&
-    <div>
-      <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} video1 = {video1} video2 = {video2} setVideo1 = {setVideo1} setVideo2 = {setVideo2} video1_mp4 = {video1_mp4} video2_mp4 = {video2_mp4} setVideo1MP4 = {setVideo1MP4} setVideo2MP4 = {setVideo2MP4} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
+      <div className={style.content_form}>
 
-    {currentIndex === 1 &&
-    <div>
-      <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-
-    {currentIndex === 2 &&
-     <div>
-      <Step3 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-    {currentIndex === 3 &&
-    <div>
-      <Step4 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-    {currentIndex === 4 &&
-    <div>
-      <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-    {currentIndex === 5 &&
-    <div>
-      <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-    {currentIndex === 6 &&
-    <div>
-      <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-    {currentIndex === 7 &&
-    <div>
-      <Step8 setCurrentIndex = {setCurrentIndex}/>
-    </div>
-    }
-
-    </form>
+        <div className={style.form_header}>
+          <Back currentIndex = {currentIndex} setCurrentIndex = {setCurrentIndex}/>
+          <Progress className={style.progressbar} currentIndex = {currentIndex}/>
+        </div>
+        <form className={style.form_input} onSubmit = {handleSubmit}>
+          {currentIndex === 0 &&
+          <div>
+            <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} video1 = {video1} video2 = {video2} setVideo1 = {setVideo1} setVideo2 = {setVideo2} video1_mp4 = {video1_mp4} video2_mp4 = {video2_mp4} setVideo1MP4 = {setVideo1MP4} setVideo2MP4 = {setVideo2MP4} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 1 &&
+          <div>
+            <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 2 &&
+          <div>
+            <Step3 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 3 &&
+          <div>
+            <Step4 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 4 &&
+          <div>
+            <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 5 &&
+          <div>
+            <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 6 &&
+          <div>
+            <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+          {currentIndex === 7 &&
+          <div>
+            <Step8 setCurrentIndex = {setCurrentIndex}/>
+          </div>
+          }
+        </form>
+      </div>
     </>
   );
 };

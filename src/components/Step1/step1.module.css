@@ -1,0 +1,32 @@
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor from tokens;
+
+.content {
+    composes: view from "../../style/layout.module.css";
+}
+
+.back {
+    composes: backButton from "../../style/buttons.module.css";
+}
+
+.confirm {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}
+
+.title {
+    composes: title from "../../style/typo.module.css";
+    text-align: center;
+    margin-bottom: 1rem;
+}   
+
+.subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    text-align: center;
+}   
+
+.content_persons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
