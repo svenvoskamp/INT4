@@ -47,7 +47,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
 
   return useObserver (() => (
     <>
-      <div className={style.background}>
+
         <div className={style.content}>
           <h1 className={style.title}>Om te beginnen, wat zijn jullie <span>voornamen?</span></h1>
           <h2 className={style.subtitle}>Deze data zal niet worden gepubliceerd.</h2>
@@ -140,10 +140,9 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
               </label>
             </div>
           </div>
-        </div>  
+        </div>
           <button className={style.confirm} onClick = {handleClick}>Ja, dit zijn wij!</button>
         </div>
-      </div>
     </>
   )
   );

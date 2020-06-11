@@ -23,6 +23,9 @@ const Form = () => {
   const { uiStore, bookingStore, userStore} = useStores();
   const [ currentIndex, setCurrentIndex] = useState(0);
 
+  // Form css
+
+
   // Formulier : boeking
   const [ name1, setName1] = useState("");
   const [ name2, setName2] = useState("");
@@ -79,8 +82,7 @@ const Form = () => {
 
   return (
     <>
-      <div className={style.content_form}>
-
+     <div className = {`form${currentIndex}`}>
         <div className={style.form_header}>
           <Back currentIndex = {currentIndex} setCurrentIndex = {setCurrentIndex}/>
           <Progress className={style.progressbar} currentIndex = {currentIndex}/>
@@ -127,7 +129,8 @@ const Form = () => {
           </div>
           }
         </form>
-      </div>
+        </div>
+      }
     </>
   );
 };

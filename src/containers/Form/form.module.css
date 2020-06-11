@@ -2,10 +2,14 @@
     display: grid;
     height: 100vh;
     grid-template-rows: 1fr 80% 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "progressbar"
     "form"
     ".";
+}
+
+.content_form {
+  background-color: red;
 }
 
 .form_header {
