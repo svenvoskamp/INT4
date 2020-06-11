@@ -68,8 +68,6 @@ class UiStore {
 
   signInWithPopUp = async () => {
     const result = await this.authService.signInWithPopup();
-
-
     return result;
   }
 }
