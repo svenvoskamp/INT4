@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 const Country = ({country, setCountry}) => {
 
   return (
+    <div>
+    <img src={country.img} width="400" height="400" />
       <label htmlFor = {country.country}>
         <span>{country.country}</span>
         <input
@@ -14,7 +16,8 @@ const Country = ({country, setCountry}) => {
         onClick={e => setCountry(e.currentTarget.value)}
         required
         />
-    </label>
+      </label>
+    </div>
   );
 }
 

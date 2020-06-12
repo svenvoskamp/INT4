@@ -19,8 +19,7 @@ const Landing = () => {
     <form onSubmit={handleLogOut}>
             <input type="submit" value="Logout"/>
         </form>
-      <h1 className={style.title}>Herbeleef jullie 
-      huwelijksreis</h1>
+      <h1 className={style.title}>Herbeleef jullie huwelijkreis</h1>
       <p className={style.text}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris at justo velit. Pellentesque ipsum magna, interdum sit amet tristique vel, posuere sit amet lorem.</p>
       <NavLink exact strict to="/form">
         <button className={style.button}>Wij zijn er klaar voor</button>

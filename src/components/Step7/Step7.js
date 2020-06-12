@@ -36,6 +36,7 @@ const Step7= ({firstName,
           <h1 className={style.title}>Nog even wat <span>administratie!</span></h1>
           <h2 className={style.subtitle}>Velden met * zijn verplicht.</h2>
         </div>
+        
         <label htmlFor="firstName" >
         <span>Voornaam:</span>
           <input
@@ -162,7 +163,9 @@ const Step7= ({firstName,
           />
         </label>
 
-        <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
+        <div>
+          <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
+        </div>
       </div>
       
     </>

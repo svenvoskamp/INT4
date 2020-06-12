@@ -24,3 +24,8 @@
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
 }   
+
+.content_images {
+    display: flex;
+    justify-content: space-between;
+}

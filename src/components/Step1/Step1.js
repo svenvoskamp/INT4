@@ -44,6 +44,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
     }
   }
 
+  console.log(sex1, sex2); 
 
   return useObserver (() => (
       <div className={style.content}>
@@ -52,18 +53,19 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
           <h2 className={style.subtitle}>Deze data zal niet worden gepubliceerd.</h2>
         </div>
         <div className={style.content_persons}>
-        <div className={style.content_person}>
-          <label htmlFor = "male">
-          <input
-          id = "male"
-          type = "radio"
-          value = "male"
-          name = "sex1"
-          onClick={e => setSex1(e.currentTarget.value)}
-          required
-          />
-        </label>
-          <label htmlFor = "female">
+          <div className={style.content_person}>
+            <label htmlFor = "male">
+              <input
+              defaultChecked
+              id = "male"
+              type = "radio"
+              value = "male"
+              name = "sex1"
+              onClick={e => setSex1(e.currentTarget.value)}
+              required
+              />
+          </label>
+            <label htmlFor = "female">
             <input
             id = "female"
             type = "radio"
@@ -73,69 +75,72 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
             required
             />
           </label>
-          <video className = "video1" width="400" height = "400"  loop autoPlay muted>
+            <video className = "video1" width="400" height = "400"  loop autoPlay muted>
             <source src="../../assets/video/male.webm" type="video/webm"/>
             <source src="../../assets/video/male.mp4" type="video/mp4"/>
           </video>
-          <div className={style.person_name}>
-            <p className={style.name_text}>Voornaam</p>
-            <label htmlFor="name1">
-              <input className={style.name_input}
-                required
-                id="name1"
-                min="0"
-                max="255"
-                value={name1}
-                type="text"
-                placeholder="Alex"
-                onChange={e => setName1(e.currentTarget.value)}
+            <div className={style.person_name}>
+              <p className={style.name_text}>Voornaam</p>
+              <label htmlFor="name1">
+                <input className={style.name_input}
+                  required
+                  id="name1"
+                  min="0"
+                  max="255"
+                  value={name1}
+                  type="text"
+                  placeholder="Alex"
+                  onChange={e => setName1(e.currentTarget.value)}
+                />
+              </label>
+            </div>
+          </div>
+          <div className={style.content_person}>
+            <label htmlFor = "male">
+              <input
+              id = "male"
+              type = "radio"
+              value = "male"
+              name = "sex2"
+              onClick={e => setSex2(e.currentTarget.value)}
+              required
               />
             </label>
-          </div>
-        </div>
-        <div className={style.content_person}>
-          <label htmlFor = "male">
-          <input
-          id = "male"
-          type = "radio"
-          value = "male"
-          name = "sex2"
-          onClick={e => setSex2(e.currentTarget.value)}
-          required
-          />
-        </label>
-          <label htmlFor = "female">
-            <input
-            id = "female"
-            type = "radio"
-            value = "female"
-            name = "sex2"
-            onClick={e => setSex2(e.currentTarget.value)}
-            required
-            />
-          </label>
-          <video className = "video2" width="400" height = "400" loop autoPlay muted>
-            <source src="../../assets/video/woman.webm" type="video/webm"/>
-            <source src="../../assets/video/woman.mp4" type="video/mp4"/>
-          </video>
-          <div className={style.person_name}>
-            <p className={style.name_text}>Voornaam</p>
-            <label htmlFor="name2" >
-              <input className={style.name_input}
-                required
-                id="name2"
-                min="0"
-                max="255"
-                value={name2}
-                type="text"
-                placeholder="Celine"
-                onChange={e => setName2(e.currentTarget.value)}
+            <label htmlFor = "female">
+              <input
+              defaultChecked
+              id = "female"
+              type = "radio"
+              value = "female"
+              name = "sex2"
+              onClick={e => setSex2(e.currentTarget.value)}
+              required
               />
             </label>
-          </div>
+            <video className = "video2" width="400" height = "400" loop autoPlay muted>
+              <source src="../../assets/video/woman.webm" type="video/webm"/>
+              <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+            </video>
+            <div className={style.person_name}>
+              <p className={style.name_text}>Voornaam</p>
+              <label htmlFor="name2" >
+                <input className={style.name_input}
+                  required
+                  id="name2"
+                  min="0"
+                  max="255"
+                  value={name2}
+                  type="text"
+                  placeholder="Celine"
+                  onChange={e => setName2(e.currentTarget.value)}
+                />
+              </label>
+            </div>
         </div>
-      </div>
-        <button className={style.confirm} onClick = {handleClick}>Ja, dit zijn wij!</button>
+        </div>
+        <div>
+          <button className={style.confirm} onClick = {handleClick}>Ja, dit zijn wij!</button>
+        </div>
       </div>
   )
   );

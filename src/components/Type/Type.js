@@ -6,6 +6,8 @@ const Type = ({type, setType}) => {
 
 
   return (
+    <div>
+      <img src={type.img} width="400" height="400"/>
       <label htmlFor = {type.type}>
         <span>{type.type}</span>
         <input
@@ -16,7 +18,8 @@ const Type = ({type, setType}) => {
         onClick={e=> setType(e.currentTarget.value)}
         required
         />
-    </label>
+      </label>
+    </div>
   );
 }
 

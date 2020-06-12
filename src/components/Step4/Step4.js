@@ -17,10 +17,14 @@ const Step4 = ({country, setCountry, setCurrentIndex}) => {
           <h1 className={style.title}>Wat typeert jullie als <span>huwelijkspaar.</span></h1>
           <h2 className={style.subtitle}>De bestemming zal voor ons als leidraad dienen om de herbeleving van jullie huwelijksreis te creeëren.</h2>
         </div>
-        {countryStore.countries.map(country => (
-            <Country country = {country} key = {country.id} setCountry = {setCountry}/>
-          ))}
+        <div className={style.content_images}>
+          {countryStore.countries.map(country => (
+              <Country country = {country} key = {country.id} setCountry = {setCountry}/>
+            ))}
+        </div>
+        <div>
         <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
+        </div>
       </div>
     </>
   );

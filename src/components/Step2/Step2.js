@@ -19,7 +19,12 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
         <div className={style.content_media}>
           <img src="/assets/images/silver_ring.png"/>
         </div>
-        <label htmlFor = "count">
+        <div className={style.container_slider}>
+          <div className={style.slider_placeholder}>
+            <p>1 jaar</p>
+            <p>80 jaar</p>
+          </div>
+          <label htmlFor = "count">
             <input className={style.slider}
             id = "count"
             type = "range"
@@ -31,7 +36,13 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
             required
             />
           </label>
-        <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
+          <div className={style.count_container}>
+            <p className={style.slider_count}>{count}</p>
+          </div>
+        </div>
+        <div>
+          <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
+        </div>
       </div>
     </>
   );

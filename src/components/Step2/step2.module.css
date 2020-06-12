@@ -6,9 +6,6 @@
     composes: spaceBetween from "../../style/layout.module.css";
 }
 
-.back {
-    composes: backButton from "../../style/buttons.module.css";
-}
 
 .confirm {
     composes: buttonBlack from "../../style/buttons.module.css";
@@ -31,24 +28,41 @@
     justify-content: center;
 }
 
-.slider {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
+.container_slider {
+    display: flex;
+    flex-direction: column;
     width: 70%;
-    height: 1rem;
-    outline: none;
-    border-radius: 0.5rem;
-    background-color: pinkColor;
-  }
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-            appearance: none;
-    width: 1rem;
-    height: 1rem;
-    background-color: primaryColor;
-    border: 1.5rem solid primaryColor;
-    border-radius: 2rem;
-    cursor: pointer;
-  }
-  
+    margin: 0 auto;
+}
+
+.slider_placeholder {
+    display: flex;
+    justify-content: space-between;
+    composes: subtitle from "../../style/typo.module.css";
+    padding-bottom: 1rem;
+}
+
+.count_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider_count {
+    margin-top: 2rem;
+}
+
+.slider {
+    composes: slider from "../../style/buttons.module.css";
+}
+    
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: primaryColor;
+  border: 1.5rem solid primaryColor;
+  border-radius: 2rem;
+  cursor: pointer;
+}

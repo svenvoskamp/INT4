@@ -1,5 +1,5 @@
 @value tokens: "../../style/tokens.module.css";
-@value primaryColor from tokens;
+@value primaryColor, pinkColor from tokens;
 
 .content {
     composes: view from "../../style/layout.module.css";
@@ -24,3 +24,32 @@
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
 }   
+
+.container_slider {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.slider_placeholder {
+    display: flex;
+    justify-content: space-between;
+    composes: subtitle from "../../style/typo.module.css";
+    padding-bottom: 1rem;
+}
+
+.slider {
+    composes: slider from "../../style/buttons.module.css";
+}
+    
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+  background-color: primaryColor;
+  border: 1.5rem solid primaryColor;
+  border-radius: 2rem;
+  cursor: pointer;
+}

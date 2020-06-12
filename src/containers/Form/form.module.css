@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: auto 40% auto;
     align-items: center;
-    padding-top: 5rem;
 }
 
 .form_input {

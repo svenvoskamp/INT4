@@ -29,8 +29,8 @@ const Form = () => {
   // Formulier : boeking
   const [ name1, setName1] = useState("");
   const [ name2, setName2] = useState("");
-  const [ sex1, setSex1] = useState("");
-  const [ sex2, setSex2] = useState("");
+  const [ sex1, setSex1] = useState("male");
+  const [ sex2, setSex2] = useState("female");
   const [ count, setCount] = useState(40);
   const [ pants, setPants] = useState(1);
   const [ type, setType] = useState("");
