@@ -12,8 +12,10 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
   return (
     <>
       <div className={style.content}>
-        <h1 className={style.title}>Wie draagt de <span>broek...?</span></h1>
-        <h2 className={style.subtitle}>Wie van jullie neemt het meest het voortouw in de relatie?</h2>
+        <div className={style.content_header}>
+          <h1 className={style.title}>Wie draagt de <span>broek...?</span></h1>
+          <h2 className={style.subtitle}>Wie van jullie neemt het meest het voortouw in de relatie?</h2>
+        </div>
         <label htmlFor = "pants">
             <span>Wie heeft de broek aan? {name1} of {name2} </span>
             <input

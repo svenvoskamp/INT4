@@ -14,8 +14,10 @@ const Step3 = ({type, setType, setCurrentIndex}) => {
   return (
     <>
       <div className={style.content}>
-        <h1 className={style.title}>Wat typeert jullie als <span>huwelijkspaar?</span></h1>
-        <h2 className={style.subtitle}>De bestemming zal voor ons als leidraad dienen om de herbeleving van jullie huwelijksreis te creeëren.</h2>
+        <div className={style.content_header}>
+          <h1 className={style.title}>Waar zijn jullie op <span>huwelijksreis</span>geweest?</h1>
+          <h2 className={style.subtitle}>De bestemming zal voor ons als leidraad dienen om de herbeleving van jullie huwelijksreis te creeëren.</h2>
+        </div>
         {typeStore.types.map(type => (
             <Type type = {type} key = {type.id} setType = {setType}/>
           ))}

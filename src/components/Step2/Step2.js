@@ -12,11 +12,15 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
   return (
     <>
       <div className={style.content}>
-        <h1 className={style.title}>Let's go <span>{name1} & {name2}!</span></h1>
-        <h2 className={style.subtitle}>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
+        <div className={style.content_header}>
+          <h1 className={style.title}>Let's go <span>{name1} & {name2}!</span></h1>
+          <h2 className={style.subtitle}>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
+        </div>
+        <div className={style.content_media}>
+          <img src="/assets/images/silver_ring.png"/>
+        </div>
         <label htmlFor = "count">
-            <span>Marriage count: {count}</span>
-            <input
+            <input className={style.slider}
             id = "count"
             type = "range"
             min = "1"

@@ -6,8 +6,10 @@ const Step8 = ({setCurrentIndex}) => {
   return (
     <>
       <div className={style.content}>
-        <h1 className={style.title}>Snel eens <span>controleren!</span></h1>
-        <h2 className={style.subtitle}>Deze informatie gaven jullie ons, klopt dit?</h2>
+        <div className={style.content_header}>
+          <h1 className={style.title}>Snel eens <span>controleren!</span></h1>
+          <h2 className={style.subtitle}>Deze informatie gaven jullie ons, klopt dit?</h2>
+        </div>
         <input className={style.confirm} type="submit" value="Verzend"/>
       </div>
     </>

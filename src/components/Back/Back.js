@@ -15,11 +15,9 @@ const Back = ({currentIndex, setCurrentIndex}) => {
     }
 
   return (
-    <>
       <div className={style.container_back}>
         <button className={style.back} onClick = {handleBack}>Back</button>
       </div>
-    </>
   );
 }
 

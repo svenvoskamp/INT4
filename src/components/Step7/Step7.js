@@ -32,8 +32,10 @@ const Step7= ({firstName,
   return (
     <>
       <div className={style.content}>
-        <h1 className={style.title}>Nog even wat <span>administratie!</span></h1>
-        <h2 className={style.subtitle}>Velden met * zijn verplicht.</h2>
+        <div className={style.content_header}>
+          <h1 className={style.title}>Nog even wat <span>administratie!</span></h1>
+          <h2 className={style.subtitle}>Velden met * zijn verplicht.</h2>
+        </div>
         <label htmlFor="firstName" >
         <span>Voornaam:</span>
           <input

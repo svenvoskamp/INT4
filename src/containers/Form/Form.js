@@ -84,53 +84,36 @@ const Form = () => {
     <>
      <div className = {`form${currentIndex}`}>
         <div className={style.form_header}>
-          <Back currentIndex = {currentIndex} setCurrentIndex = {setCurrentIndex}/>
+          <Back className={style.back} currentIndex = {currentIndex} setCurrentIndex = {setCurrentIndex}/>
           <Progress className={style.progressbar} currentIndex = {currentIndex}/>
         </div>
         <form className={style.form_input} onSubmit = {handleSubmit}>
           {currentIndex === 0 &&
-          <div>
             <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} video1 = {video1} video2 = {video2} setVideo1 = {setVideo1} setVideo2 = {setVideo2} video1_mp4 = {video1_mp4} video2_mp4 = {video2_mp4} setVideo1MP4 = {setVideo1MP4} setVideo2MP4 = {setVideo2MP4} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 1 &&
-          <div>
             <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 2 &&
-          <div>
             <Step3 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 3 &&
-          <div>
             <Step4 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 4 &&
-          <div>
             <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 5 &&
-          <div>
             <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 6 &&
-          <div>
             <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
           {currentIndex === 7 &&
-          <div>
             <Step8 setCurrentIndex = {setCurrentIndex}/>
-          </div>
           }
         </form>
-        </div>
-      }
+      </div>
     </>
   );
 };

@@ -1,24 +1,12 @@
-.content_form {
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 1fr 80% 1fr;
-    grid-template-areas:
-    "progressbar"
-    "form"
-    ".";
-}
-
-.content_form {
-  background-color: red;
-}
-
 .form_header {
     grid-area: progressbar;
     display: grid;
-    grid-template-columns: auto 96rem auto;
+    grid-template-columns: auto 40% auto;
     align-items: center;
+    padding-top: 5rem;
 }
 
 .form_input {
     grid-area: form;
+    height: 100%;
 }

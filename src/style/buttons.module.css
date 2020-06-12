@@ -2,20 +2,23 @@
 @value backgroundColor, primaryColor, blackColor from tokens;
 
 .inputFill {
-  padding: 1rem 1rem;
-  border: .2rem solid backgroundColor;
-  background-color: backgroundColor;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white ;
+  border: none;
+  border-radius: 1rem;
 }
 
 .buttonBlack {
-  /* background-image: url(/assets/buttons/button_full.svg); */
-  background-color: blackColor;
+  background-image: url(/assets/buttons/button_full.svg);
+  background-color: transparent;
   border: none;
   background-repeat: no-repeat;
   display: inline-block;
   background-size: contain;
-  padding: 2rem 2.5rem;
-  margin: 2rem 0;
+  padding: 1.5rem 1.5rem;
   background-position: 50% 50%;
   composes: button from "../style/typo.module.css";
 }

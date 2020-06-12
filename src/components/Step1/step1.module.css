@@ -1,5 +1,5 @@
 @value tokens: "../../style/tokens.module.css";
-@value primaryColor from tokens;
+@value primaryColor, backgroundColor from tokens;
 
 .background {
     background-image: url(/assets/backgrounds/step1_right.svg);
@@ -10,6 +10,7 @@
 
 .content {
     composes: view from "../../style/layout.module.css";
+    composes: spaceBetween from "../../style/layout.module.css";
 }
 
 .back {
@@ -36,4 +37,20 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    justify-content: center;
+}
+
+.content_person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name_text {
+    composes: subtitle from "../../style/typo.module.css";
+    padding-bottom: .5rem;
+}
+
+.name_input {
+    composes: inputFill from "../../style/buttons.module.css";
 }

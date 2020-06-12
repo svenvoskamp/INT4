@@ -3,6 +3,7 @@
 
 .content {
     composes: view from "../../style/layout.module.css";
+    composes: spaceBetween from "../../style/layout.module.css";
 }
 
 .back {

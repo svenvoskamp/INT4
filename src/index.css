@@ -20,7 +20,76 @@ body {
   background-color: #f2f2f2;
 }
 
+.form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
+  display: grid;
+  grid-template-rows: 1fr 75% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+}
 
 .form0 {
-  background-color: red;
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: right, top left, left bottom;
 }
+
+.form1 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: right, top left, left bottom;
+}
+
+.form2 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step3_left.png), url(/assets/backgrounds/step3_right_top.png), url(/assets/backgrounds/step3_right_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
+}
+
+.form3 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step4_left.png), url(/assets/backgrounds/step4_right_top.png), url(/assets/backgrounds/step4_right_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
+}
+
+.form4 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step5_left.png), url(/assets/backgrounds/step5_right_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto;
+  background-position: left, right bottom;
+}
+
+.form5 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step5_left.png), url(/assets/backgrounds/step5_right_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto;
+  background-position: left, right bottom;
+}
+
+.form6 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step7_left.png), url(/assets/backgrounds/step7_right.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto 100%;
+  background-position: left, right bottom;
+}
+
+.form7 {
+  height: 100vh;
+  background-image: url(/assets/backgrounds/step8_left.png), url(/assets/backgrounds/step8_right.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto 100%;
+  background-position: left, right;
+}
+
