@@ -24,7 +24,7 @@ const Step7= ({firstName,
               setCurrentIndex}) => {
 
   const handleClick = () => {
-    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms === 1){
+    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== 0){
       setCurrentIndex(7);
     }
   }

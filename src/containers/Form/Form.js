@@ -23,6 +23,8 @@ const Form = () => {
   const { uiStore, bookingStore, userStore} = useStores();
   const [ currentIndex, setCurrentIndex] = useState(0);
 
+  const [text, setText] = useState("");
+
   // Form css
 
 
@@ -57,6 +59,7 @@ const Form = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    setText("Uw reservatie wordt vastgelegd");
     const imgRef = await firebase.storage().ref('images/' + img.name);
     console.log(imgRef);
     const imgUrl = imgRef.name;
@@ -111,7 +114,7 @@ const Form = () => {
             <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 7 &&
-            <Step8 setCurrentIndex = {setCurrentIndex}/>
+            <Step8 setCurrentIndex = {setCurrentIndex} text = {text}/>
           }
         </form>
       </div>
