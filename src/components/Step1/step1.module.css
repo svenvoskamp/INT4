@@ -44,8 +44,18 @@
     align-items: center;
 }
 
+.person_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Gender */
+
 .person_gender {
     display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
 }
 
 .checkbox_male, .checkbox_female {
@@ -91,11 +101,19 @@
     fill: primaryColor;
 }
 
+/* Name input */
+
+.person_name {
+    width: 80%;
+    padding: 0 5rem;
+}
+
 .name_text {
     composes: subtitle from "../../style/typo.module.css";
-    padding-bottom: .5rem;
+    padding: 0 0 .5rem .5rem;
 }
 
 .name_input {
     composes: inputFill from "../../style/buttons.module.css";
+    width: 100%;
 }

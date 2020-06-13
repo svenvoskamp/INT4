@@ -1,5 +1,5 @@
 @value tokens: "../../style/tokens.module.css";
-@value primaryColor from tokens;
+@value primaryColor, backgroundColor from tokens;
 
 .progressbar {
     width: 100%;
@@ -8,10 +8,10 @@
 }
 
 .progressbar[value]::-webkit-progress-bar {
-    background-color: #eee;
-    border: .2rem solid primaryColor;
-    border-radius: 2px;
-    box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.25) inset;
+    background-color: backgroundColor;
+    border: .3rem solid primaryColor;
+    border-radius: 2rem;
+    height: 2rem;
 }
 
 progress[value]::-webkit-progress-value {

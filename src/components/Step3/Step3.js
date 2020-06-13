@@ -24,7 +24,7 @@ import style from "./step3.module.css"
             ))}
         </div>
         <div className={style.button_container}>
-          <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
+          <button className={style.confirm} onClick = {handleClick}>Neem ons mee</button>
         </div>
       </div>
     </>

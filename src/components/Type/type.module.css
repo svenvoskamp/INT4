@@ -12,3 +12,11 @@
     text-align: center;
     margin-top: 2rem;
 }
+
+.checkbox_type{
+    display: none;
+}
+
+.checkbox_type[type='radio']:checked+.option_text {
+    font-family: montserrat-bold;
+}

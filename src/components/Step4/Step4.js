@@ -24,7 +24,7 @@ const Step4 = ({type, setType, setCurrentIndex}) => {
             ))}
         </div>
         <div className={style.button_container}>
-          <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
+          <button className={style.confirm} onClick = {handleClick}>That's us</button>
         </div>
       </div>
     </>

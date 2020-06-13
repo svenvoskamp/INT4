@@ -1,7 +1,7 @@
 .form_header {
     grid-area: progressbar;
     display: grid;
-    grid-template-columns: auto 40% auto;
+    grid-template-columns: 1fr 40% 1fr;
     align-items: center;
 }
 
