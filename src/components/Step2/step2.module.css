@@ -6,6 +6,10 @@
     composes: spaceBetween from "../../style/layout.module.css";
 }
 
+.button_container {
+    display: flex;
+    justify-content: center;
+}
 
 .confirm {
     composes: buttonBlack from "../../style/buttons.module.css";
@@ -50,6 +54,7 @@
 
 .slider_count {
     margin-top: 2rem;
+    composes: bold from "../../style/typo.module.css";
 }
 
 .slider {
@@ -62,7 +67,7 @@
   width: 1rem;
   height: 1rem;
   background-color: primaryColor;
-  border: 1.5rem solid primaryColor;
+  border: 1.2rem solid primaryColor;
   border-radius: 2rem;
   cursor: pointer;
 }

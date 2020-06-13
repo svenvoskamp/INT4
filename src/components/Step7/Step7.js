@@ -163,7 +163,7 @@ const Step7= ({firstName,
           />
         </label>
 
-        <div>
+        <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
         </div>
       </div>

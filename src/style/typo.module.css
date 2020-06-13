@@ -17,7 +17,13 @@
 
 .text {
   font-family: montserrat-medium, sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  color: blackColor;
+}
+
+.bold {
+  font-family: montserrat-bold, sans-serif;
+  font-size: 1.7rem;
   color: blackColor;
 }
 

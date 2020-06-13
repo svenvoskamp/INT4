@@ -24,7 +24,7 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
           name="filename"
           onChange = {e => setImg(e.target.files[0])}/>
         </label>
-        <div>
+        <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
         </div>
       </div>

@@ -1,13 +1,6 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor, backgroundColor from tokens;
 
-.background {
-    background-image: url(/assets/backgrounds/step1_right.svg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: auto 100%;
-}
-
 .content {
     composes: view from "../../style/layout.module.css";
     composes: spaceBetween from "../../style/layout.module.css";
@@ -15,6 +8,11 @@
 
 .back {
     composes: backButton from "../../style/buttons.module.css";
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
 }
 
 .confirm {
@@ -44,6 +42,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.person_gender {
+    display: flex;
+}
+
+.checkbox_male, .checkbox_female {
+    display: none;
+}
+
+.gender_male, .gender_female {
+    cursor: pointer;
+}
+
+.checkbox_male[type='radio']:checked+.gender_male .male_icon {
+    fill: white;
+}
+
+.checkbox_male[type='radio']:checked+.gender_male .male_circle {
+    stroke: #006A5E; 
+    fill: #006A5E;
+}
+
+.checkbox_female[type='radio']:checked+.gender_female .female_icon {
+    fill: white;
+}
+
+.checkbox_female[type='radio']:checked+.gender_female .female_circle {
+    stroke: primaryColor; 
+    fill: primaryColor;
+}
+
+.male_circle{
+    stroke: #006A5E; 
+} 
+
+.male_icon {
+    fill: #006A5E;
+}
+
+.female_circle{
+    fill: transparent; 
+    stroke: primaryColor;
+} 
+
+.female_icon {
+    fill: primaryColor;
 }
 
 .name_text {

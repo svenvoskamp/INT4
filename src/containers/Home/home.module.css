@@ -2,24 +2,59 @@
 @value primaryColor from tokens;
 
 .content {
-    composes: view from "../../style/layout.module.css";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 75% 1fr;
+    grid-template-areas:
+    "login"
+    "info"
+    ".";
     height: 100vh;
-  }
+    align-items: center;
+}
+
+.content_login {
+    grid-area: login;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.login_button {
+    composes: backButton from "../../style/buttons.module.css";
+    margin-right: 5rem;
+}
+
+
+.content_info {
+    grid-area: info;
+    composes: view from "../../style/layout.module.css";
+}
+
+.background {
+    background-image: url(/assets/backgrounds/splash_left_back.png),url(/assets/backgrounds/splash_background.png);
+    background-repeat: no-repeat;
+    background-size: 65% 100%, cover;
+    background-position: left, 50% 50%;
+}
+
+.background_elements {
+    background-image: url(/assets/backgrounds/elements_splash_left.png),url(/assets/backgrounds/elements_splash_right.png),url(/assets/backgrounds/elements_splash_bottom.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%, auto 100%, 100% auto;
+    background-position: left, right, bottom;
+}
   
 .title {
     composes: title from "../../style/typo.module.css";
-    font-size: 5rem;
+    font-size: 6rem;
     color: primaryColor;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     width: 50%;
+    line-height: 1.2;
 }   
 
 .text {
     composes: text from "../../style/typo.module.css";
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     width: 50%;
 }    
 

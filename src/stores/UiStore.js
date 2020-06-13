@@ -25,7 +25,7 @@ class UiStore {
       await this.rootStore.bookingStore.getBookings();
       console.log("De user is ingelogd");
       const currentUser = this.rootStore.userStore.getUserById(newUser.id);
-      if(currentUser == undefined){
+      if(currentUser === undefined){
       this.setCurrentUser(newUser);
       }else {
       this.setCurrentUser(currentUser);

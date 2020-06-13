@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import style from "./country.module.css";
 
 const Country = ({country, setCountry}) => {
 
   return (
-    <div>
-    <img src={country.img} width="400" height="400" />
+    <div className={style.option}>
+      <img src={country.img} width="400" height="400" alt={country.id} />
       <label htmlFor = {country.country}>
-        <span>{country.country}</span>
+        <p className={style.option_text}>{country.country}</p>
         <input
         id = {country.id}
         type = "radio"

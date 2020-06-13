@@ -10,6 +10,11 @@
     composes: backButton from "../../style/buttons.module.css";
 }
 
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
 .confirm {
     composes: buttonBlack from "../../style/buttons.module.css";
 }

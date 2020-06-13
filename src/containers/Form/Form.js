@@ -65,7 +65,7 @@ const Form = () => {
       const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
       const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, email, telephone, terms, userId: uiStore.currentUser.id });
     try {
-      console.log(booking);
+      console.log(booking); 
       console.log(userData);
       const newBooking = await bookingStore.createBooking(booking);
       const newUserData = await userStore.createUserData(uiStore.currentUser, userData, uiStore.currentUser.email);
@@ -95,10 +95,10 @@ const Form = () => {
             <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 2 &&
-            <Step3 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
+            <Step3 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 3 &&
-            <Step4 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
+            <Step4 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 4 &&
             <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>

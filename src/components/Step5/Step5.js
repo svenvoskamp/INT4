@@ -35,7 +35,7 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
             />
           </label>
         </div>
-        <div>
+        <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
         </div>
       </div>

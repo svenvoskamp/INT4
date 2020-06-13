@@ -1,15 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import style from "./type.module.css";
 
 const Type = ({type, setType}) => {
 
-
   return (
-    <div>
+    <div className={style.option}>
       <img src={type.img} width="400" height="400"/>
       <label htmlFor = {type.type}>
-        <span>{type.type}</span>
+        <p className={style.option_text}>{type.type}</p>
         <input
         id = {type.id}
         type = "radio"

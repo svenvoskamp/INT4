@@ -37,10 +37,10 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
             />
           </label>
           <div className={style.count_container}>
-            <p className={style.slider_count}>{count}</p>
+            <p className={style.slider_count}>{count} jaar</p>
           </div>
         </div>
-        <div>
+        <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>En we leefden nog lang en gelukkig</button>
         </div>
       </div>
