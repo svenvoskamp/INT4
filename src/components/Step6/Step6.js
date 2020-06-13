@@ -17,12 +17,18 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
           <h2 className={style.subtitle}>Upload jullie meeste memorable foto van jullie huwelijkreis.</h2>
         </div>
         <label htmlFor = "img">
-          <span>Stuur de leukste foto van jullie samen van jullie huwelijksreis!</span>
-          <input
+          <input className={style.input_image}
           type="file"
           id="img"
           name="filename"
           onChange = {e => setImg(e.target.files[0])}/>
+          <div className={style.polaroid_container}>
+            <img className={style.content_polaroid} src="/assets/images/polaroid.png" />
+            <svg className={style.polaroid_add} width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="31.8505" y1="2.75311" x2="26.3944" y2="53.4604" stroke="#424242" stroke-width="5" stroke-linecap="round"/>
+              <line x1="53.9256" y1="31.2787" x2="3.2183" y2="25.8226" stroke="#424242" stroke-width="5" stroke-linecap="round"/>
+            </svg>
+          </div>
         </label>
         <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>

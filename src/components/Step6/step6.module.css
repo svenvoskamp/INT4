@@ -29,3 +29,21 @@
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
 }   
+
+.polaroid_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_polaroid {
+    position: absolute;
+}
+
+.polaroid_add {
+    position: relative;
+}
+
+.input_image {
+    display: none;
+}

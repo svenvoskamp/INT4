@@ -16,6 +16,16 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
           <h1 className={style.title}>Wie draagt de <span>broek...?</span></h1>
           <h2 className={style.subtitle}>Wie van jullie neemt het meest het voortouw in de relatie?</h2>
         </div>
+        <div className={style.content_pants}>
+          <video className = "video1" width="400" height = "400"  loop autoPlay muted>
+            <source src="../../assets/video/male.webm" type="video/webm"/>
+            <source src="../../assets/video/male.mp4" type="video/mp4"/>
+          </video>
+          <video className = "video1" width="400" height = "400"  loop autoPlay muted>
+            <source src="../../assets/video/male.webm" type="video/webm"/>
+            <source src="../../assets/video/male.mp4" type="video/mp4"/>
+          </video>
+        </div>
         <div className={style.container_slider}>
           <div className={style.slider_placeholder}>
             <p>{name1}</p>

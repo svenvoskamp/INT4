@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
   display: inline-block;
   background-size: contain;
-  padding: 1.5rem 1.5rem;
+  padding: 2rem 3rem;
   background-position: 50% 50%;
   composes: button from "../style/typo.module.css";
 }

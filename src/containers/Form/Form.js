@@ -27,7 +27,6 @@ const Form = () => {
 
   // Form css
 
-
   // Formulier : boeking
   const [ name1, setName1] = useState("");
   const [ name2, setName2] = useState("");

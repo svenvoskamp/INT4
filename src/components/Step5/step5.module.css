@@ -28,7 +28,12 @@
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
-}   
+}  
+
+.content_pants {
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .container_slider {
     display: flex;

@@ -8,4 +8,5 @@
 .form_input {
     grid-area: form;
     height: 100%;
+    padding: 2rem 0;
 }
