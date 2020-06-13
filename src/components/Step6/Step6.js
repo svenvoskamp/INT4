@@ -9,6 +9,17 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
     }
   }
 
+  const handleInput = e => {
+    if(e.target.files[0]){
+      const img = document.getElementById("id_img");
+      console.log(img);
+      img.src = URL.createObjectURL(e.target.files[0]);
+      img.onload = function() {
+        URL.revokeObjectURL(img.src);
+      }
+    }
+  }
+
   return (
     <>
       <div className={style.content}>
@@ -21,8 +32,9 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
           type="file"
           id="img"
           name="filename"
-          onChange = {e => setImg(e.target.files[0])}/>
+          onChange = {e => {setImg(e.target.files[0]); handleInput(e)}}/>
           <div className={style.polaroid_container}>
+            <img id = "id_img" className = {style.polaroid_image} src = "" alt = ""/>
             <img className={style.content_polaroid} src="/assets/images/polaroid.png" />
             <svg className={style.polaroid_add} width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
               <line x1="31.8505" y1="2.75311" x2="26.3944" y2="53.4604" stroke="#424242" stroke-width="5" stroke-linecap="round"/>

@@ -23,12 +23,12 @@
     composes: title from "../../style/typo.module.css";
     text-align: center;
     margin-bottom: 1rem;
-}   
+}
 
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
-}   
+}
 
 .polaroid_container {
     display: flex;
@@ -38,6 +38,9 @@
 
 .content_polaroid {
     position: absolute;
+    overflow: hidden;
+    width: 20rem;
+    height: 20rem;
 }
 
 .polaroid_add {

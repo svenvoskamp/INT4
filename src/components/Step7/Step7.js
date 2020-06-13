@@ -24,7 +24,7 @@ const Step7= ({firstName,
               setCurrentIndex}) => {
 
   const handleClick = () => {
-    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== 0){
+    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== ""){
       setCurrentIndex(7);
     }
   }
@@ -157,9 +157,9 @@ const Step7= ({firstName,
           <input
             required
             id="terms"
-            value="1"
+            value=""
             type="checkbox"
-            onChange={e => setTerms(e.currentTarget.value)}
+            onChange={e => setTerms(1)}
           />
         </label>
 
