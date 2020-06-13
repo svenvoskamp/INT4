@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useStores } from "../../hooks/index";
-import User from "../../models/User";
-import { useHistory } from "react-router-dom";
+
 
 const RegisterForm = () => {
   const { uiStore } = useStores();

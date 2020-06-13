@@ -24,7 +24,7 @@ const Step7= ({firstName,
               setCurrentIndex}) => {
 
   const handleClick = () => {
-    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms == 1){
+    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms === 1){
       setCurrentIndex(7);
     }
   }
@@ -36,7 +36,7 @@ const Step7= ({firstName,
           <h1 className={style.title}>Nog even wat <span>administratie!</span></h1>
           <h2 className={style.subtitle}>Velden met * zijn verplicht.</h2>
         </div>
-        
+
         <label htmlFor="firstName" >
         <span>Voornaam:</span>
           <input
@@ -167,7 +167,7 @@ const Step7= ({firstName,
           <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
         </div>
       </div>
-      
+
     </>
   );
 }

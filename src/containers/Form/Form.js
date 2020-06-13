@@ -61,11 +61,12 @@ const Form = () => {
     console.log(imgRef);
     const imgUrl = imgRef.name;
     await imgRef.put(img);
-    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms == 1) {
+    console.log(terms);
+    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== 0) {
       const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
       const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, email, telephone, terms, userId: uiStore.currentUser.id });
     try {
-      console.log(booking); 
+      console.log(booking);
       console.log(userData);
       const newBooking = await bookingStore.createBooking(booking);
       const newUserData = await userStore.createUserData(uiStore.currentUser, userData, uiStore.currentUser.email);

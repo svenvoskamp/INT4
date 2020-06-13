@@ -6,7 +6,7 @@ const Type = ({type, setType}) => {
 
   return (
     <div className={style.option}>
-      <img src={type.img} width="400" height="400"/>
+      <img src={type.img} width="400" height="400" alt = {type.type}/>
       <label htmlFor = {type.type}>
         <p className={style.option_text}>{type.type}</p>
         <input

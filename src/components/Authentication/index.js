@@ -1,6 +1,6 @@
 import React from "react";
 import 'mobx-react-lite/batchingForReactDom'
-import { Switch, Route, NavLink, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { ROUTES } from "../../consts";
 import RegisterForm from "./RegisterForm";
 import Form from "../../containers/Form/Form";

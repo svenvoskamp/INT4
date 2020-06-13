@@ -17,7 +17,7 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
           <h2 className={style.subtitle}>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
         </div>
         <div className={style.content_media}>
-          <img src="/assets/images/silver_ring.png"/>
+          <img src="/assets/images/silver_ring.png" alt = "ring"/>
         </div>
         <div className={style.container_slider}>
           <div className={style.slider_placeholder}>
