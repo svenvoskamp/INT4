@@ -113,7 +113,7 @@ const Form = () => {
             <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 7 &&
-            <Step8 setCurrentIndex = {setCurrentIndex} text = {text}/>
+            <Step8 setCurrentIndex = {setCurrentIndex} text = {text} name1 = {name1} name2 = {name2} email = {email} adress = {adress} zip = {zip} city = {city} telephone = {telephone} busNumber = {busNumber} houseNumber = {houseNumber} country = {country} type = {type}/>
           }
         </form>
       </div>
