@@ -43,10 +43,10 @@ body {
 
 .form1 {
   height: 100vh;
-  background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
+  background-image: url(/assets/backgrounds/step2_right.png), url(/assets/backgrounds/step2_bottom.png), url(/assets/backgrounds/step2_left.png);
   background-repeat: no-repeat;
-  background-size: auto 100%, auto auto, auto auto;
-  background-position: right, top left, left bottom;
+  background-size: auto 100%, 100% auto, auto auto;
+  background-position: right, bottom, left;
 }
 
 .form2 {
@@ -75,10 +75,10 @@ body {
 
 .form5 {
   height: 100vh;
-  background-image: url(/assets/backgrounds/step5_left.png), url(/assets/backgrounds/step5_right_bottom.png);
+  background-image: url(/assets/backgrounds/step6_left.png), url(/assets/backgrounds/step6_bottom.png), url(/assets/backgrounds/step6_right.png);
   background-repeat: no-repeat;
-  background-size: auto 100%, auto auto;
-  background-position: left, right bottom;
+  background-size: auto 100%, 100% auto, auto 100%;
+  background-position: left, bottom, right;
 }
 
 .form6 {

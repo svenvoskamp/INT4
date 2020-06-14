@@ -22,8 +22,8 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
             <source src="../../assets/video/male.mp4" type="video/mp4"/>
           </video>
           <video className = "video1" width="400" height = "400"  loop autoPlay muted>
-            <source src="../../assets/video/male.webm" type="video/webm"/>
-            <source src="../../assets/video/male.mp4" type="video/mp4"/>
+            <source src="../../assets/video/woman.webm" type="video/webm"/>
+            <source src="../../assets/video/woman.mp4" type="video/mp4"/>
           </video>
         </div>
         <div className={style.container_slider}>

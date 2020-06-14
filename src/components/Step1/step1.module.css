@@ -23,7 +23,12 @@
     composes: title from "../../style/typo.module.css";
     text-align: center;
     margin-bottom: 1rem;
-}   
+}  
+
+.title_span {
+    background-image: url(/assets/backgrounds/span_background.svg);
+    background-position: -5rem 5rem;
+}
 
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";

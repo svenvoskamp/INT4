@@ -16,7 +16,12 @@ const Back = ({currentIndex, setCurrentIndex}) => {
 
   return (
       <div className={style.container_back}>
-        <button className={style.back} onClick = {handleBack}><img src="/assets/buttons/arrow_back.svg" alt="arrow" /></button>
+        <button className={style.back} onClick = {handleBack}>
+        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 6L2.25 6" stroke="#D52F4F" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M7.25 11L0.999999 6L7.25 1" stroke="#D52F4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        </button>
       </div>
   );
 }

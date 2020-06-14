@@ -2,7 +2,7 @@
 @value backgroundColor, primaryColor, blackColor, pinkColor from tokens;
 
 .inputFill {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,20 +18,22 @@
   border: none;
   background-repeat: no-repeat;
   display: inline-block;
-  background-size: contain;
-  padding: 2rem 3rem;
+  background-size: 100% 100%;
+  padding: 1.5rem 3rem;
   background-position: 50% 50%;
   composes: button from "../style/typo.module.css";
+  overflow: visible;
 }
 
 .backButton {
   color: primaryColor; 
   display: inline-block;
-  /* background-image: url(/assets/buttons/button_outline.svg); */
+  background-image: url(/assets/buttons/button_outline.svg);
   background-color: transparent;
   border: none;
+  padding: 1rem 1.5rem;
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: 100% 100%;
   background-position: 50% 50%;
   margin-left: 8rem;
 }

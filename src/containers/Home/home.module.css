@@ -21,12 +21,14 @@
 .login_button {
     composes: backButton from "../../style/buttons.module.css";
     margin-right: 8rem;
+    composes: italic from "../../style/typo.module.css";
 }
 
 
 .content_info {
     grid-area: info;
-    composes: view from "../../style/layout.module.css";
+    width:120rem;
+    margin: 0 auto;
 }
 
 .background {

@@ -24,3 +24,56 @@
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
 }   
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.content_input {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+}
+
+.input_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.input_media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.media_video {
+    width: 100%;
+    height: auto;
+}
+
+.info_container {
+    padding: 1rem 0;
+}
+
+.input_info {
+    padding-top: 5rem;
+}
+
+.info_title {
+    composes: bold from "../../style/typo.module.css";
+}
+
+.info_text {
+    composes: text from "../../style/typo.module.css";
+    padding: .2rem 0;
+}
+
+.info_italic {
+    composes: italic from "../../style/typo.module.css";
+}
+
+.media_name {
+    composes: bold from "../../style/typo.module.css";
+    text-align: center;
+}

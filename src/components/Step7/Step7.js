@@ -37,131 +37,57 @@ const Step7= ({firstName,
           <h2 className={style.subtitle}>Velden met * zijn verplicht.</h2>
         </div>
 
-        <label htmlFor="firstName" >
-        <span>Voornaam:</span>
-          <input
-            required
-            id="firstName"
-            min="0"
-            max="255"
-            value={firstName}
-            type="text"
-            placeholder="Alex"
-            onChange={e => setFirstName(e.currentTarget.value)}
-          />
-        </label>
+        <div className={style.form}>
+            <label htmlFor="firstName" className={`${style.form_firstname} ${style.form_item}`}>
+              <p className={style.item_title}>Voornaam:</p>
+              <input className={style.form_input} required id="firstName" min="0" max="255" value={firstName} type="text" placeholder="Alex" onChange={e => setFirstName(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="lastName" >
-        <span>Achternaam:</span>
-          <input
-            required
-            id="lastName"
-            min="0"
-            max="255"
-            value={lastName}
-            type="text"
-            placeholder="Verbeeck"
-            onChange={e => setLastName(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="lastName" className={`${style.form_lastname} ${style.form_item}`}>
+              <p className={style.item_title}>Achternaam:</p>
+              <input className={style.form_input} required id="lastName" min="0" max="255" value={lastName} type="text" placeholder="Verbeeck" onChange={e => setLastName(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="city" >
-        <span>Woonplaats:</span>
-          <input
-            required
-            id="city"
-            min="0"
-            max="255"
-            value={city}
-            type="text"
-            placeholder="Antwerpen"
-            onChange={e => setCity(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="email" className={`${style.form_email} ${style.form_item}`}>
+              <p className={style.item_title}>E-mail:</p>
+              <input className={style.form_input} required id="email" value={email} type="email" placeholder="alexanderverbeeck@gmail.com" onChange={e => setEmail(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="zip" >
-        <span>Postcode:</span>
-          <input
-            required
-            id="zip"
-            value={zip}
-            type="text"
-            placeholder="8500"
-            onChange={e => setZip(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="telephone" className={`${style.form_email} ${style.form_item}`}>
+              <p className={style.item_title}>Telefoon:</p>
+              <input className={style.form_input} required id="telephone" value={telephone} type="tel" placeholder="0482455642" onChange={e => setTelephone(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="adress" >
-        <span>Adress:</span>
-          <input
-            required
-            id="adress"
-            min="0"
-            max="255"
-            value={adress}
-            type="text"
-            placeholder="Jan Klausplein"
-            onChange={e => setAdress(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="city" className={`${style.form_city} ${style.form_item}`} >
+              <p className={style.item_title}>Woonplaats:</p>
+              <input className={style.form_input} required id="city" min="0" max="255" value={city} type="text" placeholder="Antwerpen" onChange={e => setCity(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="houseNumber" >
-        <span>Nr:</span>
-          <input
-            required
-            id="houseNumber"
-            value={houseNumber}
-            type="number"
-            placeholder="12"
-            onChange={e => setHouseNumber(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="zip" className={`${style.form_postcode} ${style.form_item}`}>
+              <p className={style.item_title}>Postcode:</p>
+              <input className={style.form_input} required id="zip" value={zip} type="text" placeholder="8500" onChange={e => setZip(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="busNumber" >
-        <span>Bus nr:</span>
-          <input
-            id="busNumber"
-            value={busNumber}
-            type="text"
-            placeholder="3A"
-            onChange={e => setBusNumber(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="adress" className={`${style.form_adres} ${style.form_item}`}>
+              <p className={style.item_title}>Adress:</p>
+              <input className={style.form_input} required id="adress" min="0" max="255" value={adress} type="text" placeholder="Jan Klausplein" onChange={e => setAdress(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="email" >
-        <span>E-mail:</span>
-          <input
-            required
-            id="email"
-            value={email}
-            type="email"
-            placeholder="alexanderverbeeck@gmail.com"
-            onChange={e => setEmail(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="houseNumber" className={`${style.form_huisnummer} ${style.form_item}`}>
+              <p className={style.item_title}>Nr:</p>
+              <input className={style.form_input} required id="houseNumber" value={houseNumber} type="number" placeholder="12" onChange={e => setHouseNumber(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="telephone" >
-        <span>Telefoon:</span>
-          <input
-            required
-            id="telephone"
-            value={telephone}
-            type="tel"
-            placeholder="0482455642"
-            onChange={e => setTelephone(e.currentTarget.value)}
-          />
-        </label>
+            <label htmlFor="busNumber" className={`${style.form_busnummer} ${style.form_item}`}>
+              <p className={style.item_title}>Bus nr:</p>
+              <input className={style.form_input} id="busNumber" value={busNumber} type="text" placeholder="3A" onChange={e => setBusNumber(e.currentTarget.value)}/>
+            </label>
 
-        <label htmlFor="terms" >
-        <span>Ik ga akkoord met de algemene voorwaarde:</span>
-          <input
-            required
-            id="terms"
-            value=""
-            type="checkbox"
-            onChange={e => setTerms(1)}
-          />
-        </label>
+            <label htmlFor="terms" className={`${style.form_terms} ${style.form_item}`}>
+            <input className={style.form_input} required id="terms" value="" type="checkbox" onChange={e => setTerms(1)}/>
+              <p className={`${style.item_title} ${style.title_terms}`}>Ik ga akkoord met de algemene voorwaarde.</p>
+            </label>
+        </div>
 
         <div className={style.button_container}>
           <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>

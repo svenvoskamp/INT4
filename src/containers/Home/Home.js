@@ -17,7 +17,7 @@ const Landing = () => {
       <div className={style.background_elements}>
         <div className={style.content}>
           <form className={style.content_login} onSubmit={handleLogOut}>
-                <input className={style.login_button} type="submit" value="Uitloggen"/>
+                <input className={style.login_button} type="submit" value="Log uit"/>
           </form>
           <div className={style.content_info}>
             <h1 className={style.title}>Herbeleef jullie huwelijkreis</h1>

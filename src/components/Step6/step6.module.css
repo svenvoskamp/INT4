@@ -39,8 +39,8 @@
 .content_polaroid {
     position: absolute;
     overflow: hidden;
-    width: 20rem;
-    height: 20rem;
+    width: 40rem;
+    height: 40rem;
 }
 
 .polaroid_add {

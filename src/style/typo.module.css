@@ -27,6 +27,12 @@
   color: blackColor;
 }
 
+.italic {
+  font-family: montserrat-italic, sans-serif;
+  font-size: 1.5rem;
+  color: blackColor;
+}
+
 .button {
   font-family: montserrat-medium, sans-serif;
   font-size: 1.6rem;
