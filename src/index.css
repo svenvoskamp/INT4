@@ -23,6 +23,7 @@ body {
 
 
 .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
+  height: 100vh;
   display: grid;
   grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
@@ -31,10 +32,7 @@ body {
   ".";
 }
 
-
-
 .form0 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
@@ -42,7 +40,6 @@ body {
 }
 
 .form1 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step2_right.png), url(/assets/backgrounds/step2_bottom.png), url(/assets/backgrounds/step2_left.png);
   background-repeat: no-repeat;
   background-size: auto 100%, 100% auto, auto auto;
@@ -50,7 +47,6 @@ body {
 }
 
 .form2 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step3_left.png), url(/assets/backgrounds/step3_right_top.png), url(/assets/backgrounds/step3_right_bottom.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
@@ -58,7 +54,6 @@ body {
 }
 
 .form3 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step4_left.png), url(/assets/backgrounds/step4_right_top.png), url(/assets/backgrounds/step4_right_bottom.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
@@ -66,7 +61,6 @@ body {
 }
 
 .form4 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step5_left.png), url(/assets/backgrounds/step5_right_bottom.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto;
@@ -74,7 +68,6 @@ body {
 }
 
 .form5 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step6_left.png), url(/assets/backgrounds/step6_bottom.png), url(/assets/backgrounds/step6_right.png);
   background-repeat: no-repeat;
   background-size: auto 100%, 100% auto, auto 100%;
@@ -82,7 +75,6 @@ body {
 }
 
 .form6 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step7_left.png), url(/assets/backgrounds/step7_right.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
@@ -90,10 +82,26 @@ body {
 }
 
 .form7 {
-  height: 100vh;
   background-image: url(/assets/backgrounds/step8_left.png), url(/assets/backgrounds/step8_right.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
   background-position: left, right;
 }
 
+@media screen and (max-width: 1500px) {
+  .form0 {
+    background-image: url(/assets/backgrounds/tablet_step1_right.png), url(/assets/backgrounds/tablet_step1_left_top.png), url(/assets/backgrounds/tablet_step1_left_bottom.png);
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
+    height: auto;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}

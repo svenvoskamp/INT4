@@ -21,6 +21,10 @@
     margin-bottom: 1rem;
 }   
 
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;

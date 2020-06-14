@@ -23,7 +23,11 @@
     composes: title from "../../style/typo.module.css";
     text-align: center;
     margin-bottom: 1rem;
-}   
+} 
+
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
 
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
@@ -33,6 +37,7 @@
 .content_pants {
     display: flex;
     justify-content: space-evenly;
+    width: 100%;
 }
 
 .container_slider {
@@ -62,4 +67,9 @@
   border: 1.2rem solid primaryColor;
   border-radius: 2rem;
   cursor: pointer;
+}
+
+.pants_video {
+    width: 100%;
+    height: auto;
 }

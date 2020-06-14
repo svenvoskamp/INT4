@@ -10,7 +10,7 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
     <>
       <div className={style.content}>
         <div className={style.content_header}>
-          <h1 className={style.title}>Snel eens <span>controleren!</span></h1>
+          <h1 className={style.title}>Snel eens <span className={style.title_span}>controleren!</span></h1>
           <h2 className={style.subtitle}>Deze informatie gaven jullie ons, klopt dit?</h2>
           <p className={style.subtitle}>{text}</p>
         </div>
@@ -39,10 +39,12 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
               <p className={style.info_text}>{city} {zip}</p>
               <p className={style.info_text}>{adress} {houseNumber} {busNumber}</p>
             </div>
-            <div className={style.info_container}>
-              <p className={style.info_italic}>Bancontact</p>
-            </div>
           </div>
+          <p className={style.input_control}>
+            Wij zullen jullie reservatie bekijken en laten jullie spoedig iets weten!
+            <br></br>
+            Alvast bedankt namens het ‘Jubileum’ Team!    
+          </p>
         </div>
         {text === "" &&
         <div className={style.button_container}>

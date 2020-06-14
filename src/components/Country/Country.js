@@ -6,9 +6,20 @@ const Country = ({country, setCountry}) => {
 
   return (
     <div className={style.option}>
-      <label htmlFor = {country.id}>
-        <img src={country.img} width="400" height="400" alt={country.id} />
-        <input className={style.checkbox_country} id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
+      <label className={style.option_label} htmlFor = {country.id}>
+        <video className={style.option_video} width="400" height = "400"  loop autoPlay muted>
+          <source src={country.img} type="video/mp4"/>
+          <source src={country.img} type="video/mp4"/>
+        </video>
+        {country.country === "Italië" &&
+        <input className={style.checkbox_country} disabled id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
+        }
+          {country.country === "Mexico" &&
+         <input className={style.checkbox_country} disabled id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
+      }
+          {country.country === "Indonesië" &&
+         <input className={style.checkbox_country}  id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
+        }
         <p className={style.option_text}>{country.country}</p>
       </label>
     </div>

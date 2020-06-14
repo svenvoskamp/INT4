@@ -25,6 +25,10 @@
     margin-bottom: 1rem;
 }   
 
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
@@ -34,3 +38,11 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media screen and (max-width: 500px) {
+
+    .content_images {
+        flex-direction: column;
+    }
+  
+  }

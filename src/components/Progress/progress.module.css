@@ -5,10 +5,11 @@
     width: 100%;
     -webkit-appearance: none;
     appearance: none;
+    height: auto;
 }
 
 .progressbar[value]::-webkit-progress-bar {
-    background-color: backgroundColor;
+    background-color: transparent;
     border: .3rem solid primaryColor;
     border-radius: 2rem;
     height: 2rem;

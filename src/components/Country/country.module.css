@@ -2,7 +2,11 @@
     width: 100%;
 }
 
-.option img {
+.option_label {
+    cursor: pointer;
+}
+
+.option_video {
     width: 100%;
     height: auto;
 }
@@ -15,8 +19,21 @@
 
 .checkbox_country{
     display: none;
+    cursor: pointer;
 }
 
 .checkbox_country[type='radio']:checked+.option_text {
     font-family: montserrat-bold;
 }
+
+.checkbox_country[type='radio']:checked+.option_video {
+    opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+
+    .option_text {
+        margin: 0;
+    }
+  
+  }

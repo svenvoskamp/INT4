@@ -2,7 +2,11 @@
     width: 100%;
 }
 
-.option img {
+.option_label {
+    cursor: pointer;
+}
+
+.option_video {
     width: 100%;
     height: auto;
 }
@@ -11,6 +15,7 @@
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .checkbox_type{

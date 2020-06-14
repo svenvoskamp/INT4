@@ -26,8 +26,7 @@
 }  
 
 .title_span {
-    background-image: url(/assets/backgrounds/span_background.svg);
-    background-position: -5rem 5rem;
+    composes: titleSpan from "../../style/typo.module.css";
 }
 
 .subtitle {
@@ -47,12 +46,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .person_container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
 }
 
 /* Gender */
@@ -61,6 +62,11 @@
     display: flex;
     flex-direction: column;
     padding: 0 2rem;
+}
+
+.gender_video {
+    width: 100%;
+    height: auto;
 }
 
 .checkbox_male, .checkbox_female {
@@ -122,3 +128,42 @@
     composes: inputFill from "../../style/buttons.module.css";
     width: 100%;
 }
+
+@media screen and (max-width: 1050px) {
+    .person_container {
+        flex-direction: column;
+    }
+
+    .container_female {
+        flex-direction: column-reverse;
+    }
+
+    .person_gender {
+        flex-direction: row;
+    }
+
+    .person_gender label {
+        padding: 0 .5rem;
+    }
+
+    .person_name {
+        width: 100%;
+        padding: 0 5rem;
+    }
+    
+  }
+
+  @media screen and (max-width: 500px) {
+    .content_persons {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .person_container {
+        margin-top: 2rem;
+    }
+
+    .person_name {
+        padding: 0;
+    }
+  }

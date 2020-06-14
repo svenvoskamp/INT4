@@ -8,6 +8,14 @@
   font-size: 2.5rem;
 }
 
+.titleSpan {
+  background-image: url(/assets/backgrounds/span_background.svg);
+  padding: .2rem 0;
+  background-size: 100% 45%;
+  background-position: bottom ;
+  background-repeat: no-repeat;
+}
+
 .subtitle {
   font-family: montserrat, sans-serif;
   color: blackColor;
@@ -21,6 +29,12 @@
   color: blackColor;
 }
 
+.textLight {
+  font-family: montserrat-light, sans-serif;
+  font-size: 1.5rem;
+  color: blackColor;
+}
+
 .bold {
   font-family: montserrat-bold, sans-serif;
   font-size: 1.7rem;
@@ -29,7 +43,7 @@
 
 .italic {
   font-family: montserrat-italic, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: blackColor;
 }
 

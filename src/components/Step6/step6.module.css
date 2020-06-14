@@ -25,6 +25,10 @@
     margin-bottom: 1rem;
 }
 
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
 .subtitle {
     composes: subtitle from "../../style/typo.module.css";
     text-align: center;
@@ -34,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .content_polaroid {
@@ -44,9 +49,24 @@
 }
 
 .polaroid_add {
-    position: relative;
+    position: absolute;
+}
+
+.polaroid_image {
+    width: 30rem;
+    height: 29rem;
+    object-fit: cover;
+    transform: rotate(7deg);
 }
 
 .input_image {
     display: none;
 }
+
+@media screen and (max-width: 500px) {
+
+    .polaroid_container {
+        margin: 10rem;
+    }
+  
+  }

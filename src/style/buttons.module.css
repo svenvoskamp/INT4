@@ -2,7 +2,7 @@
 @value backgroundColor, primaryColor, blackColor, pinkColor from tokens;
 
 .inputFill {
-  padding: 1rem 1.5rem;
+  padding: 1.2rem 1.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,6 +23,25 @@
   background-position: 50% 50%;
   composes: button from "../style/typo.module.css";
   overflow: visible;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.buttonBlack::after{
+  content: ">";
+  transform: translateX(4rem);
+  display: inline-block;
+  transition: transform 0.3s;
+  opacity: 0;
+}
+
+.buttonBlack:hover{
+  background-image: url(/assets/buttons/button_full_black.svg);
+}
+
+.buttonBlack:hover::after{
+  transform: translateX(1rem);
+  opacity: 1;
 }
 
 .backButton {
@@ -35,7 +54,8 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: 50% 50%;
-  margin-left: 8rem;
+  margin-left: 5rem;
+  cursor: pointer;
 }
 
 .slider {
@@ -47,4 +67,24 @@
   outline: none;
   border-radius: 0.5rem;
   background-color: pinkColor; 
+}
+
+@media screen and (max-width: 500px) {
+
+  .backButton {
+    color: primaryColor; 
+    display: inline-block;
+    background-image: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.buttonBlack {
+  background-image: url(/assets/buttons/button_full.svg);
+  padding: 1.5rem 3rem;
+  margin-top: 2rem;
+
+}
+
 }

@@ -13,11 +13,14 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
     <>
       <div className={style.content}>
         <div className={style.content_header}>
-          <h1 className={style.title}>Let's go <span>{name1} & {name2}!</span></h1>
+          <h1 className={style.title}>Let's go <span className={style.title_span}>{name1} & {name2}!</span></h1>
           <h2 className={style.subtitle}>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
         </div>
         <div className={style.content_media}>
-          <img src="/assets/images/silver_ring.png" alt = "ring"/>
+        <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+              <source src="../../assets/video/male.webm" type="video/webm"/>
+              <source src="../../assets/video/male.mp4" type="video/mp4"/>
+            </video>
         </div>
         <div className={style.container_slider}>
           <div className={style.slider_placeholder}>

@@ -10,3 +10,12 @@
     height: 100%;
     padding: 2rem 0;
 }
+
+@media screen and (max-width: 500px) {
+
+    .form_header {
+        grid-template-columns: 1fr 60% 1fr;
+        margin: 2rem 0;    }
+
+  }
+

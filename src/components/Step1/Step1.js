@@ -7,7 +7,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
   console.log(sex1);
   console.log(sex2);
   useEffect (() => {
-  const geslacht1 = document.querySelector(".video1");
+  const geslacht1 = document.getElementById("video1");
   if(sex1 === "male"){
       if(geslacht1.currentSrc.includes("woman")){
       geslacht1.src ="../../assets/video/male.webm";
@@ -21,7 +21,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
       }
   }
 
-  const geslacht2 = document.querySelector(".video2");
+  const geslacht2 = document.getElementById("video2");
   if(sex2 === "female"){
       if(geslacht2.currentSrc.includes("male")){
       geslacht2.src ="../../assets/video/woman.webm";
@@ -69,7 +69,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
                   </svg>
                 </label>
               </div>
-              <video className = "video1" width="400" height = "400"  loop autoPlay muted>
+              <video id="video1" className={style.gender_video} width="400" height = "400"  loop autoPlay muted>
                 <source src="../../assets/video/male.webm" type="video/webm"/>
                 <source src="../../assets/video/male.mp4" type="video/mp4"/>
               </video>
@@ -82,8 +82,8 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
             </div>
           </div>
           <div className={style.content_person}>
-            <div className={style.person_container}>
-              <video className = "video2" width="400" height = "400" loop autoPlay muted>
+            <div className={`${style.person_container} ${style.container_female}`}>
+              <video id="video2" className = {style.gender_video}  width="400" height = "400" loop autoPlay muted>
                 <source src="../../assets/video/woman.webm" type="video/webm"/>
                 <source src="../../assets/video/woman.mp4" type="video/mp4"/>
               </video>
@@ -107,7 +107,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
             <div className={style.person_name}>
               <p className={style.name_text}>Voornaam</p>
               <label htmlFor="name2" >
-                <input className={style.name_input} required id="name2" min="0" max="255" value={name2} type="text" placeholder="Celine" onChange={e => setName2(e.currentTarget.value)} />
+                <input className={style.name_input} required id="name2" min="0" max="255" value={name2} type="text" placeholder="Dante" onChange={e => setName2(e.currentTarget.value)} />
               </label>
             </div>
         </div>
