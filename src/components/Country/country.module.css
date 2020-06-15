@@ -32,8 +32,40 @@
 
 @media screen and (max-width: 500px) {
 
+    .option {
+        margin-bottom: 2rem;
+    }
+
     .option_text {
         margin: 0;
+    }
+
+    .option_video {
+        padding: 0 5rem;
+    }
+
+    .country_option {
+        margin: 2rem 0;
+    }
+  
+  }
+
+  @media screen and (max-width: 380px) {
+
+    .option {
+        margin-bottom: 2rem;
+    }
+
+    .option_text {
+        margin: 0;
+    }
+
+    .option_video {
+        padding: 0 3rem;
+    }
+
+    .country_option {
+        margin: 2rem 0;
     }
   
   }

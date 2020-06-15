@@ -17,20 +17,21 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
         <div className={style.content_input}>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/woman.webm" type="video/webm"/>
-              <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+              <source src="../../assets/video/country_mexico.webm" type="video/webm"/>
+              <source src="../../assets/video/country_mexico.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{selectedCountry.country}</p>
           </div>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/male.webm" type="video/webm"/>
-              <source src="../../assets/video/male.mp4" type="video/mp4"/>
+              <source src="../../assets/video/type_adventure.webm" type="video/webm"/>
+              <source src="../../assets/video/type_adventure.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{selectedType.type}</p>
           </div>
           <div className={style.input_info}>
             <p className={style.info_title}>{name1} & {name2}</p>
+            <div className={style.info_gegevens}>
             <div className={style.info_container}>
               <p className={style.info_text}>{email}</p>
               <p className={style.info_text}>{telephone}</p>
@@ -38,6 +39,7 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
             <div className={style.info_container}>
               <p className={style.info_text}>{city} {zip}</p>
               <p className={style.info_text}>{adress} {houseNumber} {busNumber}</p>
+            </div>
             </div>
           </div>
           <p className={style.input_control}>

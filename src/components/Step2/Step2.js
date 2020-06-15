@@ -17,10 +17,9 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
           <h2 className={style.subtitle}>Wanneer zijn jullie in het huwelijksbootje gestapt?</h2>
         </div>
         <div className={style.content_media}>
-        <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/male.webm" type="video/webm"/>
-              <source src="../../assets/video/male.mp4" type="video/mp4"/>
-            </video>
+          <video className={style.media_video} width="500" height = "500"  loop autoPlay muted>
+            <source src="../../assets/video/type_culture.webm" type="video/webm"/>
+          </video>
         </div>
         <div className={style.container_slider}>
           <div className={style.slider_placeholder}>

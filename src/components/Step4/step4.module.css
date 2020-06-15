@@ -39,10 +39,21 @@
     justify-content: space-between;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+
+  }
+  
+  @media screen and (max-width: 500px) {
 
     .content_images {
         flex-direction: column;
     }
-  
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }  
   }

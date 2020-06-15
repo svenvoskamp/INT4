@@ -1,7 +1,7 @@
 .form_header {
     grid-area: progressbar;
     display: grid;
-    grid-template-columns: 1fr 40% 1fr;
+    grid-template-columns: 1fr 96rem 1fr;
     align-items: center;
 }
 
@@ -11,11 +11,22 @@
     padding: 2rem 0;
 }
 
+@media screen and (max-width: 1250px)  {
+    .form_header {
+        grid-template-columns: 1fr 65% 1fr;
+    }
+}
+
 @media screen and (max-width: 500px) {
 
     .form_header {
         grid-template-columns: 1fr 60% 1fr;
-        margin: 2rem 0;    }
+        margin: 3rem 0;    
+    }
+
+    .form_input {
+        padding: 0;
+    }
 
   }
 

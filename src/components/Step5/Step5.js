@@ -17,11 +17,11 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
           <h2 className={style.subtitle}>Wie van jullie neemt het meest het voortouw in de relatie?</h2>
         </div>
         <div className={style.content_pants}>
-          <video id="video1" className={style.pants_video} width="400" height = "400"  loop autoPlay muted>
-            <source src="../../assets/video/male.webm" type="video/webm"/>
-            <source src="../../assets/video/male.mp4" type="video/mp4"/>
+          <video id="video2" className = {style.pants_video}  width="400" height = "400" loop autoPlay muted>
+            <source src="../../assets/video/woman.webm" type="video/webm"/>
+            <source src="../../assets/video/woman.mp4" type="video/mp4"/>
           </video>
-          <video id="video2" className={style.pants_video} width="400" height = "400"  loop autoPlay muted>
+          <video id="video2" className = {style.pants_video}  width="400" height = "400" loop autoPlay muted>
             <source src="../../assets/video/woman.webm" type="video/webm"/>
             <source src="../../assets/video/woman.mp4" type="video/mp4"/>
           </video>

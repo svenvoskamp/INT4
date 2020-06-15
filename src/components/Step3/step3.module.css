@@ -4,6 +4,7 @@
 .content {
     composes: view from "../../style/layout.module.css";
     composes: spaceBetween from "../../style/layout.module.css";
+    z-index: -1;
 }
 
 .back {
@@ -41,6 +42,14 @@
 }
 
 @media screen and (max-width: 500px) {
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }  
 
     .content_images {
         flex-direction: column;

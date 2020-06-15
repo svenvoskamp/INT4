@@ -36,9 +36,9 @@
 
 .form {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 3rem;
     grid-row-gap: 2rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .form_item {
@@ -100,4 +100,63 @@
     grid-column: 1/7;
     flex-direction: row;
     align-items: center;
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }  
+
+    .form {
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
+    }
+
+    .form_firstname {
+        grid-column: 1/7;
+    }
+    
+    .form_lastname {
+        grid-column: 1/7;
+    }
+    
+    .form_city {
+        grid-column: 1/5;
+    }
+    
+    .form_postcode {
+        grid-column: 5/7;
+    }
+    
+    .form_adres {
+        grid-column: 1/7;
+    }
+    
+    .form_huisnummer {
+        grid-column: 1/4;
+    }
+    
+    .form_busnummer {
+        grid-column: 4/7;
+    }
+    
+    .form_email {
+        grid-column: 1/7;
+    }
+    
+    .form_telephone {
+        grid-column: 1/7;
+    }
+    
+    .form_terms {
+        grid-column: 1/7;
+        flex-direction: row;
+        align-items: center;
+    }
 }

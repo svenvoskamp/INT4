@@ -25,6 +25,9 @@
   overflow: visible;
   cursor: pointer;
   transition: all .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .buttonBlack::after{
@@ -69,6 +72,13 @@
   background-color: pinkColor; 
 }
 
+@media screen and (max-width: 1250px) {
+
+  .backButton {
+    margin: 0;
+} 
+}
+
 @media screen and (max-width: 500px) {
 
   .backButton {
@@ -78,12 +88,13 @@
     border: none;
     padding: 0;
     cursor: pointer;
+    margin: 0;
 }
 
 .buttonBlack {
   background-image: url(/assets/buttons/button_full.svg);
   padding: 1.5rem 3rem;
-  margin-top: 2rem;
+  margin: 5rem 0 3rem 0;
 
 }
 

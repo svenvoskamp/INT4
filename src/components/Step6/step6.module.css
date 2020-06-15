@@ -65,6 +65,14 @@
 
 @media screen and (max-width: 500px) {
 
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }  
+
     .polaroid_container {
         margin: 10rem;
     }

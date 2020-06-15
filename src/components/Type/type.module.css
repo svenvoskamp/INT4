@@ -25,3 +25,32 @@
 .checkbox_type[type='radio']:checked+.option_text {
     font-family: montserrat-bold;
 }
+
+@media screen and (max-width: 500px) {
+
+    .option {
+        margin-bottom: 2rem;
+    }
+
+    .option_text {
+        margin: 0;
+    }
+
+    .option_video {
+        padding: 0 5rem;
+    }
+
+    .type_option {
+        margin: 2rem 0;
+    }
+  
+  }
+
+  @media screen and (max-width: 380px) {
+
+
+    .option_video {
+        padding: 0 3rem;
+    }
+  
+  }

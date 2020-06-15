@@ -69,6 +69,10 @@
     height: auto;
 }
 
+.video_mirror {
+    transform: scaleX(-1);
+}
+
 .checkbox_male, .checkbox_female {
     display: none;
 }
@@ -129,17 +133,22 @@
     width: 100%;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1000px) {
+    .content_persons {
+        grid-column-gap: 4rem;
+      }
+
     .person_container {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .container_female {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .person_gender {
         flex-direction: row;
+        margin-bottom: 1rem;
     }
 
     .person_gender label {
@@ -148,22 +157,31 @@
 
     .person_name {
         width: 100%;
-        padding: 0 5rem;
+        padding: 0;
     }
     
   }
 
-  @media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }   
+
     .content_persons {
       display: flex;
       flex-direction: column;
     }
 
-    .person_container {
-        margin-top: 2rem;
+    .content_person {
+        margin-bottom: 2rem;
     }
 
     .person_name {
         padding: 0;
     }
-  }
+}

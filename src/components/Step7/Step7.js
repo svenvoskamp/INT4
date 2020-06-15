@@ -53,7 +53,7 @@ const Step7= ({firstName,
               <input className={style.form_input} required id="email" value={email} type="email"  onChange={e => setEmail(e.currentTarget.value)}/>
             </label>
 
-            <label htmlFor="telephone" className={`${style.form_email} ${style.form_item}`}>
+            <label htmlFor="telephone" className={`${style.form_telephone} ${style.form_item}`}>
               <p className={style.item_title}>Telefoon:*</p>
               <input className={style.form_input} required id="telephone" value={telephone} type="tel"  onChange={e => setTelephone(e.currentTarget.value)}/>
             </label>
@@ -84,7 +84,7 @@ const Step7= ({firstName,
             </label>
 
             <label htmlFor="terms" className={`${style.form_terms} ${style.form_item}`}>
-            <input className={style.form_input} required id="terms" value="" type="checkbox" onChange={e => setTerms(1)}/>
+              <input className={style.form_input} required id="terms" value="" type="checkbox" onChange={e => setTerms(1)}/>
               <p className={`${style.item_title} ${style.title_terms}`}>Ik ga akkoord met de algemene voorwaarde.*</p>
             </label>
         </div>

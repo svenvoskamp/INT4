@@ -2,3 +2,6 @@
 @value primaryColor: rgb(213, 47, 49);
 @value pinkColor: rgb(244, 199, 200);
 @value blackColor: rgb(66, 66, 66);
+
+@custom-media --only-small-screen (width >= 360px);
+@custom-media --only-desktop-screen (width >= 1000px);

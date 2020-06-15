@@ -34,6 +34,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.media_video {
+    width: auto;
+    height: 100%;
 }
 
 .container_slider {
@@ -41,6 +47,7 @@
     flex-direction: column;
     width: 70%;
     margin: 0 auto;
+    padding: 5rem 0;
 }
 
 .slider_placeholder {
@@ -75,3 +82,33 @@
   border-radius: 2rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+
+    .container_slider {
+        width: 100%;
+        padding: 2rem .5rem;
+    }
+  
+  }
+
+@media screen and (max-width: 500px) {
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }   
+
+    .content_media {
+        margin-top: 3rem;
+    }
+
+    .media_video {
+        width: 100%;
+        height: auto;
+    }
+  
+  }

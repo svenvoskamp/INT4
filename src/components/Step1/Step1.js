@@ -83,7 +83,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
           </div>
           <div className={style.content_person}>
             <div className={`${style.person_container} ${style.container_female}`}>
-              <video id="video2" className = {style.gender_video}  width="400" height = "400" loop autoPlay muted>
+              <video id="video2" className = {`${style.gender_video} ${style.video_mirror}`}  width="400" height = "400" loop autoPlay muted>
                 <source src="../../assets/video/woman.webm" type="video/webm"/>
                 <source src="../../assets/video/woman.mp4" type="video/mp4"/>
               </video>

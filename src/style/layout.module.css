@@ -14,15 +14,20 @@
 
   .view {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 3rem;
   }
 }
 
 @media screen and (max-width: 500px) {
+  .view {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
 
   .view {
-    width: 100%;
-    padding: 0 2rem;
+    padding: 1rem;
   }
 }
 
