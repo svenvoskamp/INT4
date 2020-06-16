@@ -23,7 +23,10 @@
 }
 
 .checkbox_type[type='radio']:checked+.option_text {
-    composes: bold from "../../style/typo.module.css";
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: blackColor;
 }
 
 @media screen and (max-width: 500px) {
@@ -43,7 +46,7 @@
     .type_option {
         margin: 2rem 0;
     }
-  
+
   }
 
   @media screen and (max-width: 380px) {
@@ -52,5 +55,5 @@
     .option_video {
         padding: 0 3rem;
     }
-  
+
   }
