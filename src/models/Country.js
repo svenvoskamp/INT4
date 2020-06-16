@@ -7,9 +7,10 @@ configure({
 
 class Country {
 
-  constructor({id = v4(), img, country}) {
+  constructor({id = v4(), webm, mp4, country}) {
     this.id = id;
-    this.img = img;
+    this.webm = webm;
+    this.mp4 = mp4;
     this.country = country;
   }
 }
@@ -27,8 +28,9 @@ const countryConverter = {
     const data = snapshot.data(options);
     return new Country({
       id: snapshot.id,
-      country: data.country, 
-      img: data.img
+      country: data.country,
+      webm: data.webm,
+      mp4: data.mp4
     });
   }
 };

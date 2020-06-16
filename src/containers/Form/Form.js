@@ -105,7 +105,7 @@ const Form = () => {
             <Step4 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 4 &&
-            <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex}/>
+            <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex} sex1 = {sex1} sex2 = {sex2} />
           }
           {currentIndex === 5 &&
             <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>

@@ -7,10 +7,11 @@ configure({
 
 class Type {
 
-  constructor({id = v4(), type, img}) {
+  constructor({id = v4(), type, webm, mp4}) {
     this.id = id;
     this.type = type;
-    this.img = img;
+    this.webm = webm;
+    this.mp4 = mp4;
   }
 }
 
@@ -27,8 +28,9 @@ const typeConverter = {
     const data = snapshot.data(options);
     return new Type({
       id: snapshot.id,
-      type: data.type, 
-      img: data.img
+      type: data.type,
+      webm: data.webm,
+      mp4: data.mp4
     });
   }
 };

@@ -7,9 +7,9 @@ const Country = ({country, setCountry}) => {
   return (
     <div className={style.option}>
       <label className={style.option_label} htmlFor = {country.id}>
-        <video className={style.option_video} width="400" height = "400"  loop autoPlay muted>
-          <source src={country.img} type="video/webm"/>
-          <source src={country.img} type="video/webm"/>
+        <video className={style.option_video} width="400" height = "400"  loop autoPlay playsInline muted>
+          <source src={country.webm} type="video/webm"/>
+          <source src={country.mp4} type="video/mp4"/>
         </video>
         {country.country === "Italië" &&
         <input className={style.checkbox_country} disabled id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
