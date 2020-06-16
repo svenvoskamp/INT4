@@ -18,12 +18,12 @@ const Step5 = ({pants, name1, name2, setPants, setCurrentIndex}) => {
         </div>
         <div className={style.content_pants}>
           <video id="video2" className = {style.pants_video}  width="400" height = "400" loop autoPlay muted>
-            <source src="../../assets/video/woman.webm" type="video/webm"/>
-            <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+            <source src="../../assets/video/character_man.webm" type="video/webm"/>
+            <source src="../../assets/video/character_man.mp4" type="video/mp4"/>
           </video>
           <video id="video2" className = {style.pants_video}  width="400" height = "400" loop autoPlay muted>
-            <source src="../../assets/video/woman.webm" type="video/webm"/>
-            <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+            <source src="../../assets/video/character_woman_naked.webm" type="video/webm"/>
+            <source src="../../assets/video/character_woman_naked.mp4" type="video/mp4"/>
           </video>
         </div>
         <div className={style.container_slider}>

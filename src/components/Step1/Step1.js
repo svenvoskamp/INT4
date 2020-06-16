@@ -86,8 +86,8 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
                 </label>
               </div>
               <video id="video1" className={style.gender_video} width="400" height = "400"  loop autoPlay playsInline muted>
-                <source src="../../assets/video/male.webm" type="video/webm" />
-                <source src="../../assets/video/male.mp4" type="video/mp4"/>
+                <source src="../../assets/video/character_man_head.webm" type="video/webm" />
+                <source src="../../assets/video/character_man_head.mp4" type="video/mp4"/>
               </video>
             </div>
             <div className={style.person_name}>
@@ -100,8 +100,8 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
           <div className={style.content_person}>
             <div className={`${style.person_container} ${style.container_female}`}>
               <video id="video2" className = {`${style.gender_video} ${style.video_mirror}`}  width="400" height = "400" loop autoPlay playsInline muted>
-                <source src="../../assets/video/woman.webm" type="video/webm"/>
-                <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+                <source src="../../assets/video/character_woman_head.webm" type="video/webm"/>
+                <source src="../../assets/video/character_woman_head.mp4" type="video/mp4"/>
               </video>
               <div className={style.person_gender}>
                 <label htmlFor = "male2">

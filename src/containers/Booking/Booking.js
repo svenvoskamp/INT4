@@ -61,15 +61,15 @@ const Booking = () => {
         <div className={style.content_input}>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/woman.webm" type="video/webm"/>
-              <source src="../../assets/video/woman.mp4" type="video/mp4"/>
+              <source src="../../assets/video/country_indonesia.webm" type="video/webm"/>
+              <source src="../../assets/video/country_indonesia.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{country.country}</p>
           </div>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/male.webm" type="video/webm"/>
-              <source src="../../assets/video/male.mp4" type="video/mp4"/>
+              <source src="../../assets/video/type_relax.webm" type="video/webm"/>
+              <source src="../../assets/video/type_relax.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{type.type}</p>
           </div>

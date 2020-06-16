@@ -62,7 +62,6 @@
 .person_gender {
     display: flex;
     flex-direction: column;
-    padding: 0 2rem;
 }
 
 .gender_video {
