@@ -39,7 +39,6 @@ const Landing = () => {
           </form>
         )
         }
-
         {
           uiStore.currentBooking !== undefined &&
           <div>

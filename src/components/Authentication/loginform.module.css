@@ -1,9 +1,31 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor, backgroundColor from tokens;
 
+.login {
+    display: grid;
+    grid-template-rows: 1fr 80% 1fr;
+    grid-template-areas:
+    "progressbar"
+    "form"
+    ".";
+    height: 100vh;
+    background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
+    background-repeat: no-repeat;
+    background-size: auto 100%, auto auto, auto auto;
+    background-position: right, top left, left bottom;
+  }
+
+.login_header {
+    display: flex;
+    align-items: center;
+}
+
 .content {
     composes: view from "../../style/layout.module.css";
-    composes: spaceBetween from "../../style/layout.module.css";
+}
+
+.content_header {
+    margin-bottom: 10rem;
 }
 
 .title {
@@ -28,6 +50,7 @@
 .button_container {
     display: flex;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .form_input {
@@ -36,12 +59,29 @@
     margin: .5rem 0;
 }
 
+.input_container {
+    composes: text from "../../style/typo.module.css";
+    padding: .5rem 0;
+    width: 70%;
+    margin: 0 auto;
+}
+
 .form_button {
     composes: buttonBlack from "../../style/buttons.module.css";
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .form_option {
     composes: bold from "../../style/typo.module.css";
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.container_google {
+    display: flex;
+    justify-content: center;
 }
 
 .button_google {
@@ -69,4 +109,21 @@
 
 .register_bold {
     composes: bold from "../../style/typo.module.css";
+}
+
+@media screen and (max-width: 1050px) {
+
+    .login {
+        background-image: none;
+      }
+
+    .back {
+        margin-left: 3rem;  
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .input_container {
+        width: 100%;
+    }
 }
