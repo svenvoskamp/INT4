@@ -23,7 +23,7 @@
 }
 
 .checkbox_country[type='radio']:checked+.option_text {
-    font-family: montserrat-bold;
+    composes: bold from "../../style/typo.module.css";
 }
 
 .checkbox_country[type='radio']:checked+.option_video {

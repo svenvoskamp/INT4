@@ -23,7 +23,7 @@
 }
 
 .checkbox_type[type='radio']:checked+.option_text {
-    font-family: montserrat-bold;
+    composes: bold from "../../style/typo.module.css";
 }
 
 @media screen and (max-width: 500px) {
