@@ -17,7 +17,7 @@
 }
 
 .subtitle {
-  font-family: montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
   color: blackColor;
   text-decoration: none;
@@ -25,35 +25,35 @@
 }
 
 .text {
-  font-family: montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
   color: blackColor;
 }
 
 .textLight {
-  font-family: montserrat-light, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   color: blackColor;
 }
 
 .bold {
-  font-family: montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 700;
   font-size: 1.7rem;
   color: blackColor;
 }
 
 .italic {
-  font-family: montserrat, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-style: italic;
   font-size: 1.3rem;
   color: blackColor;
 }
 
 .button {
-  font-family: montserrat-medium, sans-serif;
+  font-family: Montserrat, sans-serif;
   font-size: 1.6rem;
   color: backgroundColor;
 }
