@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import {ROUTES} from "../../consts/index";
 import style from "./registerform.module.css"
 
+
 const RegisterForm = () => {
   const {uiStore, userStore} = useStores();
   const [email, setEmail] = useState("");
@@ -14,8 +15,29 @@ const RegisterForm = () => {
   const [passwordAgain, setPassWordAgain] = useState("");
   const history = useHistory();
 
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [passwordAgainError, setPasswordAgainError] = useState("");
+  const [formError, setFormError] = useState("");
+  const [nameError, setNameError] = useState("");
+
   const handleSubmit = async e => {
     e.preventDefault();
+    if(name === ""){
+      setNameError("Gelieve een naam in te vullen");
+    }
+    if(email === ""){
+      setEmailError("Gelieve een email in te vullen");
+    }
+    if(password === ""){
+      setPasswordError("Gelieve een wachtwoord in te vullen");
+    }
+    if(passwordAgain === ""){
+      setPasswordAgainError("Gelieve een wachtwoord in te vullen");
+    }
+    if(password !== passwordAgain){
+      setFormError("De ingegeven wachtwoorden komen niet overeen")
+    }
     if(password === passwordAgain){
       const user = new User({
         name: name,
@@ -60,7 +82,7 @@ const RegisterForm = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <div className={style.input_container}>
-              <p className={style.name_text}>E-mail</p>
+              <p className={style.name_text}>Naam</p> <p>{nameError}</p>
               <input className={style.form_input}
                 label="Name"
                 name="name"
@@ -71,7 +93,7 @@ const RegisterForm = () => {
                 />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>E-mail</p>
+              <p className={style.name_text}>E-mail</p><p>{emailError}</p>
               <input className={style.form_input}
               label="Email"
               name="email"
@@ -82,7 +104,7 @@ const RegisterForm = () => {
             />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>E-mail</p>
+              <p className={style.name_text}>Wachtwoord</p><p>{passwordError}</p>
               <input className={style.form_input}
               label="Password"
               type="password"
@@ -93,7 +115,7 @@ const RegisterForm = () => {
             />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>E-mail</p>
+              <p className={style.name_text}>Herhaal wachtwoord</p><p>{passwordAgainError}</p>
               <input className={style.form_input}
               label="Passwordagain"
               type="password"
@@ -103,6 +125,7 @@ const RegisterForm = () => {
               onChange={e => setPassWordAgain(e.currentTarget.value)}
             />
             </div>
+            <p>{formError}</p>
             <div className={style.button_container}>
               <input className={style.form_button} type="submit" value="Register"/>
             </div>

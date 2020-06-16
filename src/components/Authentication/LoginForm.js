@@ -11,6 +11,9 @@ const LoginForm = () => {
   const { uiStore, userStore } = useStores();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [formError, setFormError] = useState("");
   const history = useHistory();
 
   const handleGoogleLogin = async e => {
@@ -20,6 +23,12 @@ const LoginForm = () => {
     };
 
     const handleSubmit = async e => {
+      if(password === ""){
+        setPasswordError("Gelieve een wachtwoord in te vullen");
+      }
+      if(email === ""){
+        setEmailError("Gelieve een wachtwoord in te vullen");
+      }
       e.preventDefault();
       const user = new User({
         name:"",
@@ -28,7 +37,9 @@ const LoginForm = () => {
         password: password
       });
      const result = await uiStore.signInWithEmailAndPassword(user);
-     console.log(result);
+     if(result === "auth/user-not-found" || "auth/invalid"){
+       setFormError("De inloggegevens zijn onjuist");
+     }
   };
 
   const handleClick = () => {
@@ -63,7 +74,7 @@ const LoginForm = () => {
             <div>
               <form onSubmit={handleSubmit}>
                 <div className={style.input_container}>
-                  <p className={style.name_text}>E-mail</p>
+                  <p className={style.name_text}>E-mail</p> <p>{emailError}</p>
                   <input  className={style.form_input}
                     label="Email"
                     name="email"
@@ -74,7 +85,7 @@ const LoginForm = () => {
                   />
                 </div>
                 <div className={style.input_container}>
-                  <p className={style.name_text}>Wachtwoord</p>
+                  <p className={style.name_text}>Wachtwoord</p> <p>{passwordError}</p>
                   <input className={style.form_input}
                     label="Password"
                     type="password"
@@ -84,6 +95,7 @@ const LoginForm = () => {
                     onChange={e => setPassword(e.currentTarget.value)}
                   />
                 </div>
+                <p>{formError}</p>
                 <div className={style.button_container}>
                 <input className={style.form_button} type="submit" value="Login"/>
                 </div>
