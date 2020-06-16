@@ -49,7 +49,7 @@ const Booking = () => {
       <div className={style.content}>
         <div className={style.content_header}>
           <h1 className={style.title}>Reservatie voor jullie <span className={style.title_span}>{currentBooking.count}-jarige</span> jubileum.</h1>
-          <h2 className={style.subtitle}>{currentBooking.name1} en {currentBooking.name2} deze reservatie hebben jullie vastgelegd. Bij vragen/problemen contacteer onze klantenservice.</h2>
+          <h2 className={style.subtitle}>{currentBooking.name1} en {currentBooking.name2} deze reservatie hebben jullie vastgelegd. Wij kijken er alvast naar uit!</h2>
         </div>
         <div className={style.content_input}>
           <div className={style.input_media}>

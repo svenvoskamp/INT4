@@ -13,7 +13,9 @@
 .button_container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 
 .confirm {
     composes: buttonBlack from "../../style/buttons.module.css";

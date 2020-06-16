@@ -18,20 +18,20 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
         </div>
         <div className={style.content_media}>
           <video className={style.media_video} width="500" height = "500"  loop autoPlay muted>
-            <source src="../../assets/video/type_culture.webm" type="video/webm"/>
+            <source src="../../assets/video/ring_diamond.webm" type="video/webm"/>
           </video>
         </div>
         <div className={style.container_slider}>
           <div className={style.slider_placeholder}>
             <p>1 jaar</p>
-            <p>80 jaar</p>
+            <p>60 jaar</p>
           </div>
           <label htmlFor = "count">
             <input className={style.slider}
             id = "count"
             type = "range"
             min = "1"
-            max = "80"
+            max = "60"
             value = {count}
             name = "count"
             onChange={e => setCount(e.currentTarget.value)}

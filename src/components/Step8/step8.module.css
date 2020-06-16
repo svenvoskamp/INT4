@@ -32,7 +32,9 @@
 .button_container {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 
 .content_input {
     display: grid;
