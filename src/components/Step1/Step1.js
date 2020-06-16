@@ -11,12 +11,18 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
   if(sex1 === "male"){
       if(geslacht1.currentSrc.includes("woman")){
       geslacht1.src ="../../assets/video/male.webm";
+      geslacht1.onerror = function() {
+        geslacht1.src = "../../assets/video/male.mp4";
+      }
       geslacht1.play();
       }
   }
   if(sex1 === "female"){
       if(geslacht1.currentSrc.includes("male")){
       geslacht1.src ="../../assets/video/woman.webm";
+      geslacht1.onerror = function() {
+        geslacht1.src = "../../assets/video/woman.mp4";
+      }
       geslacht1.play();
       }
   }
@@ -25,16 +31,26 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
   if(sex2 === "female"){
       if(geslacht2.currentSrc.includes("male")){
       geslacht2.src ="../../assets/video/woman.webm";
+      geslacht2.onerror = function() {
+        geslacht2.src = "../../assets/video/woman.mp4";
+      }
       geslacht2.play();
       }
   }
   if(sex2 === "male"){
       if(geslacht2.currentSrc.includes("woman")){
       geslacht2.src ="../../assets/video/male.webm";
+      geslacht2.onerror = function() {
+        geslacht2.src = "../../assets/video/male.mp4";
+      }
       geslacht2.play();
       }
-  }
+    }
   });
+
+
+
+
 
   const handleClick = () => {
     if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" ){
@@ -69,8 +85,8 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
                   </svg>
                 </label>
               </div>
-              <video id="video1" className={style.gender_video} width="400" height = "400"  loop autoPlay muted>
-                <source src="../../assets/video/male.webm" type="video/webm"/>
+              <video id="video1" className={style.gender_video} width="400" height = "400"  loop autoPlay playsInline muted>
+                <source src="../../assets/video/male.webm" type="video/webm" />
                 <source src="../../assets/video/male.mp4" type="video/mp4"/>
               </video>
             </div>
@@ -83,7 +99,7 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
           </div>
           <div className={style.content_person}>
             <div className={`${style.person_container} ${style.container_female}`}>
-              <video id="video2" className = {`${style.gender_video} ${style.video_mirror}`}  width="400" height = "400" loop autoPlay muted>
+              <video id="video2" className = {`${style.gender_video} ${style.video_mirror}`}  width="400" height = "400" loop autoPlay playsInline muted>
                 <source src="../../assets/video/woman.webm" type="video/webm"/>
                 <source src="../../assets/video/woman.mp4" type="video/mp4"/>
               </video>
