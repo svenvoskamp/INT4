@@ -1,226 +1,234 @@
-  @value tokens: "../../style/tokens.module.css";
-  @value primaryColor from tokens;
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor from tokens;
 
-  .booking {
+.booking {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step1_right.webp), url(/assets/backgrounds/desktop_step1_left_top.webp), url(/assets/backgrounds/desktop_step1_left_bottom.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: right, top left, left bottom;
+}
+
+.booking_header {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    composes: view from "../../style/layout.module.css";
+    composes: spaceBetween from "../../style/layout.module.css";
+}
+
+.back {
+    composes: backButton from "../../style/buttons.module.css";
+}
+
+.confirm {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}
+
+.title {
+    composes: title from "../../style/typo.module.css";
+    text-align: center;
+    margin-bottom: 1rem;
+}   
+
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
+.subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    text-align: center;
+}   
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.content_input {
     display: grid;
-    grid-template-rows: 1fr 80% 1fr;
-    grid-template-areas:
-    "progressbar"
-    "form"
-    ".";
-    height: 100vh;
-    background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
-    background-repeat: no-repeat;
-    background-size: auto 100%, auto auto, auto auto;
-    background-position: right, top left, left bottom;
-  }
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+    grid-row-gap: 10rem;
+}
 
-  .booking_header {
-      display: flex;
-      align-items: center;
-  }
-  
-  .content {
-      composes: view from "../../style/layout.module.css";
-      composes: spaceBetween from "../../style/layout.module.css";
-  }
+.input_info {
+    display: flex;
+    flex-direction: column;
+}
 
-  .back {
-      composes: backButton from "../../style/buttons.module.css";
-  }
-  
-  .confirm {
-      composes: buttonBlack from "../../style/buttons.module.css";
-  }
-  
-  .title {
-      composes: title from "../../style/typo.module.css";
-      text-align: center;
-      margin-bottom: 1rem;
-  }   
-  
-  .title_span {
-      composes: titleSpan from "../../style/typo.module.css";
-  }
-  
-  .subtitle {
-      composes: subtitle from "../../style/typo.module.css";
-      text-align: center;
-  }   
-  
-  .button_container {
-      display: flex;
-      justify-content: center;
-  }
-  
-  .content_input {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-column-gap: 5rem;
-      grid-row-gap: 10rem;
-  }
-  
-  .input_info {
-      display: flex;
-      flex-direction: column;
-  }
-  
-  .input_media {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-  }
-  
-  .media_video {
-      width: 100%;
-      height: auto;
-  }
-  
-  .info_container {
-      padding: 1.5rem 0;
-  }
-  
-  .input_info {
-      padding-top: 5rem;
-  }
-  
-  .info_title {
-      composes: bold from "../../style/typo.module.css";
-  }
-  
-  .info_text {
-      composes: textLight from "../../style/typo.module.css";
-      padding: .2rem 0;
-      text-transform: lowercase;
-  }
-  
-  .info_italic {
-      composes: italic from "../../style/typo.module.css";
-  }
-  
-  .media_name {
-      composes: bold from "../../style/typo.module.css";
-      text-align: center;
-  }
+.input_media {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
-  .content_text {
-      composes: italic from "../../style/typo.module.css";
-      text-align: center;
-  }
-  
+.media_video {
+    width: 100%;
+    height: auto;
+}
+
+.info_container {
+    padding: 1.5rem 0;
+}
+
+.input_info {
+    padding-top: 5rem;
+}
+
+.info_title {
+    composes: bold from "../../style/typo.module.css";
+}
+
+.info_text {
+    composes: textLight from "../../style/typo.module.css";
+    padding: .2rem 0;
+    text-transform: lowercase;
+}
+
+.info_italic {
+    composes: italic from "../../style/typo.module.css";
+}
+
+.media_name {
+    composes: bold from "../../style/typo.module.css";
+    text-align: center;
+}
+
+.content_text {
+    composes: italic from "../../style/typo.module.css";
+    text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+.booking {
+  background-image: url(/assets/backgrounds/tablet_step1_right.webp), url(/assets/backgrounds/tablet_step1_left_top.webp), url(/assets/backgrounds/tablet_step1_left_bottom.webp);
+}
+}
+
 @media screen and (max-width: 1050px) {
-    .booking {
-        background-image:none;
-      }
-      
-    .back {
-        margin-left: 3rem;  
-    }
+    
+  .back {
+      margin-left: 3rem;  
+  }
 }
 
 @media screen and (max-width: 700px) {
-      .content_input {
-          grid-template-columns: repeat(2, 1fr);
-          grid-column-gap: 1rem;
-          grid-row-gap: 1rem;
-      }
-  
-      .content_text{
-          grid-column: 1/3;
-          padding: 2rem 0;
-      }
-  
-      .input_media:first-of-type {
-          grid-column: 1/2;
-      }
-  
-      .input_media:last-of-type {
-          grid-column: 2/3;
-      }
-  
-      .input_info {
-          grid-column: 1/3;
-          grid-row: 1;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-evenly;
-      }
-  
-      .info_gegevens {
-          display: flex;
-          justify-content: space-evenly;
-      }
-  
-      .info_container {
-          padding: 0 1rem;
-          text-align: center;
-      }
-  
+
+  .booking {
+      background-image:none;
+    }
+
+    .content_input {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+
+    .content_text{
+        grid-column: 1/3;
+        padding: 2rem 0;
+    }
+
+    .input_media:first-of-type {
+        grid-column: 1/2;
+    }
+
+    .input_media:last-of-type {
+        grid-column: 2/3;
+    }
+
+    .input_info {
+        grid-column: 1/3;
+        grid-row: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .info_gegevens {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .info_container {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
 
-    .booking{
-        height: auto;
-        background-image: none;
+  .booking{
+      height: auto;
+      background-image: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container_back {
+        margin: 3rem 0;
+    }
+
+    .content_input {
+        grid-template-columns: 100%;
+    }
+
+    .input_media {
+        grid-column: 1/2;
+    }
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }  
+
+    .input_info {
+        grid-column: 1/3;
+        grid-row: 1;
         display: flex;
         flex-direction: column;
-      }
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 0;
+    }
 
-      .container_back {
-          margin: 3rem 0;
-      }
-  
-      .content_input {
-          grid-template-columns: 100%;
-      }
-  
-      .input_media {
-          grid-column: 1/2;
-      }
-  
-      .content_header {
-          margin: 1rem 0 4rem 0;
-      }
-  
-      .subtitle {
-          margin-top: 1.5rem;
-      }  
-  
-      .input_info {
-          grid-column: 1/3;
-          grid-row: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-evenly;
-          padding-top: 0;
-      }
-  
-      .input_media {
-          flex-direction: column-reverse;
-          margin-top: 2rem;
-      }
-  
-      .media_video {
-          padding: 0 5rem;
-      }
-  
-      .info_container {
-          padding: 1rem;
-      }
-  
-      .info_gegevens {
-          display: flex;
-          flex-direction: column;
-      }
+    .input_media {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+    }
+
+    .media_video {
+        padding: 0 5rem;
+    }
+
+    .info_container {
+        padding: 1rem;
+    }
+
+    .info_gegevens {
+        display: flex;
+        flex-direction: column;
+    }
 }
-  
+
 @media screen and (max-width: 500px) {
-  
-      .media_video {
-          padding: 0;
-      }
-  
+
+    .media_video {
+        padding: 0;
+    }
+
 }
