@@ -9,6 +9,11 @@ class AuthService {
     this.auth.onAuthStateChanged(user => onAuthStateChanged(user));
   }
 
+  isRegistered = async email => {
+  const signInMethods =  await this.auth.fetchSignInMethodsForEmail(email);
+  return signInMethods.length === 0 ? false : true;
+}
+
 
   signInWithPopup = async () => {
     try {
@@ -19,6 +24,16 @@ class AuthService {
     };
   }
 
+  signInWithEmailAndPassword = async (email, password) => {
+    try {
+      const result =  await this.auth.signInWithEmailAndPassword(email, password);
+      return result;
+  }
+  catch (error) {
+      return error.code;
+  }
+};
+
   logout = async () => {
     try {
       const result = await firebase.auth().signOut();
@@ -27,6 +42,28 @@ class AuthService {
       console.log(error);
       };
     };
+
+    register = async (name, email, password) => {
+      try{
+          const userCredential = await this.auth.createUserWithEmailAndPassword(email, password);
+          console.log(userCredential);
+          if(userCredential){
+            try{
+              await userCredential.user.updateProfile({
+                  displayName: name
+              });
+              return userCredential.user;
+              }
+            catch (error){
+              return error;
+            }
+          }
+      }
+      catch(error){
+        console.log("er is iets mis");
+          return error.code;
+      }
+  }
   }
 
 

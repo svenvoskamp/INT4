@@ -2,7 +2,8 @@ const ROUTES = {
   home: "/",
   form: "/form",
   login: "/login",
-  booking: "/booking"
+  booking: "/booking",
+  register: "/register"
 };
 
 export { ROUTES };

@@ -3,6 +3,8 @@ import { useStores } from "../../hooks/index";
 import * as firebase from "firebase/app";
 import 'firebase/storage';
 import style from "./booking.module.css";
+import { useHistory } from "react-router-dom";
+import {ROUTES} from "../../consts/index";
 
 const Booking = () => {
   const {uiStore, typeStore, countryStore}= useStores();
@@ -11,6 +13,11 @@ const Booking = () => {
   const country = countryStore.getCountryById(currentBooking.countryId);
   console.log(currentBooking);
   const storageRef = firebase.storage().ref();
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push(ROUTES.home)
+  }
 
   //RESIZE IMG CODE:
   /* let n = 4;
@@ -38,7 +45,7 @@ const Booking = () => {
     <div className={style.booking}>
       <div className={style.booking_header}>
         <div className={style.container_back}>
-          <button className={style.back}>
+          <button className={style.back} onClick = {handleClick}>
             <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 6L2.25 6" stroke="#D52F4F" strokeWidth="2.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M7.25 11L0.999999 6L7.25 1" stroke="#D52F4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>

@@ -2,6 +2,7 @@ import React from "react";
 import 'mobx-react-lite/batchingForReactDom'
 import { Switch, Route, Redirect } from "react-router-dom";
 import { ROUTES } from "../../consts";
+import LoginForm from "./LoginForm";
 import RegisterForm from "./RegisterForm";
 import Form from "../../containers/Form/Form";
 import Home from "../../containers/Home/Home";
@@ -16,6 +17,16 @@ const Authentication = () => {
     <>
       <Switch>
         <Route exact path={ROUTES.login}>
+          {
+            uiStore.currentUser ? (
+              <Redirect to={ROUTES.form}/>
+            ):
+            (
+             <LoginForm/>
+            )
+          }
+        </Route>
+        <Route exact path={ROUTES.register}>
           {
             uiStore.currentUser ? (
               <Redirect to={ROUTES.form}/>

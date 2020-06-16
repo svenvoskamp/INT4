@@ -13,6 +13,10 @@ class UiStore {
     this.authService = new AuthService(this.rootStore.firebase, this.onAuthStateChanged);
   }
 
+  isRegisteredContact = async user => {
+    return this.authService.isRegistered(user.email);
+  }
+
   onAuthStateChanged = async user => {
     if (user){
       const newUser = await new User({
@@ -66,8 +70,19 @@ class UiStore {
     return result;
   }
 
+  signInWithEmailAndPassword = async user => {
+    const result = await this.authService.signInWithEmailAndPassword(user.email, user.password);
+    return result;
+  }
+
   signInWithPopUp = async () => {
     const result = await this.authService.signInWithPopup();
+    return result;
+  }
+
+  registerUser = async(user) => {
+    const result = await this.authService.register(user.name, user.email, user.password);
+    console.log(result);
     return result;
   }
 }
