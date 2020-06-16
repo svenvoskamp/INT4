@@ -68,6 +68,7 @@ const Booking = () => {
           </div>
           <div className={style.input_info}>
             <p className={style.info_title}>{currentBooking.name1} & {currentBooking.name2}</p>
+            <div className={style.info_gegevens}>
             <div className={style.info_container}>
               <p className={style.info_text}>{currentBooking.email}</p>
               <p className={style.info_text}>{currentBooking.telephone}</p>
@@ -75,6 +76,7 @@ const Booking = () => {
             <div className={style.info_container}>
               <p className={style.info_text}>{currentBooking.city} {currentBooking.zip}</p>
               <p className={style.info_text}>{currentBooking.adress} {currentBooking.houseNumber} {currentBooking.busNumber}</p>
+            </div>
             </div>
           </div>
         </div>

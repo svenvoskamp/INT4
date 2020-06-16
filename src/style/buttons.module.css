@@ -72,7 +72,7 @@
   background-color: pinkColor; 
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1050px) {
 
   .backButton {
     margin: 0;
