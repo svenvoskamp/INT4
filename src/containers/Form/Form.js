@@ -59,12 +59,13 @@ const Form = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     setText("Uw reservatie wordt vastgelegd");
+    console.log("boekingknopje ingedrukt hhahahahahaha");
     const imgRef = await firebase.storage().ref('images/' + img.name);
     console.log(imgRef);
     const imgUrl = imgRef.name;
     await imgRef.put(img);
     console.log(terms);
-    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== 0) {
+    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && img !== "" && terms !== 0) {
       const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
       const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, email, telephone, terms, userId: uiStore.currentUser.id });
     try {

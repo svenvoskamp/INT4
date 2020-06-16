@@ -4,6 +4,7 @@ import style from "./step6.module.css"
 const Step6 = ({img, setImg, setCurrentIndex}) => {
 
   const handleClick = () => {
+    console.log(img);
     if(img !== "" ){
       setCurrentIndex(6);
     }
@@ -43,7 +44,7 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
           </div>
         </label>
         <div className={style.button_container}>
-          <button className={style.confirm} onClick = {handleClick}>Dit was 'm</button>
+          <p className={style.confirm} onClick = {handleClick}>Dit was 'm</p>
         </div>
       </div>
     </>
