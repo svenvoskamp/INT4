@@ -33,75 +33,109 @@ body {
 }
 
 .form0 {
-  background-image: url(/assets/backgrounds/step1_right.png), url(/assets/backgrounds/step1_left_top.png), url(/assets/backgrounds/step1_left_bottom.png);
+  background-image: url(/assets/backgrounds/desktop_step1_right.webp), url(/assets/backgrounds/desktop_step1_left_top.webp), url(/assets/backgrounds/desktop_step1_left_bottom.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
   background-position: right, top left, left bottom;
 }
 
 .form1 {
-  background-image: url(/assets/backgrounds/step2_right.png), url(/assets/backgrounds/step2_bottom.png), url(/assets/backgrounds/step2_left.png);
+  background-image: url(/assets/backgrounds/desktop_step2_right.webp), url(/assets/backgrounds/desktop_step2_bottom.webp), url(/assets/backgrounds/desktop_step2_left.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, 100% auto, auto auto;
   background-position: right, bottom, left;
 }
 
 .form2 {
-  background-image: url(/assets/backgrounds/step3_left.png), url(/assets/backgrounds/step3_right_top.png), url(/assets/backgrounds/step3_right_bottom.png);
+  background-image: url(/assets/backgrounds/desktop_step3_left.webp), url(/assets/backgrounds/desktop_step3_right_top.webp), url(/assets/backgrounds/desktop_step3_right_bottom.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
   background-position: left, right top, right bottom;
 }
 
 .form3 {
-  background-image: url(/assets/backgrounds/step4_left.png), url(/assets/backgrounds/step4_right_top.png), url(/assets/backgrounds/step4_right_bottom.png);
+  background-image: url(/assets/backgrounds/desktop_step4_left.webp), url(/assets/backgrounds/desktop_step4_right_top.webp), url(/assets/backgrounds/desktop_step4_right_bottom.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
   background-position: left, right top, right bottom;
 }
 
 .form4 {
-  background-image: url(/assets/backgrounds/step5_left.png), url(/assets/backgrounds/step5_right_bottom.png);
+  background-image: url(/assets/backgrounds/desktop_step5_left.webp), url(/assets/backgrounds/desktop_step5_botom_right.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto;
   background-position: left, right bottom;
 }
 
 .form5 {
-  background-image: url(/assets/backgrounds/step6_left.png), url(/assets/backgrounds/step6_bottom.png), url(/assets/backgrounds/step6_right.png);
+  background-image: url(/assets/backgrounds/desktop_step6_left.webp), url(/assets/backgrounds/desktop_step6_bottom.webp), url(/assets/backgrounds/desktop_step6_right.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, 100% auto, auto 100%;
   background-position: left, bottom, right;
 }
 
 .form6 {
-  background-image: url(/assets/backgrounds/step7_left.png), url(/assets/backgrounds/step7_right.png);
+  background-image: url(/assets/backgrounds/desktop_step7_left.webp), url(/assets/backgrounds/desktop_step7_right.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
   background-position: left, right bottom;
 }
 
 .form7 {
-  background-image: url(/assets/backgrounds/step8_left.png), url(/assets/backgrounds/step8_right.png);
+  background-image: url(/assets/backgrounds/desktop_step8_left.webp), url(/assets/backgrounds/desktop_step8_right.webp);
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
   background-position: left, right;
 }
 
 @media screen and (max-width: 1500px) {
+  .form0 {
+    background-image: url(/assets/backgrounds/tablet_step1_right.webp), url(/assets/backgrounds/tablet_step1_left_top.webp), url(/assets/backgrounds/tablet_step1_left_bottom.webp);
+  }
+  
+  .form1 {
+    background-image: url(/assets/backgrounds/tablet_step2_right.webp), url(/assets/backgrounds/tablet_step2_bottom.webp), url(/assets/backgrounds/tablet_step2_left.webp);
+  }
+  
+  .form2 {
+    background-image: url(/assets/backgrounds/tablet_step3_left.webp), url(/assets/backgrounds/tablet_step3_right_top.webp), url(/assets/backgrounds/tablet_step3_right_bottom.webp);
+  }
+  
+  .form3 {
+    background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
+  }
+  
+  .form4 {
+    background-image: url(/assets/backgrounds/tablet_step5_left.webp), url(/assets/backgrounds/tablet_step5_botom_right.webp);
+  }
+  
+  .form5 {
+    background-image: url(/assets/backgrounds/tablet_step6_left.webp), url(/assets/backgrounds/tablet_step6_bottom.webp), url(/assets/backgrounds/tablet_step6_right.webp);
+  }
+  
+  .form6 {
+    background-image: url(/assets/backgrounds/tablet_step7_left.webp), url(/assets/backgrounds/tablet_step7_right.webp);
+  }
+  
+  .form7 {
+    background-image: url(/assets/backgrounds/tablet_step8_left.webp), url(/assets/backgrounds/tablet_step8_right.webp);
+  }
+}
+
+@media screen and (max-width: 700px) {
+
   .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
     background-image: none;
   }
+  
 }
 
 @media screen and (max-width: 500px) {
 
   .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
     height: auto;
-    background-image: none;
     display: flex;
     flex-direction: column;
   }
-
 
 }
