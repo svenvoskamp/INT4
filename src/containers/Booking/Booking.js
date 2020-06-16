@@ -67,24 +67,25 @@ const Booking = () => {
             <p className={style.media_name}>{country.country}</p>
           </div>
           <div className={style.input_media}>
+            {type.type === "Ontspanning" &&
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
               <source src="../../assets/video/type_relax.webm" type="video/webm"/>
               <source src="../../assets/video/type_relax.mp4" type="video/mp4"/>
             </video>
+            }
+            {type.type === "Avontuurlijk" &&
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+              <source src="../../assets/video/type_adventure.webm" type="video/webm"/>
+              <source src="../../assets/video/type_adventure.mp4" type="video/mp4"/>
+          </video>
+            }
+            {type.type === "Cultuur" &&
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+              <source src="../../assets/video/type_culture.webm" type="video/webm"/>
+              <source src="../../assets/video/type_culture.mp4" type="video/mp4"/>
+          </video>
+            }
             <p className={style.media_name}>{type.type}</p>
-          </div>
-          <div className={style.input_info}>
-            <p className={style.info_title}>{currentBooking.name1} & {currentBooking.name2}</p>
-            <div className={style.info_gegevens}>
-            <div className={style.info_container}>
-              <p className={style.info_text}>{currentBooking.email}</p>
-              <p className={style.info_text}>{currentBooking.telephone}</p>
-            </div>
-            <div className={style.info_container}>
-              <p className={style.info_text}>{currentBooking.city} {currentBooking.zip}</p>
-              <p className={style.info_text}>{currentBooking.adress} {currentBooking.houseNumber} {currentBooking.busNumber}</p>
-            </div>
-            </div>
           </div>
         </div>
         <p className={style.content_text}>Bij vragen/problemen contacteer onze klantenservice.</p>
