@@ -39,11 +39,14 @@ const Landing = () => {
           </form>
         )
         }
+
         {
           uiStore.currentBooking !== undefined &&
-          <form className={style.content_login} onSubmit={handleBooking}>
-            <input className={style.login_button} type="submit" value="Bekijk uw boeking"/>
-          </form>
+          <div>
+            <form className={style.content_login} onSubmit={handleBooking}>
+              <input className={style.login_button} type="submit" value="Bekijk uw boeking"/>
+            </form>
+          </div>
         }
           <div className={style.content_info}>
             <h1 className={style.title}>Herbeleef jullie huwelijkreis</h1>
