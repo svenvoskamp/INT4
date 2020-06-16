@@ -23,6 +23,9 @@ const LoginForm = () => {
     };
 
     const handleSubmit = async e => {
+      setPasswordError("");
+      setFormError("");
+      setEmailError("");
       if(password === ""){
         setPasswordError("Gelieve een wachtwoord in te vullen");
       }

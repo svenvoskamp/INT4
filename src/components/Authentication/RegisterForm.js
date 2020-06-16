@@ -23,6 +23,11 @@ const RegisterForm = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    setPasswordError("");
+    setFormError("");
+    setEmailError("");
+    setPasswordAgainError("");
+    setNameError("");
     if(name === ""){
       setNameError("Gelieve een naam in te vullen");
     }
@@ -54,6 +59,7 @@ const RegisterForm = () => {
       }else {
         //registratie mislukt
         console.log(result);
+        setFormError("Er is iets misgegaan, probeer een sterker wachtwoord");
       }
     }
   };
