@@ -260,7 +260,7 @@
     .background_elements {
         background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
         background-repeat: no-repeat;
-        background-size: 50% auto, 100% auto, 50% 100%;
+        background-size: 40% auto, 100% auto, 50% 100%;
         background-position: top left,bottom, right;
     }
        
