@@ -26,8 +26,8 @@ const Landing = () => {
   };
   return (
     <>
-      <div className={style.background}>
-        <div className={style.background_elements}>
+      <div className="background">
+        <div className="background_elements">
           <div className={style.header}>
             <div className={style.header_nav}>
             {
@@ -73,7 +73,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
-      <div className={style.background_about}>
+      <div className="background_about">
         <div className={style.about}>
             <div className={style.about_header}>
               <h1 className={`${style.title} ${style.title_center}`}><span className={style.title_span}>Halo! Honey!</span></h1>

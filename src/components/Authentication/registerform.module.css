@@ -1,20 +1,6 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor, backgroundColor from tokens;
 
-.registratie {
-    display: grid;
-    grid-template-rows: 1fr 80% 1fr;
-    grid-template-areas:
-    "progressbar"
-    "form"
-    ".";
-    height: 100vh;
-    background-image: url(/assets/backgrounds/desktop_step4_left.webp), url(/assets/backgrounds/desktop_step4_right_top.webp), url(/assets/backgrounds/desktop_step4_right_bottom.webp);
-    background-repeat: no-repeat;
-    background-size: auto 100%, auto auto, auto auto;
-    background-position: left, right top, right bottom;
-  }
-
 .registratie_header {
     display: flex;
     align-items: center;
@@ -112,14 +98,6 @@
     composes: bold from "../../style/typo.module.css";
 }
 
-@media screen and (max-width: 1500px) {
-
-    .registratie {
-      background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
-    }
-
-  }
-
 @media screen and (max-width: 1050px) {
 
     .back {
@@ -128,10 +106,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
-    .registratie {
-        background-image: none;
-      }
       
     .input_container {
         width: 100%;

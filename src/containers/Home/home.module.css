@@ -58,24 +58,6 @@
     padding: .2rem 0;
 }
 
-.webp .background {
-    background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
-    background-repeat: no-repeat;
-    background-size: 65% 100%, cover;
-    background-position: left, 50% 50%;
-    height: 100% !important;
-}
-
-
-
- .webp .background_elements {
-    background-image: url(/assets/backgrounds/desktop_splash_left_top.webp),url(/assets/backgrounds/desktop_splash_bottom.webp), url(/assets/backgrounds/desktop_splash_right.webp);
-    background-repeat: no-repeat;
-    background-size: auto auto, 100% auto, auto 100%;
-    background-position: top left,bottom, right;
-    height: 100% !important;
-}
-
 .title {
     composes: title from "../../style/typo.module.css";
     font-size: 6rem;
@@ -150,14 +132,6 @@
 
 /* MEER INFO */
 
-.webp .background_about {
-    background-image: url(/assets/backgrounds/desktop_about_left.webp);
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: left;
-    height: 100% !important;
-}
-
 .about {
     composes: view from "../../style/layout.module.css";
     margin-top: 5rem;
@@ -215,22 +189,6 @@
         padding: 0 3rem;
     }
 
-   .webp .background {
-        background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
-        background-size: 75% 100%, cover;
-
-    }
-
-   .webp .background_elements {
-        background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
-
-    }
-
-   .webp .background_about {
-        background-image: url(/assets/backgrounds/tablet_about_left.webp);
-
-    }
-
 }
 
 @media screen and (max-width: 1050px) {
@@ -258,33 +216,6 @@
 }
 
 @media screen and (max-width: 750px) {
-    .webp .background {
-        background-image: url(/assets/backgrounds/mobile_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
-        background-repeat: no-repeat;
-        background-size: 100% 100%, cover;
-        background-position: bottom, 50% 50%;
-    }
-
-      .no-webp .background {
-          background-image: url(/assets/backgrounds/mobile_splash_left.png),url(/assets/backgrounds/desktop_splash_background.png);
-          background-repeat: no-repeat;
-          background-size: 100% 100%, cover;
-          background-position: bottom, 50% 50%;
-      }
-
-   .webp .background_elements {
-        background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
-        background-repeat: no-repeat;
-        background-size: 40% auto, 100% auto, 50% 100%;
-        background-position: top left,bottom, right;
-    }
-
-    .no-webp .background_elements {
-      background-image: url(/assets/backgrounds/mobile_splash_left_top.png),url(/assets/backgrounds/mobile_splash_bottom.png), url(/assets/backgrounds/mobile_splash_right.png);
-      background-repeat: no-repeat;
-      background-size: 40% auto, 100% auto, 50% 100%;
-      background-position: top left,bottom, right;
-  }
 
     .header_info {
         margin: 0 auto;
@@ -303,10 +234,6 @@
 
     .image_pic {
         width: 75% !important;
-    }
-
-    .background_about {
-        background-image: none;
     }
 
     .about_header{
@@ -362,9 +289,9 @@
         margin-right: 1rem;
       }
 
-      .booking_icon {
+    .booking_icon {
           margin-right: 1.5rem;
-      }
+    }
 
     .text {
         margin: 0;

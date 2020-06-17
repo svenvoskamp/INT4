@@ -70,7 +70,7 @@ const RegisterForm = () => {
 
   return (
     <>
-      <div className={style.registratie}>
+      <div className="registratie">
         <div className={style.registratie_header}>
           <div className={style.container_back}>
             <button className={style.back} onClick = {handleClick}>

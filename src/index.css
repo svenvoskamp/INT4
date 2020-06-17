@@ -96,7 +96,6 @@ html {
   background-position: left, right top, right bottom;
 }
 
-
 .webp .form4 {
   background-image: url(/assets/backgrounds/desktop_step5_left.webp), url(/assets/backgrounds/desktop_step5_botom_right.webp);
   background-repeat: no-repeat;
@@ -104,14 +103,12 @@ html {
   background-position: left, right bottom;
 }
 
-
 .no-webp .form4 {
   background-image: url(/assets/backgrounds/desktop_step5_left.png), url(/assets/backgrounds/desktop_step5_botom_right.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto;
   background-position: left, right bottom;
 }
-
 
 .webp .form5 {
   background-image: url(/assets/backgrounds/desktop_step6_left.webp), url(/assets/backgrounds/desktop_step6_bottom.webp), url(/assets/backgrounds/desktop_step6_right.webp);
@@ -153,6 +150,72 @@ html {
   background-repeat: no-repeat;
   background-size: auto 100%, auto 100%;
   background-position: left, right;
+}
+
+.background {
+  background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
+  background-repeat: no-repeat;
+  background-size: 65% 100%, cover;
+  background-position: left, 50% 50%;
+  height: 100% !important;
+}
+
+.background_elements {
+  background-image: url(/assets/backgrounds/desktop_splash_left_top.webp),url(/assets/backgrounds/desktop_splash_bottom.webp), url(/assets/backgrounds/desktop_splash_right.webp);
+  background-repeat: no-repeat;
+  background-size: auto auto, 100% auto, auto 100%;
+  background-position: top left,bottom, right;
+  height: 100% !important;
+}
+
+.login {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step4_left.webp), url(/assets/backgrounds/desktop_step4_right_top.webp), url(/assets/backgrounds/desktop_step4_right_bottom.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
+}
+
+.background_about {
+  background-image: url(/assets/backgrounds/desktop_about_left.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left;
+  height: 100% !important;
+}
+
+.booking {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step1_right.webp), url(/assets/backgrounds/desktop_step1_left_top.webp), url(/assets/backgrounds/desktop_step1_left_bottom.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: right, top left, left bottom;
+}
+
+.registratie {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step4_left.webp), url(/assets/backgrounds/desktop_step4_right_top.webp), url(/assets/backgrounds/desktop_step4_right_bottom.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
 }
 
 @media screen and (max-width: 1500px) {
@@ -215,9 +278,71 @@ html {
   .webp .form7 {
     background-image: url(/assets/backgrounds/tablet_step8_left.webp), url(/assets/backgrounds/tablet_step8_right.webp);
   }
+
   .no-webp .form7 {
     background-image: url(/assets/backgrounds/tablet_step8_left.png), url(/assets/backgrounds/tablet_step8_right.png);
   }
+
+  .login {
+    background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
+  }
+
+  .booking {
+    background-image: url(/assets/backgrounds/tablet_step1_right.webp), url(/assets/backgrounds/tablet_step1_left_top.webp), url(/assets/backgrounds/tablet_step1_left_bottom.webp);
+  }
+
+  .registratie {
+    background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
+  }
+
+
+}
+
+@media screen and (max-width: 1250px) {
+  .header_info {
+      width:100%;
+      padding: 0 3rem;
+  }
+
+ .background {
+      background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
+      background-size: 75% 100%, cover;
+  }
+
+ .background_elements {
+      background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
+  }
+
+ .background_about {
+      background-image: url(/assets/backgrounds/tablet_about_left.webp);
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  .background {
+      background-image: url(/assets/backgrounds/mobile_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
+      background-size: 100% 100%, cover;
+      background-position: bottom, 50% 50%;
+  }
+
+ .background_elements {
+      background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
+      background-size: 40% auto, 100% auto, 50% 100%;
+      background-position: top left,bottom, right;
+  }
+
+  .background_elements {
+    background-image: url(/assets/backgrounds/mobile_splash_left_top.png),url(/assets/backgrounds/mobile_splash_bottom.png), url(/assets/backgrounds/mobile_splash_right.png);
+    background-size: 40% auto, 100% auto, 50% 100%;
+    background-position: top left,bottom, right;
+  }
+
+    .background_about {
+      background-image: none;
+  }
+
 }
 
 @media screen and (max-width: 700px) {
@@ -226,12 +351,32 @@ html {
     background-image: none;
   }
 
+  .login {
+    background-image: none;
+  }
+
+  .booking {
+    background-image:none;
+  }
+
+  .registratie {
+    background-image: none;
+  }
+
+
 }
 
 @media screen and (max-width: 500px) {
 
   .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
     height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .booking{
+    height: auto;
+    background-image: none;
     display: flex;
     flex-direction: column;
   }

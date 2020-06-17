@@ -1,20 +1,6 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor from tokens;
 
-.booking {
-  display: grid;
-  grid-template-rows: 1fr 80% 1fr;
-  grid-template-areas:
-  "progressbar"
-  "form"
-  ".";
-  height: 100vh;
-  background-image: url(/assets/backgrounds/desktop_step1_right.webp), url(/assets/backgrounds/desktop_step1_left_top.webp), url(/assets/backgrounds/desktop_step1_left_bottom.webp);
-  background-repeat: no-repeat;
-  background-size: auto 100%, auto auto, auto auto;
-  background-position: right, top left, left bottom;
-}
-
 .booking_header {
     display: flex;
     align-items: center;
@@ -108,12 +94,6 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1500px) {
-.booking {
-  background-image: url(/assets/backgrounds/tablet_step1_right.webp), url(/assets/backgrounds/tablet_step1_left_top.webp), url(/assets/backgrounds/tablet_step1_left_bottom.webp);
-}
-}
-
 @media screen and (max-width: 1050px) {
     
   .back {
@@ -122,10 +102,6 @@
 }
 
 @media screen and (max-width: 700px) {
-
-  .booking {
-      background-image:none;
-    }
 
     .content_input {
         grid-template-columns: repeat(1fr);
@@ -154,13 +130,6 @@
 }
 
 @media screen and (max-width: 500px) {
-
-  .booking{
-      height: auto;
-      background-image: none;
-      display: flex;
-      flex-direction: column;
-    }
 
     .container_back {
         margin: 3rem 0;

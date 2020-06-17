@@ -42,7 +42,7 @@ const Booking = () => {
   */
 
   return (
-    <div className={style.booking}>
+    <div className="booking">
       <div className={style.booking_header}>
         <div className={style.container_back}>
           <button className={style.back} onClick = {handleClick}>

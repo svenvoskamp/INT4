@@ -51,7 +51,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className={style.login}>
+      <div className="login">
         <div className={style.login_header}>
           <div className={style.container_back}>
             <button className={style.back} onClick = {handleClick} >
