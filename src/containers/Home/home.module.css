@@ -149,7 +149,7 @@
 .about_subtitle {
     display: flex;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .subtitle_line {
@@ -191,6 +191,14 @@
     .header_info {
         width:100%;
         padding: 0 3rem;
+    }
+
+    .about_header {
+        margin-bottom: 10rem;
+    }
+
+    .about_div {
+        height: 40rem;
     }
 
 }
@@ -266,6 +274,10 @@
         align-self: flex-start;
     }
 
+    .about_div {
+        height: 25rem;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -303,6 +315,10 @@
 
     .image_pic {
         width: 100% !important;
+    }
+
+    .about_div {
+        height: 13rem;
     }
 
 }

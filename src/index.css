@@ -416,11 +416,25 @@ html {
 }
 
  .webp .background_about {
-      background-image: url(/assets/backgrounds/tablet_about_left.webp);
-  }
+    background-image: url(/assets/backgrounds/tablet_about_left.webp), url(/assets/backgrounds/desktop_about_wedding.webp);
+    background-position: left, right 75%;
+    background-size: auto 100%, 40% auto;
+}
 
   .no-webp .background_about {
-    background-image: url(/assets/backgrounds/tablet_about_left.png);
+    background-image: url(/assets/backgrounds/tablet_about_left.png), url(/assets/backgrounds/desktop_about_wedding.png);
+    background-position: left, right 75%;
+    background-size: auto 100%, 40% auto;
+}
+
+.webp .about {
+  background-image: url(/assets/backgrounds/desktop_about_location.webp);
+  background-size: 100% auto;
+}
+
+.no-webp .about {
+  background-image: url(/assets/backgrounds/desktop_about_location.png);
+  background-size: 100% auto;
 }
 
 }
@@ -457,7 +471,7 @@ html {
 
   .no-webp .background_about {
     background-image: none;
-}
+  }
 
 }
 
