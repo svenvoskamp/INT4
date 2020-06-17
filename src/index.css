@@ -152,7 +152,7 @@ html {
   background-position: left, right;
 }
 
-.background {
+.webp .background {
   background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
   background-repeat: no-repeat;
   background-size: 65% 100%, cover;
@@ -160,7 +160,15 @@ html {
   height: 100% !important;
 }
 
-.background_elements {
+.no-webp .background {
+  background-image: url(/assets/backgrounds/desktop_splash_left.png),url(/assets/backgrounds/desktop_splash_background.png);
+  background-repeat: no-repeat;
+  background-size: 65% 100%, cover;
+  background-position: left, 50% 50%;
+  height: 100% !important;
+}
+
+.webp .background_elements {
   background-image: url(/assets/backgrounds/desktop_splash_left_top.webp),url(/assets/backgrounds/desktop_splash_bottom.webp), url(/assets/backgrounds/desktop_splash_right.webp);
   background-repeat: no-repeat;
   background-size: auto auto, 100% auto, auto 100%;
@@ -168,7 +176,16 @@ html {
   height: 100% !important;
 }
 
-.login {
+.no-webp .background_elements {
+  background-image: url(/assets/backgrounds/desktop_splash_left_top.png),url(/assets/backgrounds/desktop_splash_bottom.png), url(/assets/backgrounds/desktop_splash_right.png);
+  background-repeat: no-repeat;
+  background-size: auto auto, 100% auto, auto 100%;
+  background-position: top left,bottom, right;
+  height: 100% !important;
+}
+
+
+.webp .login {
   display: grid;
   grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
@@ -182,7 +199,21 @@ html {
   background-position: left, right top, right bottom;
 }
 
-.background_about {
+.no-webp .login {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step4_left.png), url(/assets/backgrounds/desktop_step4_right_top.png), url(/assets/backgrounds/desktop_step4_right_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
+}
+
+.webp .background_about {
   background-image: url(/assets/backgrounds/desktop_about_left.webp);
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -190,7 +221,15 @@ html {
   height: 100% !important;
 }
 
-.booking {
+.no-webp .background_about {
+  background-image: url(/assets/backgrounds/desktop_about_left.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left;
+  height: 100% !important;
+}
+
+.webp .booking {
   display: grid;
   grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
@@ -204,7 +243,21 @@ html {
   background-position: right, top left, left bottom;
 }
 
-.registratie {
+.no-webp .booking {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step1_right.png), url(/assets/backgrounds/desktop_step1_left_top.png), url(/assets/backgrounds/desktop_step1_left_bottom.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: right, top left, left bottom;
+}
+
+.webp .registratie {
   display: grid;
   grid-template-rows: 1fr 80% 1fr;
   grid-template-areas:
@@ -213,6 +266,20 @@ html {
   ".";
   height: 100vh;
   background-image: url(/assets/backgrounds/desktop_step4_left.webp), url(/assets/backgrounds/desktop_step4_right_top.webp), url(/assets/backgrounds/desktop_step4_right_bottom.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, auto auto, auto auto;
+  background-position: left, right top, right bottom;
+}
+
+.no-webp .registratie {
+  display: grid;
+  grid-template-rows: 1fr 80% 1fr;
+  grid-template-areas:
+  "progressbar"
+  "form"
+  ".";
+  height: 100vh;
+  background-image: url(/assets/backgrounds/desktop_step4_left.png), url(/assets/backgrounds/desktop_step4_right_top.png), url(/assets/backgrounds/desktop_step4_right_bottom.png);
   background-repeat: no-repeat;
   background-size: auto 100%, auto auto, auto auto;
   background-position: left, right top, right bottom;
@@ -283,16 +350,27 @@ html {
     background-image: url(/assets/backgrounds/tablet_step8_left.png), url(/assets/backgrounds/tablet_step8_right.png);
   }
 
-  .login {
+  .webp .login {
     background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
   }
+  .no-webp .login {
+    background-image: url(/assets/backgrounds/tablet_step4_left.png), url(/assets/backgrounds/tablet_step4_right_top.png), url(/assets/backgrounds/tablet_step4_right_bottom.png);
+  }
 
-  .booking {
+  .webp .booking {
     background-image: url(/assets/backgrounds/tablet_step1_right.webp), url(/assets/backgrounds/tablet_step1_left_top.webp), url(/assets/backgrounds/tablet_step1_left_bottom.webp);
   }
 
-  .registratie {
+  .no-webp .booking {
+    background-image: url(/assets/backgrounds/tablet_step1_right.png), url(/assets/backgrounds/tablet_step1_left_top.png), url(/assets/backgrounds/tablet_step1_left_bottom.png);
+  }
+
+  .webp .registratie {
     background-image: url(/assets/backgrounds/tablet_step4_left.webp), url(/assets/backgrounds/tablet_step4_right_top.webp), url(/assets/backgrounds/tablet_step4_right_bottom.webp);
+  }
+
+  .no-webp .registratie {
+    background-image: url(/assets/backgrounds/tablet_step4_left.png), url(/assets/backgrounds/tablet_step4_right_top.png), url(/assets/backgrounds/tablet_step4_right_bottom.png);
   }
 
 
@@ -304,62 +382,97 @@ html {
       padding: 0 3rem;
   }
 
- .background {
+ .webp .background {
       background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
       background-size: 75% 100%, cover;
   }
 
- .background_elements {
+  .no-webp .background {
+    background-image: url(/assets/backgrounds/desktop_splash_left.png),url(/assets/backgrounds/desktop_splash_background.png);
+    background-size: 75% 100%, cover;
+}
+
+ .webp .background_elements {
       background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
   }
 
- .background_about {
+  .no-webp .background_elements {
+    background-image: url(/assets/backgrounds/tablet_splash_left_top.png),url(/assets/backgrounds/tablet_splash_bottom.png), url(/assets/backgrounds/tablet_splash_right.png);
+}
+
+ .webp .background_about {
       background-image: url(/assets/backgrounds/tablet_about_left.webp);
   }
+
+  .no-webp .background_about {
+    background-image: url(/assets/backgrounds/tablet_about_left.png);
+}
 
 }
 
 @media screen and (max-width: 750px) {
 
-  .background {
+  .webp .background {
       background-image: url(/assets/backgrounds/mobile_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
       background-size: 100% 100%, cover;
       background-position: bottom, 50% 50%;
   }
 
- .background_elements {
+  .no-webp .background {
+    background-image: url(/assets/backgrounds/mobile_splash_left.png),url(/assets/backgrounds/desktop_splash_background.png);
+    background-size: 100% 100%, cover;
+    background-position: bottom, 50% 50%;
+}
+
+  .webp .background_elements {
       background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
       background-size: 40% auto, 100% auto, 50% 100%;
       background-position: top left,bottom, right;
   }
 
-  .background_elements {
+  .no-webp .background_elements {
     background-image: url(/assets/backgrounds/mobile_splash_left_top.png),url(/assets/backgrounds/mobile_splash_bottom.png), url(/assets/backgrounds/mobile_splash_right.png);
     background-size: 40% auto, 100% auto, 50% 100%;
     background-position: top left,bottom, right;
-  }
+}
 
-    .background_about {
+   .webp .background_about {
       background-image: none;
   }
+
+  .no-webp .background_about {
+    background-image: none;
+}
 
 }
 
 @media screen and (max-width: 700px) {
 
-  .form0, .form1, .form2, .form3, .form4, .form5, .form6, .form7 {
+  .webp .form0, .webp .form1, .webp .form2, .webp .form3, .webp .form4, .webp .form5, .webp .form6, .webp .form7 {
+    background-image: none;
+  }
+  .no-webp .form0, .no-webp .form1, .no-webp .form2, .no-webp .form3, .no-webp .form4, .no-webp .form5, .no-webp .form6, .no-webp .form7 {
+    background-image: none;
+  }
+  .webp .login {
+    background-image: none;
+  }
+  .no-webp .login {
     background-image: none;
   }
 
-  .login {
-    background-image: none;
-  }
-
-  .booking {
+  .webp .booking {
     background-image:none;
   }
 
-  .registratie {
+  .no-webp .booking {
+    background-image:none;
+  }
+
+  .webp .registratie {
+    background-image: none;
+  }
+  .no-webp .registratie {
     background-image: none;
   }
 
