@@ -11,6 +11,7 @@
     "lottie-web": "^5.6.10",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.0-alpha.5",
+    "modernizr": "^3.11.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-lottie": "^1.2.3",

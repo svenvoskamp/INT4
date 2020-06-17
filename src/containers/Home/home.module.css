@@ -58,7 +58,7 @@
     padding: .2rem 0;
 }
 
-.background {
+.webp .background {
     background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
     background-repeat: no-repeat;
     background-size: 65% 100%, cover;
@@ -66,7 +66,9 @@
     height: 100% !important;
 }
 
-.background_elements {
+
+
+ .webp .background_elements {
     background-image: url(/assets/backgrounds/desktop_splash_left_top.webp),url(/assets/backgrounds/desktop_splash_bottom.webp), url(/assets/backgrounds/desktop_splash_right.webp);
     background-repeat: no-repeat;
     background-size: auto auto, 100% auto, auto 100%;
@@ -148,7 +150,7 @@
 
 /* MEER INFO */
 
-.background_about {
+.webp .background_about {
     background-image: url(/assets/backgrounds/desktop_about_left.webp);
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -213,18 +215,18 @@
         padding: 0 3rem;
     }
 
-    .background {
+   .webp .background {
         background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
         background-size: 75% 100%, cover;
 
     }
 
-    .background_elements {
+   .webp .background_elements {
         background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
 
     }
 
-    .background_about {
+   .webp .background_about {
         background-image: url(/assets/backgrounds/tablet_about_left.webp);
 
     }
@@ -256,19 +258,33 @@
 }
 
 @media screen and (max-width: 750px) {
-    .background {
+    .webp .background {
         background-image: url(/assets/backgrounds/mobile_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
         background-repeat: no-repeat;
         background-size: 100% 100%, cover;
         background-position: bottom, 50% 50%;
     }
 
-    .background_elements {
+      .no-webp .background {
+          background-image: url(/assets/backgrounds/mobile_splash_left.png),url(/assets/backgrounds/desktop_splash_background.png);
+          background-repeat: no-repeat;
+          background-size: 100% 100%, cover;
+          background-position: bottom, 50% 50%;
+      }
+
+   .webp .background_elements {
         background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
         background-repeat: no-repeat;
         background-size: 40% auto, 100% auto, 50% 100%;
         background-position: top left,bottom, right;
     }
+
+    .no-webp .background_elements {
+      background-image: url(/assets/backgrounds/mobile_splash_left_top.png),url(/assets/backgrounds/mobile_splash_bottom.png), url(/assets/backgrounds/mobile_splash_right.png);
+      background-repeat: no-repeat;
+      background-size: 40% auto, 100% auto, 50% 100%;
+      background-position: top left,bottom, right;
+  }
 
     .header_info {
         margin: 0 auto;
