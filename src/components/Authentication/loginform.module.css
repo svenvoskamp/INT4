@@ -37,6 +37,9 @@
     display: flex;
     justify-content: center;
     margin-top: 5rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .form_input {
@@ -56,7 +59,7 @@
     composes: buttonBlack from "../../style/buttons.module.css";
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .form_option {
@@ -98,6 +101,10 @@
     font-weight: 700;
 }
 
+.form_error {
+    composes: error from "../../style/typo.module.css";
+}
+
 @media screen and (max-width: 1050px) {
 
     .back {
@@ -109,5 +116,12 @@
 
     .input_container {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .login_header {
+        margin: 3rem 0;
     }
 }

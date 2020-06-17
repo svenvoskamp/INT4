@@ -79,11 +79,11 @@ const RegisterForm = () => {
         <div className={style.content}>
           <div className={style.content_header}>
             <h1 className={style.title}><span className={style.title_span}>Registratie.</span></h1>
-            <h2 className={style.subtitle}>Gelieve jullie gegevens in tevullen om te registreren.</h2>
+            <h2 className={style.subtitle}>Gelieve jullie gegevens in te vullen om te registreren.</h2>
           </div>
           <form onSubmit={handleSubmit}>
             <div className={style.input_container}>
-              <p className={style.name_text}>Naam</p> <p>{nameError}</p>
+              <p className={style.name_text}>Naam</p> <p className={style.form_error}>{nameError}</p>
               <input className={style.form_input}
                 label="Name"
                 name="name"
@@ -94,7 +94,7 @@ const RegisterForm = () => {
                 />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>E-mail</p><p>{emailError}</p>
+              <p className={style.name_text}>E-mail</p><p className={style.form_error}>{emailError}</p>
               <input className={style.form_input}
               label="Email"
               name="email"
@@ -105,7 +105,7 @@ const RegisterForm = () => {
             />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>Wachtwoord</p><p>{passwordError}</p>
+              <p className={style.name_text}>Wachtwoord</p><p className={style.form_error}>{passwordError}</p>
               <input className={style.form_input}
               label="Password"
               type="password"
@@ -116,7 +116,7 @@ const RegisterForm = () => {
             />
             </div>
             <div className={style.input_container}>
-              <p className={style.name_text}>Herhaal wachtwoord</p><p>{passwordAgainError}</p>
+              <p className={style.name_text}>Herhaal wachtwoord</p><p className={style.form_error}>{passwordAgainError}</p>
               <input className={style.form_input}
               label="Passwordagain"
               type="password"
@@ -126,8 +126,8 @@ const RegisterForm = () => {
               onChange={e => setPassWordAgain(e.currentTarget.value)}
             />
             </div>
-            <p>{formError}</p>
             <div className={style.button_container}>
+              <p className={style.form_error}>{formError}</p>
               <input className={style.form_button} type="submit" value="Register"/>
             </div>
           </form>

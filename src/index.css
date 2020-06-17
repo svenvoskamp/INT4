@@ -6,8 +6,6 @@ html {
   font-size: 62.5%;
 }
 
-
-
 /* stylelint-disable */
 *,
 *:before,
@@ -480,12 +478,15 @@ html {
   .webp .form0, .webp .form1, .webp .form2, .webp .form3, .webp .form4, .webp .form5, .webp .form6, .webp .form7 {
     background-image: none;
   }
+
   .no-webp .form0, .no-webp .form1, .no-webp .form2, .no-webp .form3, .no-webp .form4, .no-webp .form5, .no-webp .form6, .no-webp .form7 {
     background-image: none;
   }
+
   .webp .login {
     background-image: none;
   }
+
   .no-webp .login {
     background-image: none;
   }
@@ -501,6 +502,7 @@ html {
   .webp .registratie {
     background-image: none;
   }
+
   .no-webp .registratie {
     background-image: none;
   }
@@ -519,6 +521,30 @@ html {
   .booking{
     height: auto;
     background-image: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .webp .login{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .no-webp .login{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .webp .registratie{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .no-webp .registratie{
+    height: auto;
     display: flex;
     flex-direction: column;
   }

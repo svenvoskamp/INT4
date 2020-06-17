@@ -63,7 +63,7 @@ const LoginForm = () => {
         </div>
         <div className={style.content}>
           <div className={style.content_header}>
-            <h1 className={style.title}>Jullie <span className={style.title_span}>account?</span></h1>
+            <h1 className={style.title}>Jullie <span className={style.title_span}>account.</span></h1>
             <h2 className={style.subtitle}>Zouden jullie even kunnen inloggen om de ervaring te personaliseren.</h2>
           </div>
           <div className={style.login_methods}>
@@ -76,7 +76,7 @@ const LoginForm = () => {
             <div>
               <form onSubmit={handleSubmit}>
                 <div className={style.input_container}>
-                  <p className={style.name_text}>E-mail</p> <p>{emailError}</p>
+                  <p className={style.name_text}>E-mail</p> <p className={style.form_error}>{emailError}</p>
                   <input  className={style.form_input}
                     label="Email"
                     name="email"
@@ -87,7 +87,7 @@ const LoginForm = () => {
                   />
                 </div>
                 <div className={style.input_container}>
-                  <p className={style.name_text}>Wachtwoord</p> <p>{passwordError}</p>
+                  <p className={style.name_text}>Wachtwoord</p> <p className={style.form_error}>{passwordError}</p>
                   <input className={style.form_input}
                     label="Password"
                     type="password"
@@ -97,9 +97,9 @@ const LoginForm = () => {
                     onChange={e => setPassword(e.currentTarget.value)}
                   />
                 </div>
-                <p>{formError}</p>
                 <div className={style.button_container}>
-                <input className={style.form_button} type="submit" value="Login"/>
+                  <p className={style.form_error}>{formError}</p>
+                  <input className={style.form_button} type="submit" value="Login"/>
                 </div>
                 <NavLink className={style.form_register} exact strict to= "/register">
                   <p>Nog geen account? <span className={style.register_bold}>Registreren</span> </p>

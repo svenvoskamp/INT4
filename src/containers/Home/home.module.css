@@ -47,7 +47,7 @@
     grid-area: more;
     align-self: flex-end;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: .8rem;
 }
 
 .more_text {
@@ -123,6 +123,7 @@
 
 .header_image {
     width: 100%;
+    text-align: center;
 }
 
 .image_pic {
@@ -291,6 +292,10 @@
         height: auto;
         display: flex;
         flex-direction: column;
+    }
+
+    .title {
+        font-size: 4rem;
     }
 
     .header_more {
