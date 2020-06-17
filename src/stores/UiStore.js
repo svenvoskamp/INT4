@@ -27,7 +27,6 @@ class UiStore {
       })
       await this.rootStore.userStore.createUser(newUser);
       await this.rootStore.bookingStore.getBookings();
-      console.log("De user is ingelogd");
       const currentUser = this.rootStore.userStore.getUserById(newUser.id);
       if(currentUser === undefined){
       this.setCurrentUser(newUser);
@@ -36,7 +35,6 @@ class UiStore {
       }
 
     }else {
-      console.log("De user is nu uitgelogd");
       this.setCurrentUser(undefined);
     }
 }
@@ -82,7 +80,6 @@ class UiStore {
 
   registerUser = async(user) => {
     const result = await this.authService.register(user.name, user.email, user.password);
-    console.log(result);
     return result;
   }
 }

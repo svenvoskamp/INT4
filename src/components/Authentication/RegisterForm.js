@@ -50,15 +50,10 @@ const RegisterForm = () => {
         email: email,
         password: password
       });
-      console.log(user);
       const result = await uiStore.registerUser(user)
       if(result.uid){
-        //gebruiker is correct geregestreerd
-        console.log(result);
         history.push(ROUTES.form);
       }else {
-        //registratie mislukt
-        console.log(result);
         setFormError("Er is iets misgegaan, probeer een sterker wachtwoord");
       }
     }

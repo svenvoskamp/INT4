@@ -9,7 +9,6 @@ const Booking = () => {
   const currentBooking = uiStore.currentBooking;
   const type = typeStore.getTypeById(currentBooking.typeId);
   const country = countryStore.getCountryById(currentBooking.countryId);
-  console.log(currentBooking);
   const history = useHistory();
 
   const handleClick = () => {

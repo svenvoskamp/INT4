@@ -4,8 +4,6 @@ import style from "./step1.module.css"
 
 const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, video1, video2, setVideo1, setVideo2, video1_mp4, video2_mp4, setVideo1MP4, setVideo2MP4, setCurrentIndex}) => {
 
-  console.log(sex1);
-  console.log(sex2);
   useEffect (() => {
   const geslacht1 = document.getElementById("video1");
   if(sex1 === "male"){
@@ -57,8 +55,6 @@ const Step1 = ({name1, name2, sex1, sex2, setName1, setName2, setSex1, setSex2, 
       setCurrentIndex(1);
     }
   }
-
-  console.log(sex1, sex2);
 
   return useObserver (() => (
       <div className={style.content}>

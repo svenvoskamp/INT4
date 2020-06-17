@@ -20,7 +20,7 @@ class AuthService {
     const result = firebase.auth().signInWithPopup(provider);
     return result;
     } catch(error) {
-        console.log(error);
+      return error.code;
     };
   }
 
@@ -39,14 +39,13 @@ class AuthService {
       const result = await firebase.auth().signOut();
       return result;
     }catch(error) {
-      console.log(error);
+      return error.code;
       };
     };
 
     register = async (name, email, password) => {
       try{
           const userCredential = await this.auth.createUserWithEmailAndPassword(email, password);
-          console.log(userCredential);
           if(userCredential){
             try{
               await userCredential.user.updateProfile({
@@ -60,7 +59,6 @@ class AuthService {
           }
       }
       catch(error){
-        console.log("er is iets mis");
           return error.code;
       }
   }

@@ -4,7 +4,6 @@ import style from "./step6.module.css"
 const Step6 = ({img, setImg, setCurrentIndex}) => {
 
   const handleClick = () => {
-    console.log(img);
     if(img !== "" ){
       setCurrentIndex(6);
     }
@@ -13,7 +12,6 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
   const handleInput = e => {
     if(e.target.files[0]){
       const img = document.getElementById("id_img");
-      console.log(img);
       img.src = URL.createObjectURL(e.target.files[0]);
       img.onload = function() {
         URL.revokeObjectURL(img.src);

@@ -18,8 +18,7 @@ const LoginForm = () => {
 
   const handleGoogleLogin = async e => {
     e.preventDefault();
-      const result = await uiStore.signInWithPopUp();
-      console.log(result);
+      await uiStore.signInWithPopUp();
     };
 
     const handleSubmit = async e => {
