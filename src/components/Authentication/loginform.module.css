@@ -108,7 +108,7 @@
 }
 
 .register_bold {
-    composes: bold from "../../style/typo.module.css";
+    font-weight: 700;
 }
 
 @media screen and (max-width: 1500px) {

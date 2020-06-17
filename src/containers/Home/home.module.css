@@ -7,9 +7,14 @@
     grid-template-areas:
     "login"
     "info"
-    ".";
+    "more";
     height: 100vh;
     align-items: center;
+}
+
+.content_header {
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 .content_login {
@@ -20,29 +25,51 @@
 
 .login_button {
     composes: backButton from "../../style/buttons.module.css";
-    margin-right: 5rem;
+    margin-right: 2rem;
+    margin-left: 0;
     composes: italic from "../../style/typo.module.css";
 }
 
+.booking_button {
+    display: none;
+}
+
+.booking_icon {
+    margin-right: 3rem;
+    cursor: pointer;
+}
 
 .content_info {
     grid-area: info;
     width:120rem;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.content_more {
+    grid-area: more;
+    align-self: flex-end;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.more_text {
+    composes: bold from "../../style/typo.module.css";
 }
 
 .background {
-    background-image: url(/assets/backgrounds/splash_left_back.png),url(/assets/backgrounds/splash_background.png);
+    background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
     background-repeat: no-repeat;
     background-size: 65% 100%, cover;
     background-position: left, 50% 50%;
 }
 
 .background_elements {
-    background-image: url(/assets/backgrounds/elements_splash_left.png),url(/assets/backgrounds/elements_splash_right.png),url(/assets/backgrounds/elements_splash_bottom.png);
+    background-image: url(/assets/backgrounds/desktop_splash_left_top.webp),url(/assets/backgrounds/desktop_splash_bottom.webp), url(/assets/backgrounds/desktop_splash_right.webp);
     background-repeat: no-repeat;
-    background-size: auto 100%, auto 100%, 100% auto;
-    background-position: left, right, bottom;
+    background-size: auto auto, 100% auto, auto 100%;
+    background-position: top left,bottom, right;
 }
   
 .title {
@@ -50,22 +77,133 @@
     font-size: 6rem;
     color: primaryColor;
     margin-bottom: 3rem;
-    width: 50%;
     line-height: 1.2;
 }   
 
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
 .text {
     composes: text from "../../style/typo.module.css";
-    margin-bottom: 3rem;
-    width: 50%;
-}    
+    margin-bottom: 5rem;
+}   
+
+.text_bold {
+    font-weight: 700;
+}
 
 .button {
     composes: buttonBlack from "../../style/buttons.module.css";
 }
-  
+
+.info_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_image {
+    width: 100%;
+}
+
+.image_pic {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1250px) {
+    .content_info {
+        width:100%;
+        padding: 0 3rem;
+    }
+
+    .background {
+        background-image: url(/assets/backgrounds/desktop_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
+        background-size: 75% 100%, cover;
+    }
+    
+    .background_elements {
+        background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
+    }
+    
+}
+
+@media screen and (max-width: 1050px) {
+
+    .content_info {
+        grid-template-columns: 1.5fr 1fr;
+        grid-column-gap: 2rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }   
+    
+}
   
 @media screen and (max-width: 750px) {
+    .background {
+        background-image: url(/assets/backgrounds/mobile_splash_left.webp),url(/assets/backgrounds/desktop_splash_background.webp);
+        background-repeat: no-repeat;
+        background-size: 100% 100%, cover;
+        background-position: bottom, 50% 50%;
+    }
+    
+    .background_elements {
+        background-image: url(/assets/backgrounds/mobile_splash_left_top.webp),url(/assets/backgrounds/mobile_splash_bottom.webp), url(/assets/backgrounds/mobile_splash_right.webp);
+        background-repeat: no-repeat;
+        background-size: 50% auto, 100% auto, 50% 100%;
+        background-position: top left,bottom, right;
+    }
+       
+    .content_info {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .info_text {
+        text-align: center;
+    }
+
+    .info_image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .image_pic {
+        width: 75%;
+    }
 
 }
+
+@media screen and (max-width: 500px) {
+
+    .content_header {
+        margin: 2rem 0 4rem;
+        align-self: flex-end;
+    }
+
+    .content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content_more {
+        align-self: center;
+    }
+
+    .text {
+        margin: 0;
+    }
+
+    .image_pic {
+        width: 100%;
+    }
+}
+  
   

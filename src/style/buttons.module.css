@@ -25,9 +25,9 @@
   overflow: visible;
   cursor: pointer;
   transition: all .3s;
-  display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 }
 
 .buttonBlack::after{
