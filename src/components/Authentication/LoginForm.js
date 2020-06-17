@@ -102,7 +102,7 @@ const LoginForm = () => {
                   <input className={style.form_button} type="submit" value="Login"/>
                 </div>
                 <NavLink className={style.form_register} exact strict to= "/register">
-                  <p>Nog geen account? <span className={style.register_bold}>Registreren</span> </p>
+                  <p className={style.register_text}>Nog geen account? <span className={style.register_bold}>Registreren</span> </p>
                 </NavLink>
               </form>
             </div>

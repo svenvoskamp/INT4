@@ -124,4 +124,8 @@
     .registratie_header {
         margin: 3rem 0;
     }
+
+    .button_container {
+        margin-bottom: 3rem;
+    }
 }
