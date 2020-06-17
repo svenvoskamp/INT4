@@ -105,6 +105,7 @@
 .form_register {
     composes: italic from "../../style/typo.module.css";
     text-align: center;
+    text-decoration: none;
 }
 
 .register_bold {

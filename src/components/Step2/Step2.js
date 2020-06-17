@@ -15,36 +15,36 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
     if(count >= 0 && count <= 14){
       if(counter.currentSrc.includes("silver")){
       } else {
-        counter.src ="../../assets/video/ring_silver.webm";
+        counter.src ="/assets/video/ring_silver.webm";
         counter.onerror = function() {
-          counter.src = "../../assets/video/ring_silver.mp4";
+          counter.src = "/assets/video/ring_silver.mp4";
         }
       }
     }
     if(count >= 15 && count <= 29){
       if(counter.currentSrc.includes("gold")){
       }else {
-      counter.src ="../../assets/video/ring_gold.webm";
+      counter.src ="/assets/video/ring_gold.webm";
       counter.onerror = function() {
-        counter.src = "../../assets/video/ring_gold.mp4";
+        counter.src = "/assets/video/ring_gold.mp4";
       }
     }
   }
     if(count >= 29 && count <= 44){
       if(counter.currentSrc.includes("diamond")){
       }else{
-      counter.src ="../../assets/video/ring_diamond.webm";
+      counter.src ="/assets/video/ring_diamond.webm";
       counter.onerror = function() {
-        counter.src = "../../assets/video/ring_diamond.mp4";
+        counter.src = "/assets/video/ring_diamond.mp4";
       }
     }
   }
     if(count >= 44 && count <= 60){
       if(counter.currentSrc.includes("pearl")){
       }else {
-      counter.src ="../../assets/video/ring_pearl.webm";
+      counter.src ="/assets/video/ring_pearl.webm";
       counter.onerror = function() {
-        counter.src = "../../assets/video/ring_pearl.mp4";
+        counter.src = "/assets/video/ring_pearl.mp4";
       }
     }
   }
@@ -63,8 +63,8 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
         </div>
         <div className={style.content_media}>
           <video id = "counter" className={style.media_video} width="500" height = "500"  loop playsInline autoPlay muted>
-            <source src="../../assets/video/ring_diamond.webm" type="video/webm"/>
-            <source src="../../assets/video/ring_diamond.mp4" type="video/mp4"/>
+            <source src="/assets/video/ring_diamond.webm" type="video/webm"/>
+            <source src="/assets/video/ring_diamond.mp4" type="video/mp4"/>
           </video>
         </div>
         <div className={style.container_slider}>

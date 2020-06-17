@@ -63,12 +63,12 @@ const Landing = () => {
                 </NavLink>
               </article>
               <div className={style.header_image}>
-                <img className={style.image_pic} width= "400" height="500" src="./assets/images/polaroid_test.png" />
+                <img className={style.image_pic} width= "400" height="500" src="/assets/images/polaroid_test.png" />
               </div>
             </div>
             <div className={style.header_more}>
               <p className={style.more_text}>Meer info graag</p>
-              <img className={style.more_icon} src="/assets/buttons/arrow_down.svg" />
+              <img className={style.more_icon} alt="pijltje" src="/assets/buttons/arrow_down.svg" />
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ const Landing = () => {
             </div>
             <div className={style.about_button}>
               <NavLink exact strict to="/form">
-                <a className={`${style.button} ${style.button_center}`}>Boek jou ervaring</a>
+                <a className={`${style.button} ${style.button_center}`}>Boek jullie ervaring</a>
               </NavLink>
             </div>
         </div>

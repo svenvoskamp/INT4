@@ -17,15 +17,15 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
         <div className={style.content_input}>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/country_mexico.webm" type="video/webm"/>
-              <source src="../../assets/video/country_mexico.mp4" type="video/mp4"/>
+              <source src="/assets/video/country_mexico.webm" type="video/webm"/>
+              <source src="/assets/video/country_mexico.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{selectedCountry.country}</p>
           </div>
           <div className={style.input_media}>
             <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="../../assets/video/type_adventure.webm" type="video/webm"/>
-              <source src="../../assets/video/type_adventure.mp4" type="video/mp4"/>
+              <source src="/assets/video/type_adventure.webm" type="video/webm"/>
+              <source src="/assets/video/type_adventure.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{selectedType.type}</p>
           </div>
