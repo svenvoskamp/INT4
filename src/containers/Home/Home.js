@@ -63,7 +63,7 @@ const Landing = () => {
                 </NavLink>
               </article>
               <div className={style.header_image}>
-                <img className={style.image_pic} width= "400" height="500" src="/assets/images/polaroid_test.png" />
+                <img className={style.image_pic} src="/assets/images/polaroid_test.png" />
               </div>
             </div>
             <div className={style.header_more}>
