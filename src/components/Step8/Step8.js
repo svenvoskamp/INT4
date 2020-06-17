@@ -16,17 +16,31 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
         </div>
         <div className={style.content_input}>
           <div className={style.input_media}>
-            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="/assets/video/country_mexico.webm" type="video/webm"/>
-              <source src="/assets/video/country_mexico.mp4" type="video/mp4"/>
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay playsInline muted>
+              <source src="/assets/video/country_indonesia.webm" type="video/webm"/>
+              <source src="/assets/video/country_indonesia.mp4" type="video/mp4"/>
             </video>
             <p className={style.media_name}>{selectedCountry.country}</p>
           </div>
           <div className={style.input_media}>
-            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
-              <source src="/assets/video/type_adventure.webm" type="video/webm"/>
-              <source src="/assets/video/type_adventure.mp4" type="video/mp4"/>
+          {selectedType.type === "Ontspanning" &&
+            <video className={style.media_video} width="400" height = "400"  loop playsInline autoPlay muted>
+              <source src="../../assets/video/type_relax.webm" type="video/webm"/>
+              <source src="../../assets/video/type_relax.mp4" type="video/mp4"/>
             </video>
+            }
+            {selectedType.type === "Avontuurlijk" &&
+            <video className={style.media_video} width="400" height = "400"  loop playsInline autoPlay muted>
+              <source src="../../assets/video/type_adventure.webm" type="video/webm"/>
+              <source src="../../assets/video/type_adventure.mp4" type="video/mp4"/>
+          </video>
+            }
+            {selectedType.type === "Cultuur" &&
+            <video className={style.media_video} width="400" height = "400"  loop playsInline autoPlay muted>
+              <source src="../../assets/video/type_culture.webm" type="video/webm"/>
+              <source src="../../assets/video/type_culture.mp4" type="video/mp4"/>
+          </video>
+            }
             <p className={style.media_name}>{selectedType.type}</p>
           </div>
           <div className={style.input_info}>
@@ -45,7 +59,7 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
           <p className={style.input_control}>
             Wij zullen jullie reservatie bekijken en laten jullie spoedig iets weten!
             <br></br>
-            Alvast bedankt namens het ‘Jubileum’ Team!    
+            Alvast bedankt namens het ‘Jubileum’ Team!
           </p>
         </div>
         {text === "" &&
