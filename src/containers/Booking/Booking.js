@@ -42,19 +42,19 @@ const Booking = () => {
           </div>
           <div className={style.input_media}>
             {type.type === "Ontspanning" &&
-            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay playsInline muted>
               <source src="../../assets/video/type_relax.webm" type="video/webm"/>
               <source src="../../assets/video/type_relax.mp4" type="video/mp4"/>
             </video>
             }
             {type.type === "Avontuurlijk" &&
-            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay playsInline muted>
               <source src="../../assets/video/type_adventure.webm" type="video/webm"/>
               <source src="../../assets/video/type_adventure.mp4" type="video/mp4"/>
           </video>
             }
             {type.type === "Cultuur" &&
-            <video className={style.media_video} width="400" height = "400"  loop autoPlay muted>
+            <video className={style.media_video} width="400" height = "400"  loop autoPlay playsInline muted>
               <source src="../../assets/video/type_culture.webm" type="video/webm"/>
               <source src="../../assets/video/type_culture.mp4" type="video/mp4"/>
           </video>
