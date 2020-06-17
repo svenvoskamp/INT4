@@ -63,7 +63,7 @@ const Landing = () => {
                 </NavLink>
               </article>
               <div className={style.header_image}>
-                <img className={style.image_pic} src="/assets/images/polaroid_test.png" />
+                <img className={style.image_pic} src="/assets/images/polaroid_test.png"/>
               </div>
             </div>
             <div className={style.header_more}>
@@ -95,7 +95,7 @@ const Landing = () => {
                   <p className={`${style.subtitle_text} ${style.text_right}`}>“Liefde is gemaakt om een avontuur te zijn!” </p>
                 </div>
                 <p className={style.text}>Jullie bepalen dit avontuur. Een <span className={style.text_bold}>ontspannende</span> date? De <span className={style.text_bold}>cultuur</span> leren kennen?
-                 Of juist een <span className={style.text_bold}>spannende</span> date? Wij zorgen dat het inorde komt. 
+                 Of juist een <span className={style.text_bold}>spannende</span> date? Wij zorgen dat het inorde komt.
                  <span className={style.text_bold}> Verleg jullie grenzen </span>en zorg ervoor dat dit een avontuur wordt dat jullie<span className={style.text_bold}> nooit meer zullen vergeten! </span></p>
               </div>
               <div className={`${style.about_part} ${style.part_left}`}>
