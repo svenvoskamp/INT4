@@ -137,6 +137,10 @@
     margin-top: 5rem;
 }
 
+.about_div {
+    height: 50rem;
+}
+
 .about_title {
     composes: title from "../../style/typo.module.css";
     margin-bottom: 1rem;
@@ -174,7 +178,7 @@
 }
 
 .about_part {
-    margin: 7rem 0;
+    margin: 5rem 0;
     width: 65%;
 }
 

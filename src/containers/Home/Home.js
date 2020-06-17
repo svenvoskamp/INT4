@@ -59,11 +59,11 @@ const Landing = () => {
                 <h1 className={style.title}><span className={style.title_span}>Liefde</span>, zoals het eerst was.</h1>
                 <p className={`${style.text} ${style.text_intro}`}>Ga terug naar de <span className={style.text_bold}>roots</span> van jullie <span className={style.text_bold}>huwelijksreis</span> en vindt de liefde tussen jullie opnieuw! Bewonder en ontdek, maar bovenal <span className={style.text_bold}>geniet van elkaar</span> op deze <span className={style.text_bold}>jubileumreis</span> die speciaal voor jullie wordt gemaakt! </p>
                 <NavLink exact strict to="/form">
-                  <a className={style.button}>Wij zijn er klaar voor</a>
+                  <p className={style.button}>Wij zijn er klaar voor</p>
                 </NavLink>
               </article>
               <div className={style.header_image}>
-                <img className={style.image_pic} src="/assets/images/polaroid_test.png"/>
+                <img className={style.image_pic} src="/assets/images/splash_polaroid.png" alt="maried couple"/>
               </div>
             </div>
             <div className={style.header_more}>
@@ -73,6 +73,7 @@ const Landing = () => {
           </div>
         </div>
       </div>
+      <div className="about">
       <div className="background_about">
         <div className={style.about}>
             <div className={style.about_header}>
@@ -81,22 +82,21 @@ const Landing = () => {
             </div>
             <div className={style.about_parts}>
               <div className={`${style.about_part} ${style.part_left}`}>
-                <h1 className={style.about_title}>Halo! <span className={style.title_span}>Liefde!</span></h1>
+                <h1 className={style.about_title}>Halo! <span className={style.title_span}>Avontuur!</span></h1>
                 <div className={style.about_subtitle}>
                   <div className={style.subtitle_line}></div>
-                  <p className={style.subtitle_text}>"Liefde wordt beter met de tijd"</p>
-                </div>
-                <p className={style.text}>Ga <span className={style.text_bold}>terug in de tijd </span> toen jullie elkaar net leerde kennen. De vonken spatten er vanaf en de  <span className={style.text_bold}>kriebels in de buik</span> waren enorm. Liefde gaat <span className={style.text_bold}>normaal voelen</span> naarmate de tijd. Het wordt dus tijd om dit te veranderen! Op deze reis wordt <span className={style.text_bold}>de vlam weer als toen! </span></p>
-              </div>
-              <div className={`${style.about_part} ${style.part_right}`}>
-                <h1 className={style.about_title}>Halo! <span className={style.title_span}>Avontuur!</span></h1>
-                <div className={`${style.about_subtitle} ${style.subtitle_right}`}>
-                  <div className={style.subtitle_line}></div>
-                  <p className={`${style.subtitle_text} ${style.text_right}`}>“Liefde is gemaakt om een avontuur te zijn!” </p>
+                  <p className={style.subtitle_text}>"Liefde is gemaakt om een avontuur te zijn."</p>
                 </div>
                 <p className={style.text}>Jullie bepalen dit avontuur. Een <span className={style.text_bold}>ontspannende</span> date? De <span className={style.text_bold}>cultuur</span> leren kennen?
                  Of juist een <span className={style.text_bold}>spannende</span> date? Wij zorgen dat het inorde komt.
-                 <span className={style.text_bold}> Verleg jullie grenzen </span>en zorg ervoor dat dit een avontuur wordt dat jullie<span className={style.text_bold}> nooit meer zullen vergeten! </span></p>
+                 <span className={style.text_bold}> Verleg jullie grenzen </span>en zorg ervoor dat dit een avontuur wordt dat jullie<span className={style.text_bold}> nooit meer zullen vergeten! </span></p>              </div>
+              <div className={`${style.about_part} ${style.part_right}`}>
+                <h1 className={style.about_title}>Halo! <span className={style.title_span}>Liefde!</span></h1>
+                <div className={`${style.about_subtitle} ${style.subtitle_right}`}>
+                  <div className={style.subtitle_line}></div>
+                  <p className={`${style.subtitle_text} ${style.text_right}`}>“Liefde wordt beter met de tijd” </p>
+                </div>
+                 <p className={style.text}>Ga <span className={style.text_bold}>terug in de tijd </span> toen jullie elkaar net leerde kennen. De vonken spatten er vanaf en de  <span className={style.text_bold}>kriebels in de buik</span> waren enorm. Liefde gaat <span className={style.text_bold}>normaal voelen</span> naarmate de tijd. Het wordt dus tijd om dit te veranderen! Op deze reis wordt <span className={style.text_bold}>de vlam weer als toen! </span></p>
               </div>
               <div className={`${style.about_part} ${style.part_left}`}>
                 <h1 className={style.about_title}>Halo! <span className={style.title_span}>Locatie!</span></h1>
@@ -109,9 +109,11 @@ const Landing = () => {
             </div>
             <div className={style.about_button}>
               <NavLink exact strict to="/form">
-                <a className={`${style.button} ${style.button_center}`}>Boek jullie ervaring</a>
+                <p className={`${style.button} ${style.button_center}`}>Boek jullie ervaring</p>
               </NavLink>
             </div>
+          </div>
+          <div className={style.about_div}></div>
         </div>
       </div>
     </>

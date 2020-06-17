@@ -184,7 +184,6 @@ html {
   height: 100% !important;
 }
 
-
 .webp .login {
   display: grid;
   grid-template-rows: 1fr 80% 1fr;
@@ -213,11 +212,27 @@ html {
   background-position: left, right top, right bottom;
 }
 
-.webp .background_about {
-  background-image: url(/assets/backgrounds/desktop_about_left.webp);
+.webp .about {
+  background-image: url(/assets/backgrounds/desktop_about_location.webp);
   background-repeat: no-repeat;
-  background-size: auto 100%;
-  background-position: left;
+  background-size: 100% 100%;
+  background-position: bottom;
+  height: 100% !important;
+}
+
+.no-webp .about {
+  background-image: url(/assets/backgrounds/desktop_about_location.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom;
+  height: 100% !important;
+}
+
+.webp .background_about {
+  background-image: url(/assets/backgrounds/desktop_about_left.webp), url(/assets/backgrounds/desktop_about_wedding.webp);
+  background-repeat: no-repeat;
+  background-size: auto 100%, 30% auto;
+  background-position: left, right 55%;
   height: 100% !important;
 }
 

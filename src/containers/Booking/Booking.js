@@ -1,7 +1,5 @@
 import React from "react";
 import { useStores } from "../../hooks/index";
-import * as firebase from "firebase/app";
-import 'firebase/storage';
 import style from "./booking.module.css";
 import { useHistory } from "react-router-dom";
 import {ROUTES} from "../../consts/index";
@@ -12,34 +10,11 @@ const Booking = () => {
   const type = typeStore.getTypeById(currentBooking.typeId);
   const country = countryStore.getCountryById(currentBooking.countryId);
   console.log(currentBooking);
-  const storageRef = firebase.storage().ref();
   const history = useHistory();
 
   const handleClick = () => {
     history.push(ROUTES.home)
   }
-
-  //RESIZE IMG CODE:
-  /* let n = 4;
-  const extension = currentBooking.img.substring(currentBooking.img.length - n);
-  const newImage = currentBooking.img.slice(0, -4);
-  console.log(newImage);
-  console.log(extension);
-
-  storageRef.child('images/' + newImage + '_400x300' + extension).getDownloadURL().then(function(url){
-    console.log(url);
-    var img = document.getElementById('img');
-    img.src = url;
-  });
-  */
-
-  /*
-  storageRef.child('images/' + currentBooking.img).getDownloadURL().then(function(url){
-    console.log(url);
-    var img = document.getElementById('img');
-    img.src = url;
-  });
-  */
 
   return (
     <div className="booking">
