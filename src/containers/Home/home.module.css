@@ -1,7 +1,7 @@
 @value tokens: "../../style/tokens.module.css";
-@value primaryColor from tokens;
+@value primaryColor, pinkColor from tokens;
 
-.content {
+.header {
     display: grid;
     grid-template-rows: 1fr 75% 1fr;
     grid-template-areas:
@@ -12,12 +12,12 @@
     align-items: center;
 }
 
-.content_header {
+.header_nav {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.content_login {
+.header_login {
     grid-area: login;
     display: flex;
     flex-direction: row-reverse;
@@ -30,16 +30,12 @@
     composes: italic from "../../style/typo.module.css";
 }
 
-.booking_button {
-    display: none;
-}
-
 .booking_icon {
     margin-right: 3rem;
     cursor: pointer;
 }
 
-.content_info {
+.header_info {
     grid-area: info;
     width:120rem;
     margin: 0 auto;
@@ -47,7 +43,7 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
-.content_more {
+.header_more {
     grid-area: more;
     align-self: flex-end;
     text-align: center;
@@ -56,6 +52,10 @@
 
 .more_text {
     composes: bold from "../../style/typo.module.css";
+}
+
+.more_icon {
+    padding: .2rem 0;
 }
 
 .background {
@@ -76,17 +76,40 @@
     composes: title from "../../style/typo.module.css";
     font-size: 6rem;
     color: primaryColor;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 1.2;
-}   
+}  
+
+.title_center {
+    text-align: center;
+}
 
 .title_span {
     composes: titleSpan from "../../style/typo.module.css";
 }
 
+.more_title {
+    composes: title from "../../style/typo.module.css";
+    text-align: center;
+    margin-bottom: 1rem;
+}  
+
+.subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    text-align: center;
+    font-weight: 700;
+}  
+
+.subtitle_red {
+    color: primaryColor;
+}
+
+.text_intro {
+    margin-bottom: 5rem;
+}
+
 .text {
     composes: text from "../../style/typo.module.css";
-    margin-bottom: 5rem;
 }   
 
 .text_bold {
@@ -97,13 +120,18 @@
     composes: buttonBlack from "../../style/buttons.module.css";
 }
 
-.info_text {
+.about_button {
+    display: flex;
+    justify-content: center;
+}
+
+.header_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.info_image {
+.header_image {
     width: 100%;
 }
 
@@ -112,8 +140,68 @@
     height: auto;
 }
 
+/* MEER INFO */
+
+.background_about {
+    background-image: url(/assets/backgrounds/desktop_about_left.webp);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left;
+}
+
+.about {
+    composes: view from "../../style/layout.module.css";
+    margin-top: 5rem;
+}
+
+.about_title {
+    composes: title from "../../style/typo.module.css";
+    margin-bottom: 1rem;
+}
+
+.about_subtitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.subtitle_line {
+    width: 2rem;
+    height: .3rem;
+    background-color: pinkColor;
+}
+
+.subtitle_text {
+  composes: italic from "../../style/typo.module.css"; 
+  padding-left: 1rem;
+}
+
+.subtitle_right {
+    flex-direction: row-reverse;
+}
+
+.text_right {
+    padding-right: 1rem;
+}
+
+.about_parts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.about_part {
+    margin: 7rem 0;
+    width: 65%;
+}
+
+.part_right {
+    text-align: right;
+    align-self: flex-end;
+}
+
 @media screen and (max-width: 1250px) {
-    .content_info {
+    .header_info {
         width:100%;
         padding: 0 3rem;
     }
@@ -126,21 +214,34 @@
     .background_elements {
         background-image: url(/assets/backgrounds/tablet_splash_left_top.webp),url(/assets/backgrounds/tablet_splash_bottom.webp), url(/assets/backgrounds/tablet_splash_right.webp);
     }
+
+    .background_about {
+        background-image: url(/assets/backgrounds/tablet_about_left.webp);
+    }
     
 }
 
 @media screen and (max-width: 1050px) {
 
-    .content_info {
+    .header_info {
         grid-template-columns: 1.5fr 1fr;
         grid-column-gap: 2rem;
     }
 
     .title {
-        font-size: 4rem;
+        font-size: 4.5rem;
         margin-bottom: 2rem;
         line-height: 1.2;
     }   
+
+    .more_text {
+        composes: bold from "../../style/typo.module.css";
+        font-size: 1.2rem;
+    }
+
+    .about_parts {
+        padding: 0 5rem;
+    }
     
 }
   
@@ -159,17 +260,17 @@
         background-position: top left,bottom, right;
     }
        
-    .content_info {
+    .header_info {
         margin: 0 auto;
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .info_text {
+    .header_text {
         text-align: center;
     }
 
-    .info_image {
+    .header_image {
         display: flex;
         justify-content: center;
     }
@@ -178,24 +279,60 @@
         width: 75%;
     }
 
+    .background_about {
+        background-image: none;
+    }
+
+    .about_header{
+        margin: 5rem 0;
+    }
+
+    .about_parts {
+        padding: 0;
+    }
+    
+    .about_part {
+        margin: 4rem 0;
+        width: 100%;
+    }
+
+    .text_right {
+        padding-right: 1rem;
+    }
+
+    .subtitle_right {
+        flex-direction: row;
+    }
+    
+    .part_right {
+        text-align: left;
+        align-self: flex-start;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
 
-    .content_header {
+    .header_nav {
         margin: 2rem 0 4rem;
         align-self: flex-end;
     }
 
-    .content {
+    .header {
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-    .content_more {
+    .header_more {
         align-self: center;
+        margin-top: 8rem;
     }
+
+    .login_button {
+        background-image: url(/assets/buttons/button_outline.svg);
+        padding: 1rem 1.5rem;
+      }
 
     .text {
         margin: 0;
@@ -204,6 +341,7 @@
     .image_pic {
         width: 100%;
     }
+
 }
   
   
