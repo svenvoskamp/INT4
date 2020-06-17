@@ -20,7 +20,7 @@ const Country = ({country, setCountry}) => {
           {country.country === "Indonesië" &&
          <input className={style.checkbox_country}  id = {country.id} type = "radio" value = {country.id} name = "country" onClick={e => setCountry(e.currentTarget.value)} required />
         }
-        <p className={style.option_text}>{country.country}</p>
+        <p className={style.option_text}>{country.country}{country.country !== "Indonesië" && <p className={style.text_italic}>(niet beschikbaar)</p> }</p>
       </label>
     </div>
   );
