@@ -31,6 +31,7 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
           type="file"
           id="img"
           name="filename"
+          accept="image/*"
           onChange = {e => {setImg(e.target.files[0]); handleInput(e)}}/>
           <div className={style.polaroid_container}>
             <img id = "id_img" className = {style.polaroid_image} src = "" alt = ""/>
