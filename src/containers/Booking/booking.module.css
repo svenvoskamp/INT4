@@ -1,9 +1,16 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor from tokens;
 
-.booking_header {
-    display: flex;
+.header {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
     align-items: center;
+}
+
+.nav_logo {
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .content {
@@ -131,7 +138,7 @@
 
 @media screen and (max-width: 500px) {
 
-    .container_back {
+    .header {
         margin: 3rem 0;
     }
 

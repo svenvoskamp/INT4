@@ -30,30 +30,36 @@ const Landing = () => {
         <div className="background_elements">
           <div className={style.header}>
             <div className={style.header_nav}>
-            {
-              uiStore.currentBooking !== undefined &&
-                <form className={style.header_login} onSubmit={handleBooking}>
-                    <label htmlFor = "booking">
-                      <input className={style.booking_button} id="booking" type="submit"/>
-                      <svg className={style.booking_icon} width="30" height="30" viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M42.2734 80.8473C32.1504 80.7659 23.4733 79.8083 15.0668 77.0358C11.5222 75.8663 8.12323 74.3769 5.09522 72.1475C3.43171 70.9211 1.95556 69.5131 0.956321 67.6698C-0.654198 64.6986 -0.21703 61.4492 2.16563 58.6483C4.44799 55.9666 7.40597 54.2444 10.557 52.8156C16.0869 50.3099 21.9442 48.9889 27.9245 48.16C28.3143 48.1051 28.8329 48.3455 29.166 48.6067C32.9093 51.5381 37.0463 53.3247 41.8968 53.0711C46.0546 52.8534 49.6012 51.1313 52.8298 48.6104C53.1648 48.3493 53.6795 48.1032 54.0694 48.1581C60.1443 49.0041 66.0906 50.3515 71.6962 52.9272C74.6352 54.2785 77.3907 55.9117 79.5841 58.3549C82.826 61.9677 82.8089 66.2277 79.5103 69.8121C76.6148 72.9594 72.8941 74.8027 68.9842 76.2977C62.7257 78.6899 56.1985 79.8821 49.5501 80.4461C46.6962 80.6902 43.8253 80.7659 42.2734 80.8473Z" fill="#D52F4F"/>
-                        <path d="M62.8127 22.4392C62.0027 32.2348 58.3786 40.6204 50.5966 46.8203C44.5273 51.6537 37.6216 51.5894 31.4426 46.8884C26.5807 43.1905 23.4392 38.2226 21.3101 32.5773C19.8264 28.6447 19.0694 24.5909 19.393 20.3574C20.1141 10.9365 27.7806 2.53761 37.1087 1.00847C48.9974 -0.938912 59.6749 6.27909 62.2468 18.0486C62.561 19.485 62.631 20.9763 62.8127 22.4392Z" fill="#D52F4F"/>
-                      </svg>
-                    </label>
-                </form>
-            }
-            {uiStore.currentUser ? (
-              <form className={style.content_login} onSubmit={handleLogOut}>
-                    <input className={style.login_button} type="submit" value="Log uit"/>
-              </form>
-            ):
-            (
-              <form className={style.content_login} onSubmit={handleLogin}>
-                    <input className={style.login_button} type="submit" value="Log in"/>
-              </form>
-            )
-            }
-          </div>
+              <div className={style.nav_profile}>
+              {uiStore.currentUser ? (
+                  <form className={style.content_login} onSubmit={handleLogOut}>
+                        <input className={style.login_button} type="submit" value="Log uit"/>
+                  </form>
+                ):
+                (
+                  <form className={style.content_login} onSubmit={handleLogin}>
+                        <input className={style.login_button} type="submit" value="Log in"/>
+                  </form>
+                )
+                }
+                {
+                  uiStore.currentBooking !== undefined &&
+                    <form className={style.header_login} onSubmit={handleBooking}>
+                        <label htmlFor = "booking">
+                          <input className={style.booking_button} id="booking" type="submit"/>
+                          <svg className={style.booking_icon} width="30" height="30" viewBox="0 0 82 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M42.2734 80.8473C32.1504 80.7659 23.4733 79.8083 15.0668 77.0358C11.5222 75.8663 8.12323 74.3769 5.09522 72.1475C3.43171 70.9211 1.95556 69.5131 0.956321 67.6698C-0.654198 64.6986 -0.21703 61.4492 2.16563 58.6483C4.44799 55.9666 7.40597 54.2444 10.557 52.8156C16.0869 50.3099 21.9442 48.9889 27.9245 48.16C28.3143 48.1051 28.8329 48.3455 29.166 48.6067C32.9093 51.5381 37.0463 53.3247 41.8968 53.0711C46.0546 52.8534 49.6012 51.1313 52.8298 48.6104C53.1648 48.3493 53.6795 48.1032 54.0694 48.1581C60.1443 49.0041 66.0906 50.3515 71.6962 52.9272C74.6352 54.2785 77.3907 55.9117 79.5841 58.3549C82.826 61.9677 82.8089 66.2277 79.5103 69.8121C76.6148 72.9594 72.8941 74.8027 68.9842 76.2977C62.7257 78.6899 56.1985 79.8821 49.5501 80.4461C46.6962 80.6902 43.8253 80.7659 42.2734 80.8473Z" fill="#D52F4F"/>
+                            <path d="M62.8127 22.4392C62.0027 32.2348 58.3786 40.6204 50.5966 46.8203C44.5273 51.6537 37.6216 51.5894 31.4426 46.8884C26.5807 43.1905 23.4392 38.2226 21.3101 32.5773C19.8264 28.6447 19.0694 24.5909 19.393 20.3574C20.1141 10.9365 27.7806 2.53761 37.1087 1.00847C48.9974 -0.938912 59.6749 6.27909 62.2468 18.0486C62.561 19.485 62.631 20.9763 62.8127 22.4392Z" fill="#D52F4F"/>
+                          </svg>
+                        </label>
+                    </form>
+                }
+              </div>
+              <svg className={style.nav_logo} width="64" height="45" viewBox="0 0 64 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46.5 45L35.0714 33.7145L37.8571 30.9464L46.5 39.4637L58.4286 27.6104L46.5714 15.8991L17.3571 44.8581L0 27.6104L17 10.7177L28.3571 22.0741L25.5714 24.8423L17 16.254L5.57143 27.6104L17.3571 39.3218L46.5714 10.2918L64 27.6104L46.5 45Z" fill="white"/>
+                <path d="M13.3572 0L31.2143 19.235L50.5715 0H13.3572ZM33 3.12303H42.9286L33 12.989V3.12303ZM29.8572 3.12303V13.1309L20.5715 3.12303H29.8572Z" fill="white"/>
+              </svg>
+            </div>
             <div className={style.header_info}>
               <article className={style.header_text}>
                 <h1 className={style.title}><span className={style.title_span}>Liefde</span>, zoals het vroeger was.</h1>
@@ -80,6 +86,7 @@ const Landing = () => {
       <div className="background_about">
         <div className={style.about}>
             <div className={style.about_header}>
+              <img className={style.header_logo} src="/assets/images/halo_gold.svg" />
               <h1 className={`${style.title} ${style.title_center}`}><span className={style.title_span}>Halo! Honey!</span></h1>
               <h2 className={style.subtitle}>Zeg maar <span className={style.subtitle_red}>Halo!</span> tegen de <span className={style.subtitle_red}>liefde</span>, tegen jullie nieuwe <span className={style.subtitle_red}>avontuur</span> en tegen de prachtige <span className={style.subtitle_red}>locatie</span>.</h2>
             </div>

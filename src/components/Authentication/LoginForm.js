@@ -51,7 +51,7 @@ const LoginForm = () => {
   return (
     <>
       <div className="login">
-        <div className={style.login_header}>
+        <div className={style.header}>
           <div className={style.container_back}>
             <button className={style.back} onClick = {handleClick} >
               <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,6 +60,10 @@ const LoginForm = () => {
               </svg>
             </button>
           </div>
+          <svg className={style.nav_logo} width="64" height="45" viewBox="0 0 64 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M46.5 45L35.0714 33.7145L37.8571 30.9464L46.5 39.4637L58.4286 27.6104L46.5714 15.8991L17.3571 44.8581L0 27.6104L17 10.7177L28.3571 22.0741L25.5714 24.8423L17 16.254L5.57143 27.6104L17.3571 39.3218L46.5714 10.2918L64 27.6104L46.5 45Z" fill="#D53151"/>
+            <path d="M13.3574 0L31.2146 19.235L50.5717 0H13.3574ZM33.0003 3.12303H42.9289L33.0003 12.989V3.12303ZM29.8574 3.12303V13.1309L20.5717 3.12303H29.8574Z" fill="#D53151"/>
+          </svg>
         </div>
         <div className={style.content}>
           <div className={style.content_header}>

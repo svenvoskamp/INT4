@@ -35,7 +35,6 @@
     align-items: center;
 }
 
-
 .content_input {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -89,7 +88,15 @@
 .input_control {
     composes: italic from "../../style/typo.module.css";
     grid-column: 1/4;
-    text-align: center;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.halo_team {
+    display: flex;
+    align-items: center;
+    grid-column: 1/4;
+    justify-content: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -101,7 +108,7 @@
 
     .input_control {
         grid-column: 1/3;
-        padding: 2rem 0;
+        padding: 5rem 1rem;
     }
 
     .input_media:first-of-type {
@@ -154,6 +161,7 @@
     .input_info {
         grid-column: 1/3;
         grid-row: 1;
+        grid-column: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -164,10 +172,7 @@
     .input_media {
         flex-direction: column-reverse;
         margin-top: 2rem;
-    }
-
-    .media_video {
-        padding: 0 5rem;
+        grid-column: 1;
     }
 
     .info_container {
@@ -178,12 +183,19 @@
         display: flex;
         flex-direction: column;
     }
-  }
-
-  @media screen and (max-width: 500px) {
 
     .media_video {
         padding: 0;
+    }
+
+    .halo_team {
+        flex-direction: column;
+        grid-column: 1;
+    }
+
+    .input_control {
+        padding: 2rem 0;
+        text-align: center;
     }
 
   }

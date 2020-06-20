@@ -1,9 +1,16 @@
 @value tokens: "../../style/tokens.module.css";
 @value primaryColor, backgroundColor from tokens;
 
-.registratie_header {
-    display: flex;
+.header {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
     align-items: center;
+}
+
+.nav_logo {
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .content {
@@ -121,7 +128,7 @@
 
 @media screen and (max-width: 500px) {
 
-    .registratie_header {
+    .header {
         margin: 3rem 0;
     }
 
