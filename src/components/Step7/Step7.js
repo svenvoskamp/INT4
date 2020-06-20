@@ -46,12 +46,6 @@ const Step7= ({firstName,
               <input className={style.form_input} required id="lastName" min="0" max="255" value={lastName} type="text"  onChange={e => setLastName(e.currentTarget.value)}/>
             </label>
 
-
-            <label htmlFor="telephone" className={`${style.form_telephone} ${style.form_item}`}>
-              <p className={style.item_title}>Telefoon:</p>
-              <input className={style.form_input} id="telephone" value={telephone} type="tel"  onChange={e => setTelephone(e.currentTarget.value)}/>
-            </label>
-
             <label htmlFor="city" className={`${style.form_city} ${style.form_item}`} >
               <p className={style.item_title}>Woonplaats:*</p>
               <input className={style.form_input} required id="city" min="0" max="255" value={city} type="text"  onChange={e => setCity(e.currentTarget.value)}/>
@@ -75,6 +69,11 @@ const Step7= ({firstName,
             <label htmlFor="busNumber" className={`${style.form_busnummer} ${style.form_item}`}>
               <p className={style.item_title}>Bus nr:</p>
               <input className={style.form_input} id="busNumber" value={busNumber} type="text"  onChange={e => setBusNumber(e.currentTarget.value)}/>
+            </label>
+
+            <label htmlFor="telephone" className={`${style.form_telephone} ${style.form_item}`}>
+              <p className={style.item_title}>Telefoon:</p>
+              <input className={style.form_input} id="telephone" value={telephone} type="tel"  onChange={e => setTelephone(e.currentTarget.value)}/>
             </label>
 
             <label htmlFor="terms" className={`${style.form_terms} ${style.form_item}`}>

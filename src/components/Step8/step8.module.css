@@ -90,6 +90,11 @@
     grid-column: 1/4;
     text-align: left;
     padding-left: 1rem;
+    line-height: 1.4;
+}
+
+.control_bold {
+    font-weight: 700;
 }
 
 .halo_team {

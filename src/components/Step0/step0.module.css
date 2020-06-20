@@ -1,0 +1,119 @@
+@value tokens: "../../style/tokens.module.css";
+@value primaryColor, backgroundColor from tokens;
+
+.content {
+    composes: view from "../../style/layout.module.css";
+    composes: spaceBetween from "../../style/layout.module.css";
+}
+
+.back {
+    composes: backButton from "../../style/buttons.module.css";
+}
+
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm {
+    composes: buttonBlack from "../../style/buttons.module.css";
+}
+
+.title {
+    composes: title from "../../style/typo.module.css";
+    text-align: center;
+    margin-bottom: 1rem;
+}  
+
+.title_span {
+    composes: titleSpan from "../../style/typo.module.css";
+}
+
+.subtitle {
+    composes: subtitle from "../../style/typo.module.css";
+    text-align: center;
+}   
+
+.content_media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.media_video {
+    width: auto;
+    height: 100%;
+}
+
+.container_inputs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Name input */
+
+.person_name {
+    width: 80%;
+    padding: 0 5rem;
+}
+
+.name_text {
+    composes: subtitle from "../../style/typo.module.css";
+    padding: 0 0 .5rem .5rem;
+}
+
+.text_italic {
+    composes: textLight from "../../style/typo.module.css";
+}
+
+.input {
+    width: 100%;
+}
+
+.name_input {
+    composes: inputFill from "../../style/buttons.module.css";
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .container_inputs {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .input {
+      padding: 0 1rem;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .content_header {
+        margin: 1rem 0 4rem 0;
+    }
+
+    .subtitle {
+        margin-top: 1.5rem;
+    }   
+
+    .content_media {
+        margin-top: 3rem;
+    }
+
+    .media_video {
+        width: 100%;
+        height: auto;
+    }
+
+    .input {
+        padding: 0 .5rem;
+    }
+
+}
