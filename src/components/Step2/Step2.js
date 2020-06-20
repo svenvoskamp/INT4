@@ -6,7 +6,7 @@ const Step2 = ({name1, name2, count, setCount, setCurrentIndex}) => {
 
   const handleClick = () => {
     if(count !== "" ){
-      setCurrentIndex(2);
+      setCurrentIndex(3);
     }
   }
 

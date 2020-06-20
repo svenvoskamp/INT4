@@ -7,9 +7,12 @@ configure({
 
 class Booking {
 
-  constructor({id = v4(), user = [], sex1, sex2, name1, name2, type = [], country = [], count, pants, img, userId, typeId, countryId}) {
+  constructor({id = v4(), user = [], day, month, year, sex1, sex2, name1, name2, type = [], country = [], count, pants, img, userId, typeId, countryId}) {
     this.id = id;
     this.user = user;
+    this.day = day;
+    this.month = month;
+    this.year = year;
     this.sex1 = sex1;
     this.sex2 = sex2;
     this.name1 = name1;
@@ -47,6 +50,9 @@ decorate(Booking, {
 const bookingConverter = {
   toFirestore: function(booking) {
     return {
+      day: booking.day,
+      month: booking.month,
+      year: booking.year,
       sex1: booking.sex1,
       sex2: booking.sex2,
       name1: booking.name1,
@@ -63,6 +69,9 @@ const bookingConverter = {
     const data = snapshot.data(options);
     return new Booking({
       id: snapshot.id,
+      day: data.day,
+      month: data.month,
+      year: data.year,
       sex1: data.sex1,
       sex2: data.sex2,
       name1: data.name1,

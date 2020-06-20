@@ -15,8 +15,6 @@ const Step7= ({firstName,
               setHouseNumber,
               busNumber,
               setBusNumber,
-              email,
-              setEmail,
               telephone,
               setTelephone,
               terms,
@@ -24,8 +22,8 @@ const Step7= ({firstName,
               setCurrentIndex}) => {
 
   const handleClick = () => {
-    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && terms !== ""){
-      setCurrentIndex(7);
+    if(firstName !== "" && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && terms !== ""){
+      setCurrentIndex(8);
     }
   }
 
@@ -48,14 +46,10 @@ const Step7= ({firstName,
               <input className={style.form_input} required id="lastName" min="0" max="255" value={lastName} type="text"  onChange={e => setLastName(e.currentTarget.value)}/>
             </label>
 
-            <label htmlFor="email" className={`${style.form_email} ${style.form_item}`}>
-              <p className={style.item_title}>E-mail:*</p>
-              <input className={style.form_input} required id="email" value={email} type="email"  onChange={e => setEmail(e.currentTarget.value)}/>
-            </label>
 
             <label htmlFor="telephone" className={`${style.form_telephone} ${style.form_item}`}>
-              <p className={style.item_title}>Telefoon:*</p>
-              <input className={style.form_input} required id="telephone" value={telephone} type="tel"  onChange={e => setTelephone(e.currentTarget.value)}/>
+              <p className={style.item_title}>Telefoon:</p>
+              <input className={style.form_input} id="telephone" value={telephone} type="tel"  onChange={e => setTelephone(e.currentTarget.value)}/>
             </label>
 
             <label htmlFor="city" className={`${style.form_city} ${style.form_item}`} >

@@ -7,7 +7,7 @@ import style from "./step3.module.css"
     const {countryStore} = useStores();
     const handleClick = () => {
       if(country !== "" ){
-        setCurrentIndex(3);
+        setCurrentIndex(4);
       }
     }
 

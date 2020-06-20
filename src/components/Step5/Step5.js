@@ -5,7 +5,7 @@ const Step5 = ({pants, sex1, sex2, name1, name2, setPants, setCurrentIndex}) => 
 
   const handleClick = () => {
     if(pants !== "" ){
-      setCurrentIndex(5);
+      setCurrentIndex(6);
     }
   }
 

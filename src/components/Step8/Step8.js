@@ -2,7 +2,7 @@ import React from "react";
 import style from "./step8.module.css"
 import { useStores } from "../../hooks/index";
 
-const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, busNumber, houseNumber, zip, city, country, type}) => {
+const Step8 = ({setCurrentIndex, day, month, text, name1, name2, email, adress, telephone, busNumber, houseNumber, zip, city, country, type}) => {
     const {typeStore, countryStore} = useStores();
     const selectedCountry = countryStore.getCountryById(country);
     const selectedType = typeStore.getTypeById(type);
@@ -45,6 +45,7 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
           </div>
           <div className={style.input_info}>
             <p className={style.info_title}>{name1} & {name2}</p>
+            <p className={style.info_title}>{day} - {month} - 2020</p>
             <div className={style.info_gegevens}>
             <div className={style.info_container}>
               <p className={style.info_text}>{email}</p>
@@ -62,9 +63,9 @@ const Step8 = ({setCurrentIndex, text, name1, name2, email, adress, telephone, b
               <path d="M8.13965 0L19.0213 11.541L30.8171 0H8.13965ZM20.1095 1.87382H26.1597L20.1095 7.79337V1.87382ZM18.1943 1.87382V7.87855L12.5359 1.87382H18.1943Z" fill="#D52F4F"/>
             </svg>
             <p className={style.input_control}>
-              Wij zullen jullie reservatie bekijken en laten jullie spoedig iets weten!
+              Deze reservatie is onder voorbehoud en wij laten jullie spoedig iets weten!
               <br></br>
-              Alvast bedankt namens het ‘Jubileum’ Team!
+              Alvast bedankt namens het `Halo` Team!
             </p>
           </div>
         </div>

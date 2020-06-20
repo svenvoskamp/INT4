@@ -7,7 +7,7 @@ const Step4 = ({type, setType, setCurrentIndex}) => {
   const {typeStore} = useStores();
   const handleClick = () => {
     if(type !== "" ){
-      setCurrentIndex(4)
+      setCurrentIndex(5)
     }
   }
 

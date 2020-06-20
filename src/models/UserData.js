@@ -7,7 +7,7 @@ configure({
 
 class UserData {
 
-  constructor({id = v4(), firstName, lastName, city, zip, adress, houseNumber, busNumber = "", email, telephone, terms, users = [], userId}) {
+  constructor({id = v4(), firstName, lastName, city, zip, adress, houseNumber, busNumber = "", telephone = "", terms, users = [], userId}) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -16,7 +16,6 @@ class UserData {
     this.adress = adress;
     this.houseNumber = houseNumber;
     this.busNumber = busNumber;
-    this.email = email;
     this.telephone = telephone;
     this.terms = terms;
     this.users = users;
@@ -42,7 +41,6 @@ const userDataConverter = {
       adress: userData.adress,
       houseNumber: userData.houseNumber,
       busNumber: userData.houseNumber,
-      email: userData.email,
       telephone: userData.telephone,
       terms: userData.terms,
       userId: userData.userId
@@ -58,7 +56,6 @@ const userDataConverter = {
       adress: data.adress,
       houseNumber: data.houseNumber,
       busNumber: data.houseNumber,
-      email: data.email,
       telephone: data.telephone,
       terms: data.terms,
       userId: data.userId

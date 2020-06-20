@@ -5,7 +5,7 @@ const Step6 = ({img, setImg, setCurrentIndex}) => {
 
   const handleClick = () => {
     if(img !== "" ){
-      setCurrentIndex(6);
+      setCurrentIndex(7);
     }
   }
 

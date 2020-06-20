@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { ROUTES } from "../../consts/index";
 import * as firebase from "firebase/app";
 import 'firebase/storage';
+import Step0 from "../../components/Step0/Step0";
 import Step1 from "../../components/Step1/Step1";
 import Step2 from "../../components/Step2/Step2";
 import Step3 from "../../components/Step3/Step3";
@@ -32,6 +33,9 @@ const Form = () => {
   const [ name2, setName2] = useState("");
   const [ sex1, setSex1] = useState("male");
   const [ sex2, setSex2] = useState("female");
+  const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
   const [ count, setCount] = useState(30);
   const [ pants, setPants] = useState(1);
   const [ type, setType] = useState("");
@@ -50,7 +54,6 @@ const Form = () => {
   const [ adress, setAdress] = useState("");
   const [ houseNumber, setHouseNumber] = useState("");
   const [ busNumber, setBusNumber] = useState("");
-  const [ email, setEmail] = useState("");
   const [ telephone, setTelephone] = useState("");
   const [ terms, setTerms] = useState("");
 
@@ -62,9 +65,9 @@ const Form = () => {
     const imgRef = await firebase.storage().ref('images/' + img.name);
     const imgUrl = imgRef.name;
     await imgRef.put(img);
-    if(name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && email !== "" && telephone !== "" && img !== "" && terms !== 0) {
-      const booking = new Booking({user: uiStore.currentUser, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
-      const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, email, telephone, terms, userId: uiStore.currentUser.id });
+    if(day !== "" && month !== "" && year!== "" && name1 !== "" && name2 !== "" && sex1 !== "" && sex2 !== "" && count !== "" && pants !== "" && firstName !== ""  && lastName !== "" && city !== "" && zip !== "" && adress !== "" && houseNumber !== "" && img !== "" && terms !== 0) {
+      const booking = new Booking({user: uiStore.currentUser, day, month, year, sex1, sex2, name1, name2, count, pants, userId: uiStore.currentUser.id, typeId: type, countryId: country, img: imgUrl});
+      const userData = new UserData({firstName, lastName, city, zip, adress, houseNumber, busNumber, telephone, terms, userId: uiStore.currentUser.id });
     try {
       await bookingStore.createBooking(booking);
       await userStore.createUserData(uiStore.currentUser, userData, uiStore.currentUser.email);
@@ -87,26 +90,29 @@ const Form = () => {
           {currentIndex === 0 &&
             <Step1 name1 = {name1} name2 = {name2} sex1 = {sex1} sex2 = {sex2} setName1 = {setName1} setName2 = {setName2} setSex1 = {setSex1} setSex2 = {setSex2} video1 = {video1} video2 = {video2} setVideo1 = {setVideo1} setVideo2 = {setVideo2} video1_mp4 = {video1_mp4} video2_mp4 = {video2_mp4} setVideo1MP4 = {setVideo1MP4} setVideo2MP4 = {setVideo2MP4} setCurrentIndex = {setCurrentIndex}/>
           }
-          {currentIndex === 1 &&
-            <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
+           {currentIndex === 1 &&
+            <Step0 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} day = {day} month = {month} year = {year} setDay = {setDay} setMonth = {setMonth} setYear = {setYear} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 2 &&
-            <Step3 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
+            <Step2 name1 = {name1} name2 = {name2} count = {count} setCount = {setCount} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 3 &&
-            <Step4 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
+            <Step3 country = {country} setCountry = {setCountry} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 4 &&
-            <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex} sex1 = {sex1} sex2 = {sex2} />
+            <Step4 type = {type} setType = {setType} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 5 &&
-            <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
+            <Step5 pants = {pants} name1 = {name1} name2 = {name2} setPants = {setPants} setCurrentIndex = {setCurrentIndex} sex1 = {sex1} sex2 = {sex2} />
           }
           {currentIndex === 6 &&
-            <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} email = {email} setEmail = {setEmail} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
+            <Step6 img = {img} setImg = {setImg} setCurrentIndex = {setCurrentIndex}/>
           }
           {currentIndex === 7 &&
-            <Step8 setCurrentIndex = {setCurrentIndex} text = {text} name1 = {name1} name2 = {name2} email = {email} adress = {adress} zip = {zip} city = {city} telephone = {telephone} busNumber = {busNumber} houseNumber = {houseNumber} country = {country} type = {type}/>
+            <Step7 firstName = {firstName} setFirstName = {setFirstName} lastName = {lastName} setLastName = {setLastName} city = {city} setCity = {setCity} zip = {zip} setZip = {setZip} adress = {adress} setAdress = {setAdress} houseNumber = {houseNumber} setHouseNumber = {setHouseNumber} busNumber = {busNumber} setBusNumber = {setBusNumber} telephone = {telephone} setTelephone = {setTelephone} terms = {terms} setTerms = {setTerms} setCurrentIndex = {setCurrentIndex}/>
+          }
+          {currentIndex === 8 &&
+            <Step8 setCurrentIndex = {setCurrentIndex} text = {text} day = {day} month = {month} year = {year} name1 = {name1} name2 = {name2} adress = {adress} zip = {zip} city = {city} telephone = {telephone} busNumber = {busNumber} houseNumber = {houseNumber} country = {country} type = {type}/>
           }
         </form>
       </div>

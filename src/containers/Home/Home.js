@@ -86,7 +86,7 @@ const Landing = () => {
       <div className="background_about">
         <div className={style.about}>
             <div className={style.about_header}>
-              <img className={style.header_logo} src="/assets/images/halo_gold.svg" />
+              <img className={style.header_logo} src="/assets/images/halo_gold.svg" alt = "gold" />
               <h1 className={`${style.title} ${style.title_center}`}><span className={style.title_span}>Halo! Honey!</span></h1>
               <h2 className={style.subtitle}>Zeg maar <span className={style.subtitle_red}>Halo!</span> tegen de <span className={style.subtitle_red}>liefde</span>, tegen jullie nieuwe <span className={style.subtitle_red}>avontuur</span> en tegen de prachtige <span className={style.subtitle_red}>locatie</span>.</h2>
             </div>
