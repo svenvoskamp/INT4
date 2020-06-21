@@ -6,7 +6,7 @@ import style from "./step0.module.css";
 const Step0 = ({name1, name2, day, setDay, month, setMonth, year, setYear, setCurrentIndex}) => {
 
   const handleClick = () => {
-    if(day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 1900 && year <= 2020 ){
+    if(day >= 1 && day <= 31 && month >= 1 && month <= 12 && year >= 2020 && year <= 2021 ){
       setCurrentIndex(2);
     }
   }
@@ -44,7 +44,7 @@ const Step0 = ({name1, name2, day, setDay, month, setMonth, year, setYear, setCu
           <div className={style.input}>
             <p className={style.name_text}>Jaar <span className={style.text_italic}>(2020-2021)</span></p>
             <label htmlFor = "year">
-              <input className={style.name_input} id = "year" type = "number" min = "2020" max = "2022" maxLength = "4" value = {year} name = "year" onChange={e => setYear(e.currentTarget.value)} required />
+              <input className={style.name_input} id = "year" type = "number" min = "2020" max = "2021" maxLength = "4" value = {year} name = "year" onChange={e => setYear(e.currentTarget.value)} required />
             </label>
           </div>
         </div>

@@ -70,7 +70,7 @@ const Landing = () => {
               </article>
               <div className={style.header_image}>
                 <picture className={style.image_container}>
-  	            <source className={style.image_pic} type="image/webp" srcset="/assets/images/splash_polaroid.webp"/>
+  	            <source className={style.image_pic} type="image/webp" srcSet="/assets/images/splash_polaroid.webp"/>
                 <img className={style.image_pic} src="/assets/images/splash_polaroid.png" alt="married couple"/>
               </picture>
               </div>
