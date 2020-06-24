@@ -24,8 +24,8 @@ const Step0 = ({name1, name2, day, setDay, month, setMonth, year, setYear, setCu
         </div>
         <div className={style.content_media}>
           <video id = "counter" className={style.media_video} width="500" height = "500"  loop playsInline autoPlay muted>
-            <source src="/assets/video/ring_diamond.webm" type="video/webm"/>
-            <source src="/assets/video/ring_diamond.mp4" type="video/mp4"/>
+            <source src="/assets/video/date.webm" type="video/webm"/>
+            <source src="/assets/video/date.mp4" type="video/mp4"/>
           </video>
         </div>
         <div className={style.container_inputs}>

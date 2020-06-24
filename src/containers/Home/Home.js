@@ -62,7 +62,7 @@ const Landing = () => {
             </div>
             <div className={style.header_info}>
               <article className={style.header_text}>
-                <h1 className={style.title}><span className={style.title_span}>Liefde</span>, net zoals toen.</h1>
+                <h1 className={style.title}><span className={style.title_span}>Herbeleef</span> de liefde zoals toen.</h1>
                 <p className={`${style.text} ${style.text_intro}`}>Ga terug naar de <span className={style.text_bold}>roots</span> van jullie <span className={style.text_bold}>huwelijksreis</span> en vindt de liefde tussen jullie opnieuw! Bewonder en ontdek, maar bovenal <span className={style.text_bold}>geniet van elkaar</span> op deze <span className={style.text_bold}>jubileumreis</span> die speciaal voor jullie wordt gemaakt! </p>
                 <NavLink exact strict to="/form">
                   <p className={style.button}>Wij zijn er klaar voor</p>
