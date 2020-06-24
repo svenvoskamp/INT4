@@ -62,7 +62,7 @@ const Landing = () => {
             </div>
             <div className={style.header_info}>
               <article className={style.header_text}>
-                <h1 className={style.title}><span className={style.title_span}>Liefde</span>, zoals het vroeger was.</h1>
+                <h1 className={style.title}><span className={style.title_span}>Liefde</span>, net zoals toen.</h1>
                 <p className={`${style.text} ${style.text_intro}`}>Ga terug naar de <span className={style.text_bold}>roots</span> van jullie <span className={style.text_bold}>huwelijksreis</span> en vindt de liefde tussen jullie opnieuw! Bewonder en ontdek, maar bovenal <span className={style.text_bold}>geniet van elkaar</span> op deze <span className={style.text_bold}>jubileumreis</span> die speciaal voor jullie wordt gemaakt! </p>
                 <NavLink exact strict to="/form">
                   <p className={style.button}>Wij zijn er klaar voor</p>
@@ -98,7 +98,7 @@ const Landing = () => {
                   <p className={style.subtitle_text}>"Liefde is gemaakt om een avontuur te zijn."</p>
                 </div>
                 <p className={style.text}>Jullie bepalen dit avontuur. Een <span className={style.text_bold}>ontspannende</span> date? De <span className={style.text_bold}>cultuur</span> leren kennen?
-                 Of juist een <span className={style.text_bold}>spannende</span> date? Wij zorgen dat het inorde komt.
+                 Of juist een <span className={style.text_bold}>avontuurlijke</span> activiteit? Wij zorgen dat het inorde komt.
                  <span className={style.text_bold}> Verleg jullie grenzen </span>en zorg ervoor dat dit een avontuur wordt dat jullie<span className={style.text_bold}> nooit meer zullen vergeten! </span></p>              </div>
               <div className={`${style.about_part} ${style.part_right}`}>
                 <h1 className={style.about_title}>Halo! <span className={style.title_span}>Liefde!</span></h1>
@@ -106,7 +106,7 @@ const Landing = () => {
                   <div className={style.subtitle_line}></div>
                   <p className={`${style.subtitle_text} ${style.text_right}`}>“Liefde wordt beter met de tijd” </p>
                 </div>
-                 <p className={style.text}>Ga <span className={style.text_bold}>terug in de tijd </span> toen jullie elkaar net leerde kennen. De vonken spatten er vanaf en de  <span className={style.text_bold}>kriebels in de buik</span> waren enorm. Liefde gaat <span className={style.text_bold}>normaal voelen</span> naarmate de tijd. Het wordt dus tijd om dit te veranderen! Op deze reis wordt <span className={style.text_bold}>de vlam weer als toen! </span></p>
+                 <p className={style.text}>Ga <span className={style.text_bold}>terug in de tijd </span> toen jullie elkaar net leerde kennen. De vonken spatten er vanaf en je had <span className={style.text_bold}>vlinders in je buik</span>. Maar de dagelijkse sleur kan weleens de spotlight van jullie liefdeweghalen. Bij ons staat jullie liefde opnieuw <span className={style.text_bold}>feller dan ooit</span> in het licht zodat jullie kunnen stralen alsof jullie <span className={style.text_bold}>eerste date is.</span></p>
               </div>
               <div className={`${style.about_part} ${style.part_left}`}>
                 <h1 className={style.about_title}>Halo! <span className={style.title_span}>Locatie!</span></h1>
@@ -114,7 +114,10 @@ const Landing = () => {
                   <div className={style.subtitle_line}></div>
                   <p className={style.subtitle_text}>"Liefde wordt beter met de tijd"</p>
                 </div>
-                <p className={style.text}>Om jullie reis nog beter te maken, zullen jullie verblijven op onze  <span className={style.text_bold}>prachtige locatie </span> Deze locatie is <span className={style.text_bold}> speciaal gemaakt </span> naar jullie wensen. Jullie zullen je al <span className={style.text_bold}>snel welkom </span> voelen!</p>
+                <p className={style.text}>Deze locatie is <span className={style.text_bold}>speciaal gemaakt naar jullie wensen. </span>
+                De locatie zal in de stijl zijn van jullie huwelijksreis, waardoor jullie terug in de tijd gaan!
+                Bovendien is de reis <span className={style.text_bold}>all inclusive</span>, waardoor jullie nergens aan hoeven te denken.
+                Jullie zullen jullie al snel <span className={style.text_bold}>welkom voelen.</span></p>
               </div>
             </div>
             <div className={style.about_button}>
